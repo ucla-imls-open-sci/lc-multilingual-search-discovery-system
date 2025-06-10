@@ -16,3 +16,9 @@ This lesson is based on the authors’ experience developing [LACLI](https://lac
 - Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
 ### Part 3: Promote and Encourage Participation and Collaboration
 - Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
+
+## Who is this lesson for?
+Subject liaison, digital scholarship, or data services librarians working with researchers in the social sciences and humanities. While these librarians possess domain expertise, they seek theoretical and technical guidance in creating a collaborative, multilingual search and discovery system for their research community.
+
+## Prerequisite Knowledge
+A foundational understanding of HTML, CSS, and JavaScript along with basic experience using spreadsheets like Google Sheets.
