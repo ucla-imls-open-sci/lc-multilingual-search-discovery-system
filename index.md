@@ -8,3 +8,11 @@ While well-intentioned, such solutions are difficult to navigate, lack useful me
 This lesson guides you through creating a lightweight, open-source search and discovery system where users can find, explore, and engage with multilingual research materials. We'll use the Google Sheets API (free) for the backend database and JavaScript (also free) for controlling search and data display on the front-end. 
 
 This lesson is based on the authors’ experience developing [LACLI](https://lacli.info/), a multilingual search and discovery system for freely available online resources in Latin American, Caribbean, Latinx, and Iberian studies.
+
+## What will you learn?
+### Part 1: Ethical and Multilingual Description Standards
+- Understand how a description standard ensures ethical representation of data and the importance of multilingual access.
+### Part 2: Database and Search System Development
+- Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
+### Part 3: Promote and Encourage Participation and Collaboration
+- Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
