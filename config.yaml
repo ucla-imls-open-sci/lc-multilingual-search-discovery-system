@@ -15,7 +15,7 @@
 carpentry: 'incubator'
 
 # Alt-text description of the lesson.
-carpentry_description: 'A Low-Code Search and Discovery Web App with Google Sheets & JavaScript for Collaborative, Multilingual Projects'
+carpentry_description: 'A low-code search and discovery web app with Google Sheets & JavaScript for collaborative, multilingual projects'
 
 # Overall title for pages.
 title: 'Search and Discovery Web App for Collaborative, Multilingual Projects' # FIXME
