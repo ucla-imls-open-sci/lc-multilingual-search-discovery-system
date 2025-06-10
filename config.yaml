@@ -18,13 +18,13 @@ carpentry: 'incubator'
 carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'A Low-Code Search and Discovery Web App with Google Sheets & JavaScript for Collaborative, Multilingual Projects' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: 2024-09-01 # FIXME
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'Google Sheets, Google AppsScript, JavaScript, multilingual, description standards' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -40,7 +40,7 @@ source: 'https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'eric.silberberg@qc.cuny.edu' # FIXME
 
 # Navigation ------------------------------------------------
 #
