@@ -20,7 +20,5 @@ authors:
   - given-names: Jesús
     family-names: Alonso-Regalado
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  A low-code search and discovery web app with Google Sheets & JavaScript for collaborative, multilingual projects.
 license: CC-BY-4.0
