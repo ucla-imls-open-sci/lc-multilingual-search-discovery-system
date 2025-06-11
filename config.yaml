@@ -66,6 +66,7 @@ contact: 'eric.silberberg@qc.cuny.edu' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
+# - introduction.md
 - description-standards.md
 
 # Information for Learners
