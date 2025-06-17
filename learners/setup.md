@@ -2,53 +2,14 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Dataset
 
-## Data Sets
+Access the LACLI [sample data]([https://example.com/FIXME](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing)) that we will use throughout the lesson.
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+## Web App Starting Files
 
-## Software Setup
+This lesson provides the basic HTML, CSS, and Javascript files to start up our web app. To get these files:
 
-::::::::::::::::::::::::::::::::::::::: discussion
-
-### Details
-
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
-### Windows
-
-Use PuTTY
-
-::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
-### MacOS
-
-Use Terminal.app
-
-::::::::::::::::::::::::
-
-
-:::::::::::::::: spoiler
-
-### Linux
-
-Use Terminal
-
-::::::::::::::::::::::::
-
+1. Download this zip file and save it to your Desktop. 
+2. Unzip the ```sdwa.zip``` file, which should create a new folder called ```sdwa```.
+   
