@@ -25,5 +25,10 @@ This lesson is based on the authors’ experience developing [LACLI](https://lac
 ## Who is this lesson for?
 Subject liaison, digital scholarship, or data services librarians working with researchers in the social sciences and humanities. While these librarians possess domain expertise, they seek theoretical and technical guidance in creating a collaborative, multilingual search and discovery system for their research community.
 
-## Prerequisite Knowledge
-A foundational understanding of HTML, CSS, and JavaScript along with basic experience using spreadsheets like Google Sheets.
+::::::::::::::::::::::::::::::::::::::::::  prereq
+
+## Prerequisites
+1. Learners must have a foundational understanding of HTML, CSS, and JavaScript.
+2. Learners must have basic experience using spreadsheets like Google Sheets.
+   
+::::::::::::::::::::::::::::::::::::::::::
