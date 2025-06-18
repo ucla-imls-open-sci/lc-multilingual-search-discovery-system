@@ -27,8 +27,8 @@ Knowing your audience is the first step to ensure you have adequate data categor
 ## Target Audience
 Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
 
-A) Terms in Spanish & Portuguese
-B) Country Coverage
+A) Terms in Spanish & Portuguese  
+B) Country Coverage  
 C) Resource type
 
 :::::::::::::::  solution
@@ -61,9 +61,9 @@ Metadata standards already exist for all kinds of data. If you can find one that
 ## Appraising Controlled Vocabularies
 The sample spreadsheet is part of our larger project featuring free online resources relating to Latin American, Caribbean, Latinx and Iberian Studies. Which of the following controlled vocabularies best fits our data?
 
-A) Library of Congress Subject Headings (LCSH)
-B) Hispanic American Periodicals Index (HAPI) Subject Headings
-C) Medical Subject Headings (MeSH)
+A) Library of Congress Subject Headings (LCSH)  
+B) Hispanic American Periodicals Index (HAPI) Subject Headings  
+C) Medical Subject Headings (MeSH)  
 
 :::::::::::::::  solution
 
@@ -91,9 +91,9 @@ For more guidance, see:
 
 Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
 
-A) Terms in Spanish & Portuguese
-B) Country Coverage
-C) Resource type
+A) Terms in Spanish & Portuguese  
+B) Country Coverage  
+C) Resource type  
 
 :::::::::::::::  solution
 
