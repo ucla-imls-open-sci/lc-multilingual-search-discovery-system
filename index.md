@@ -28,7 +28,7 @@ Subject liaison, digital scholarship, or data services librarians working with r
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
 ## Prerequisites
-1. Learners must have a foundational understanding of HTML, CSS, and JavaScript.
-2. Learners must have basic experience using spreadsheets like Google Sheets.
+1. Learners need to have a foundational understanding of HTML, CSS, and JavaScript.
+2. Learners should have basic experience using spreadsheets like Google Sheets.
    
 ::::::::::::::::::::::::::::::::::::::::::
