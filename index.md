@@ -21,14 +21,14 @@ This lesson is based on the authors’ experience developing [LACLI](https://lac
 ::::::::::::::::::::::::::::::::::::::::::
 
 ## Learning Objectives
-**Part 1: Ethical and Multilingual Description Standards**
-- Understand how a description standard ensures ethical representation of data and the importance of multilingual access.
+**Part 1: Ethical and Multilingual Description Standards**<br>
+Understand how a description standard ensures ethical representation of data and the importance of multilingual access.
 
-**Part 2: Building the Search Web App**
-- Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
+**Part 2: Building the Search Web App**<br>
+Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
 
-**Part 3: Action Plan for Promotion and Collaboration**
-- Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
+**Part 3: Action Plan for Promotion and Collaboration**<br>
+Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
 
 ## Who is this lesson for?
 Subject liaison, digital scholarship, or data services librarians working with researchers in the social sciences and humanities. While these librarians possess domain expertise, they seek theoretical and technical guidance in creating a collaborative, multilingual search and discovery system for their research community.
