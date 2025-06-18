@@ -14,7 +14,8 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-Who is your intended audience? What are their needs?
+- Who is your intended audience?
+- What are their needs?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
