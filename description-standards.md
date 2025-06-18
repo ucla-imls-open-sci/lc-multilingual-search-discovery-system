@@ -27,9 +27,9 @@ Knowing your audience is the first step to ensure you have adequate data categor
 ## Target Audience
 Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
 
-A. Terms in Spanish & Portuguese
-B. Country Coverage
-C. Resource type
+A) Terms in Spanish & Portuguese
+B) Country Coverage
+C) Resource type
 
 :::::::::::::::  solution
 
@@ -60,9 +60,10 @@ Metadata standards already exist for all kinds of data. If you can find one that
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Appraising Controlled Vocabularies
 The sample spreadsheet is part of our larger project featuring free online resources relating to Latin American, Caribbean, Latinx and Iberian Studies. Which of the following controlled vocabularies best fits our data?
-A. Library of Congress Subject Headings (LCSH)
-B. Hispanic American Periodicals Index (HAPI) Subject Headings
-C. Medical Subject Headings (MeSH)
+
+A) Library of Congress Subject Headings (LCSH)
+B) Hispanic American Periodicals Index (HAPI) Subject Headings
+C) Medical Subject Headings (MeSH)
 
 :::::::::::::::  solution
 
@@ -90,9 +91,9 @@ For more guidance, see:
 
 Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
 
-A. Terms in Spanish & Portuguese
-B. Country Coverage
-C. Resource type
+A) Terms in Spanish & Portuguese
+B) Country Coverage
+C) Resource type
 
 :::::::::::::::  solution
 
@@ -101,16 +102,17 @@ C. Resource type
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Evaluate Sample Dataset
-At this point, go ahead and copy the lacli-sample-data spreadsheet to your Google Drive.
+At this point, go ahead and copy the [lacli-sample-data spreadsheet](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) to your Google Drive. We'll explore the data through the following two questions.
 
 
 :::::::::::::::::::::::::::::::::::::::::: spoiler
 
 ### There are typos that may result in inaccurate search results. How might you edit this?
 
-Use tutorials and other existing google sheet shortcuts. Filtering within a column, for example, is a fast way to pull out terms only used once, some of which may in fact be typos.
+Use tutorials and other existing Google Sheet shortcuts. Filtering within a column, for example, is a fast way to pull out terms only used once, some of which may in fact be typos.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 :::::::::::::::::::::::::::::::::::::::::: spoiler
 
