@@ -24,10 +24,10 @@ This lesson is based on the authors’ experience developing [LACLI](https://lac
 **Part 1: Ethical and Multilingual Description Standards**
 - Understand how a description standard ensures ethical representation of data and the importance of multilingual access.
 
-**Part 2: Database and Search System Development**
+**Part 2: Building the Search Web App**
 - Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
 
-**Part 3: Promote and Encourage Participation and Collaboration**
+**Part 3: Action Plan for Promotion and Collaboration**
 - Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
 
 ## Who is this lesson for?
