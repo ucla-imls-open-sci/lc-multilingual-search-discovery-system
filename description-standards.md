@@ -83,8 +83,8 @@ Find an existing one! Search for one related to your scholarly area or try Patri
 When choosing which metadata to capture, how to organize it, and how to use it, we necessarily apply our own perspectives and experiences to those choices. Thus it is important to conscientiously work to avoid bias as much as possible. Take a step back and think about how the structure of your metadata may help or hinder access by your target audience.
 
 For more guidance, see:
-- [*The Cataloging Code of Ethics*](http://hdl.handle.net/11213/16716)
-- [*Statement of Internaitonal Cataloging Principles*](https://repository.ifla.org/handle/20.500.14598/80)
++ [*The Cataloging Code of Ethics*](http://hdl.handle.net/11213/16716)
++ [*Statement of Internaitonal Cataloging Principles*](https://repository.ifla.org/handle/20.500.14598/80)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Matching Metadata Standards to a Target Audience
