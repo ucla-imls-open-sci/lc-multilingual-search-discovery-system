@@ -68,6 +68,7 @@ contact: 'eric.silberberg@qc.cuny.edu' # FIXME
 episodes: 
 # - introduction.md
 - description-standards.md
+- web-app.md
 - action-plan.md
 
 # Information for Learners
