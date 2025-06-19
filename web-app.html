@@ -215,12 +215,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         2. Building the Search Web App
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#establish-functional-requirements">Establish Functional Requirements</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -311,10 +318,12 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What are the most effective strategies for promoting a project to a
-diverse and global audience?</li>
-<li>How do we foster multilingual and culturally diverse
-collaborations?</li>
+<ul><li>Based on my data, what are the functional requirements for a simple
+search and discovery web app?</li>
+<li>What is an API endpoint?</li>
+<li>How can I use the JavaScript methods .get(), .filter(), and .map()
+to retrieve my data, filter my data, and display my data on the web
+app.</li>
 </ul></div>
 </div>
 </div>
@@ -322,16 +331,71 @@ collaborations?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Identify and evaluate effective strategies to promote and increase
-visibility of your project among your diverse and global potential
-users.</li>
-<li>Learn how to encourage participation in your project and nurture
-collaborations that enhance its multilingual functionality, cultural
-diversity, and global usefulness.</li>
-<li>Develop an action plan to promote your project and encourage
-participation and collaboration.</li>
+<ul><li>Establish functional requirements for a web application.</li>
+<li>Transform a Google Sheet into a simple API endpoint with Google App
+Script.</li>
+<li>Build three JavaScript functions that filter and display your Google
+Sheet data on a website.</li>
 </ul></div>
 </div>
+</div>
+</div>
+</div>
+<p>In this part we will create a single page website that displays a
+search and discovery system for data on a Google Sheet using
+JavaScript.</p>
+<section><h2 class="section-heading" id="establish-functional-requirements">Establish Functional Requirements<a class="anchor" aria-label="anchor" href="#establish-functional-requirements"></a></h2>
+<hr class="half-width"><p>In any technical project, it’s essential to establish clear
+functional requirements before diving into the technical details. This
+ensures that the team stays focused on the core objectives of the
+project, rather than getting sidetracked by fancy features or bells and
+whistles.</p>
+<p>During the development of the LACLI project, we arrived at a series
+of functional requirements. Many of which are shared by digital projects
+in the humanities and social sciences:</p>
+<table class="table"><colgroup><col width="53%"><col width="46%"></colgroup><thead><tr class="header"><th>Functional Requirement</th>
+<th>Solution</th>
+</tr></thead><tbody><tr class="odd"><td>A free, intuitive, and collaborative database solution that can be
+easily edited by multiple volunteers without prior database
+knowledge.</td>
+<td>Google Sheets is a free, cloud-based spreadsheet solution that is
+intuitive to use, supports real-time collaboration by multiple users,
+and does not require extensive database knowledge.</td>
+</tr><tr class="even"><td>Free web hosting services to store and access website files.</td>
+<td>GitHub Pages allows you to easily publish static websites directly
+from your GitHub repositories and use custom URL.</td>
+</tr><tr class="odd"><td>The client-side technology should be open-source and avoid the use
+of front-end frameworks, which have a steep learning curve and can
+dissuade collaboration among those unfamiliar with a given
+framework.</td>
+<td>Vanilla JavaScript is the core programming language of the web and
+is open-source. It provides for collaboration and easy maintenance as it
+is framework independent.</td>
+</tr><tr class="even"><td>The user interface should allow users to search through the data
+using keywords and present resources in an attractive, easy-to-read
+format that includes links to the original resources.</td>
+<td>JavaScript can make API calls, filter data, and display data on a
+webpage by injecting HTML into the site at run time.</td>
+</tr><tr class="odd"><td>The website must be translatable.</td>
+<td>JavaScript can create a translation table inside of an object to
+switch the site’s text content.</td>
+</tr></tbody></table><p>With this solution, the website data is edited and stored using
+Google Sheets. The added benefit is using Google’s security via its
+login credentials and you can also manage access of users. Then we use
+JavaScript to get the data from the spreadsheet and display it on our
+website. The JavaScript file that does that data manipulation, as well
+as the HTML and CSS files that give structure and style to our site, all
+live in a GitHub repository and are served to the public via their
+GitHub Pages service.</p>
+<div id="best-practices" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="best-practices" class="callout-inner">
+<h3 class="callout-title">Best Practices</h3>
+<div class="callout-content">
+<p>Based on the functional requirement assessment created above, name
+three best practices for writing effective functional requirements.</p>
 </div>
 </div>
 </div>
@@ -339,10 +403,7 @@ participation and collaboration.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="description-standards.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="action-plan.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

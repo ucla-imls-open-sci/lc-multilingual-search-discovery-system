@@ -405,7 +405,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -473,7 +473,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -538,7 +538,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -561,7 +561,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -575,7 +575,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -603,10 +603,12 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are the most effective strategies for promoting a project to a
-diverse and global audience?</li>
-<li>How do we foster multilingual and culturally diverse
-collaborations?</li>
+<li>Based on my data, what are the functional requirements for a simple
+search and discovery web app?</li>
+<li>What is an API endpoint?</li>
+<li>How can I use the JavaScript methods .get(), .filter(), and .map()
+to retrieve my data, filter my data, and display my data on the web
+app.</li>
 </ul>
 </div>
 </div>
@@ -616,20 +618,102 @@ collaborations?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Identify and evaluate effective strategies to promote and increase
-visibility of your project among your diverse and global potential
-users.</li>
-<li>Learn how to encourage participation in your project and nurture
-collaborations that enhance its multilingual functionality, cultural
-diversity, and global usefulness.</li>
-<li>Develop an action plan to promote your project and encourage
-participation and collaboration.</li>
+<li>Establish functional requirements for a web application.</li>
+<li>Transform a Google Sheet into a simple API endpoint with Google App
+Script.</li>
+<li>Build three JavaScript functions that filter and display your Google
+Sheet data on a website.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-</div></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
+</div>
+<p>In this part we will create a single page website that displays a
+search and discovery system for data on a Google Sheet using
+JavaScript.</p>
+<section><h2 class="section-heading" id="establish-functional-requirements">Establish Functional Requirements<a class="anchor" aria-label="anchor" href="#establish-functional-requirements"></a>
+</h2>
+<hr class="half-width">
+<p>In any technical project, it’s essential to establish clear
+functional requirements before diving into the technical details. This
+ensures that the team stays focused on the core objectives of the
+project, rather than getting sidetracked by fancy features or bells and
+whistles.</p>
+<p>During the development of the LACLI project, we arrived at a series
+of functional requirements. Many of which are shared by digital projects
+in the humanities and social sciences:</p>
+<table class="table">
+<colgroup>
+<col width="53%">
+<col width="46%">
+</colgroup>
+<thead><tr class="header">
+<th>Functional Requirement</th>
+<th>Solution</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>A free, intuitive, and collaborative database solution that can be
+easily edited by multiple volunteers without prior database
+knowledge.</td>
+<td>Google Sheets is a free, cloud-based spreadsheet solution that is
+intuitive to use, supports real-time collaboration by multiple users,
+and does not require extensive database knowledge.</td>
+</tr>
+<tr class="even">
+<td>Free web hosting services to store and access website files.</td>
+<td>GitHub Pages allows you to easily publish static websites directly
+from your GitHub repositories and use custom URL.</td>
+</tr>
+<tr class="odd">
+<td>The client-side technology should be open-source and avoid the use
+of front-end frameworks, which have a steep learning curve and can
+dissuade collaboration among those unfamiliar with a given
+framework.</td>
+<td>Vanilla JavaScript is the core programming language of the web and
+is open-source. It provides for collaboration and easy maintenance as it
+is framework independent.</td>
+</tr>
+<tr class="even">
+<td>The user interface should allow users to search through the data
+using keywords and present resources in an attractive, easy-to-read
+format that includes links to the original resources.</td>
+<td>JavaScript can make API calls, filter data, and display data on a
+webpage by injecting HTML into the site at run time.</td>
+</tr>
+<tr class="odd">
+<td>The website must be translatable.</td>
+<td>JavaScript can create a translation table inside of an object to
+switch the site’s text content.</td>
+</tr>
+</tbody>
+</table>
+<p>With this solution, the website data is edited and stored using
+Google Sheets. The added benefit is using Google’s security via its
+login credentials and you can also manage access of users. Then we use
+JavaScript to get the data from the spreadsheet and display it on our
+website. The JavaScript file that does that data manipulation, as well
+as the HTML and CSS files that give structure and style to our site, all
+live in a GitHub repository and are served to the public via their
+GitHub Pages service.</p>
+<div id="best-practices" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="best-practices" class="callout-inner">
+<h3 class="callout-title">Best Practices</h3>
+<div class="callout-content">
+<p>Based on the functional requirement assessment created above, name
+three best practices for writing effective functional requirements.</p>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
 <hr>
 <p>Last updated on 2025-06-18 |
 
