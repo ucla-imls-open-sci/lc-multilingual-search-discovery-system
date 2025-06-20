@@ -226,6 +226,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#establish-functional-requirements">Establish Functional Requirements</a></li>
+<li><a href="#transform-a-google-sheet-into-an-api-endpoint">Transform a Google Sheet into an API Endpoint</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -299,7 +300,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Building the Search Web App</h1>
-        <p>Last updated on 2025-06-19 |
+        <p>Last updated on 2025-06-20 |
 
         <a href="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/edit/main/episodes/web-app.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -355,52 +356,78 @@ whistles.</p>
 <p>During the development of the LACLI project, we arrived at a series
 of functional requirements. Many of which are shared by digital projects
 in the humanities and social sciences:</p>
-<table class="table"><colgroup><col width="53%"><col width="46%"></colgroup><thead><tr class="header"><th>Functional Requirement</th>
-<th>Solution</th>
-</tr></thead><tbody><tr class="odd"><td>A free, intuitive, and collaborative database solution that can be
-easily edited by multiple volunteers without prior database
-knowledge.</td>
-<td>Google Sheets is a free, cloud-based spreadsheet solution that is
-intuitive to use, supports real-time collaboration by multiple users,
-and does not require extensive database knowledge.</td>
-</tr><tr class="even"><td>Free web hosting services to store and access website files.</td>
-<td>GitHub Pages allows you to easily publish static websites directly
-from your GitHub repositories and use custom URL.</td>
-</tr><tr class="odd"><td>The client-side technology should be open-source and avoid the use
-of front-end frameworks, which have a steep learning curve and can
-dissuade collaboration among those unfamiliar with a given
+<table class="table"><colgroup><col width="52%"><col width="47%"></colgroup><thead><tr class="header"><th align="center">Functional Requirement</th>
+<th align="center">Solution</th>
+</tr></thead><tbody><tr class="odd"><td align="center">A free, intuitive, and collaborative database
+solution that can be easily edited by multiple volunteers without prior
+database knowledge.</td>
+<td align="center">Google Sheets is a free, cloud-based spreadsheet
+solution that is intuitive to use, supports real-time collaboration by
+multiple users, and does not require extensive database knowledge.</td>
+</tr><tr class="even"><td align="center">Free web hosting services to store and access website
+files.</td>
+<td align="center">GitHub Pages allows you to easily publish static
+websites directly from your GitHub repositories and use custom URL.</td>
+</tr><tr class="odd"><td align="center">The client-side technology should be open-source and
+avoid the use of front-end frameworks, which have a steep learning curve
+and can dissuade collaboration among those unfamiliar with a given
 framework.</td>
-<td>Vanilla JavaScript is the core programming language of the web and
-is open-source. It provides for collaboration and easy maintenance as it
-is framework independent.</td>
-</tr><tr class="even"><td>The user interface should allow users to search through the data
-using keywords and present resources in an attractive, easy-to-read
-format that includes links to the original resources.</td>
-<td>JavaScript can make API calls, filter data, and display data on a
-webpage by injecting HTML into the site at run time.</td>
-</tr><tr class="odd"><td>The website must be translatable.</td>
-<td>JavaScript can create a translation table inside of an object to
-switch the site’s text content.</td>
+<td align="center">Vanilla JavaScript is the core programming language
+of the web and is open-source. It provides for collaboration and easy
+maintenance as it is framework independent.</td>
+</tr><tr class="even"><td align="center">The user interface should allow users to search
+through the data using keywords and present resources in an attractive,
+easy-to-read format that includes links to the original resources.</td>
+<td align="center">JavaScript can make API calls, filter data, and
+display data on a webpage by injecting HTML into the site at run
+time.</td>
+</tr><tr class="odd"><td align="center">The website must be translatable.</td>
+<td align="center">JavaScript can create a translation table inside of
+an object to switch the site’s text content.</td>
 </tr></tbody></table><p>With this solution, the website data is edited and stored using
-Google Sheets. The added benefit is using Google’s security via its
-login credentials and you can also manage access of users. Then we use
-JavaScript to get the data from the spreadsheet and display it on our
-website. The JavaScript file that does that data manipulation, as well
-as the HTML and CSS files that give structure and style to our site, all
-live in a GitHub repository and are served to the public via their
-GitHub Pages service.</p>
-<div id="best-practices" class="callout discussion">
+Google Sheets. The added benefit is that Google already has an entire
+security infrastructure: you can set permission of who can view,
+comment, or edit files in Google Drive. Then we use JavaScript to get
+the data from the spreadsheet and display it on our website. The
+JavaScript file that does that data manipulation, as well as the HTML
+and CSS files that give structure and style to our site, all live in a
+GitHub repository and are served to the public via their GitHub Pages
+service.</p>
+<div id="write-your-own" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="best-practices" class="callout-inner">
-<h3 class="callout-title">Best Practices</h3>
+<div id="write-your-own" class="callout-inner">
+<h3 class="callout-title">Write Your Own</h3>
 <div class="callout-content">
-<p>Based on the functional requirement assessment created above, name
-three best practices for writing effective functional requirements.</p>
+<p>Based on the functional requirement assessment above, create your own
+two column table and list the functional requirements for your project
+on one side. As you progress through this lesson, note what suggestions
+provided here could be solutions to your specific functional
+requirements.</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="transform-a-google-sheet-into-an-api-endpoint">Transform a Google Sheet into an API Endpoint<a class="anchor" aria-label="anchor" href="#transform-a-google-sheet-into-an-api-endpoint"></a></h2>
+<hr class="half-width"><p>The first technological hurtle is the fact that a Google Sheet is not
+automatically set up like a database. We will do this in three steps: 1.
+Create a Google App Script file that uses the Google Sheets API. 2.
+Write a script in the file that wraps all data up in a JSON. 3. Launch
+our script as a web app, which creates a unique API endpoint for our
+data and will permit our website to get that data and bring it to the
+user’s browser.</p>
+<p>An API is a set of protocols that delivers data to a website. We want
+our site to receive the data in our spreadsheet as JSON (JavaScript
+Object Notation), which is a text-based data format to transmit data
+objects between a web server and a client-side application. When we talk
+about server-side, we are talking about operations that happen in the
+database on the servers. When we talk about client-side, we are talking
+about operations that occur in the user’s browser.</p>
+<p>To activate the Google Sheet API and transform our Spreadsheet into
+JSON data requires creating a Google App Script file. In the Google
+Drive folder where you copied lacli-sample-data create a Google App
+Script File and name it Convert Sheet to JSON. When you open it, add the
+Google Sheets API under Services:</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -463,8 +490,8 @@ any links that you are not going to use.
   "url": "https://ucla-imls-open-sci.github.io/lc-multilingual-search-discovery-system/instructor/web-app.html",
   "identifier": "https://ucla-imls-open-sci.github.io/lc-multilingual-search-discovery-system/instructor/web-app.html",
   "dateCreated": "2024-09-01",
-  "dateModified": "2025-06-19",
-  "datePublished": "2025-06-19"
+  "dateModified": "2025-06-20",
+  "datePublished": "2025-06-20"
 }
 
   </script><script>
