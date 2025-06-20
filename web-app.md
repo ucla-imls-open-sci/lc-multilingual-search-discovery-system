@@ -28,17 +28,28 @@ In any technical project, it's essential to establish clear functional requireme
 During the development of the LACLI project, we arrived at a series of functional requirements. Many of which are shared by digital projects in the humanities and social sciences:
 
 | Functional Requirement    | Solution |
-| -------- | ------- |
+| :--------: | :-------: |
 | A free, intuitive, and collaborative database solution that can be easily edited by multiple volunteers without prior database knowledge.  | Google Sheets is a free, cloud-based spreadsheet solution that is intuitive to use, supports real-time collaboration by multiple users, and does not require extensive database knowledge.    |
 | Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
 | The client-side technology should be open-source and avoid the use of front-end frameworks, which have a steep learning curve and can dissuade collaboration among those unfamiliar with a given framework.    | Vanilla JavaScript is the core programming language of the web and is open-source. It provides for collaboration and easy maintenance as it is framework independent.    |
 | The user interface should allow users to search through the data using keywords and present resources in an attractive, easy-to-read format that includes links to the original resources.    | JavaScript can make API calls, filter data, and display data on a webpage by injecting HTML into the site at run time.    |
 | The website must be translatable.    | JavaScript can create a translation table inside of an object to switch the site’s text content.    |
 
-With this solution, the website data is edited and stored using Google Sheets. The added benefit is using Google’s security via its login credentials and you can also manage access of users. Then we use JavaScript to get the data from the spreadsheet and display it on our website. The JavaScript file that does that data manipulation, as well as the HTML and CSS files that give structure and style to our site, all live in a GitHub repository and are served to the public via their GitHub Pages service.
+With this solution, the website data is edited and stored using Google Sheets. The added benefit is that Google already has an entire security infrastructure: you can set permission of who can view, comment, or edit files in Google Drive. Then we use JavaScript to get the data from the spreadsheet and display it on our website. The JavaScript file that does that data manipulation, as well as the HTML and CSS files that give structure and style to our site, all live in a GitHub repository and are served to the public via their GitHub Pages service.
 
 :::::::::::::::::::::::::::::::::::::::: challenge
-### Best Practices
-Based on the functional requirement assessment created above, name three best practices for writing effective functional requirements.
+### Write Your Own
+Based on the functional requirement assessment above, create your own two column table and list the functional requirements for your project on one side. As you progress through this lesson, note what suggestions provided here could be solutions to your specific functional requirements.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Transform a Google Sheet into an API Endpoint
+
+The first technological hurtle is the fact that a Google Sheet is not automatically set up like a database. We will do this in three steps:
+1. Create a Google App Script file that uses the Google Sheets API.
+2. Write a script in the file that wraps all data up in a JSON.
+3. Launch our script as a web app, which creates a unique API endpoint for our data and will permit our website to get that data and bring it to the user’s browser.
+
+An API is a set of protocols that delivers data to a website. We want our site to receive the data in our spreadsheet as JSON (JavaScript Object Notation), which is a text-based data format to transmit data objects between a web server and a client-side application. When we talk about server-side, we are talking about operations that happen in the database on the servers. When we talk about client-side, we are talking about operations that occur in the user’s browser.
+
+To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. In the Google Drive folder where you copied lacli-sample-data create a Google App Script File and name it Convert Sheet to JSON. When you open it, add the Google Sheets API under Services:
