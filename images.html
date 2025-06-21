@@ -335,16 +335,17 @@
 <hr class="half-width">
 <h3 id="web-app-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Screenshot of the spreadsheet’s URL.’</p>
-<p>Let’s take this code step by step: 1.
+<p>Let’s take this code step by step:<br> 1.
 <code>function doGet(request)</code> is a stock function in Google App
-Script that handles a GET request made to your script’s web app URL. 2.
-Your spreadsheetid is available in the URL for the spreadsheet. Copy the
-string of alphanumeric characters in the URL of your spreadsheet: <img src="https://drive.google.com/file/d/1ZGz9MOPGdGOb01TtnLmkmE5NC5GivU_l/view" alt="Screenshot of the spreadsheet’s URL." class="figure"> 3.
+Script that handles a GET request made to your script’s web app URL.<br>
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy
+the string of alphanumeric characters in the URL of your
+spreadsheet:<br><img src="spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
 <code>var headers = dataValues[2]</code>, set the index of where the
 JSON should read header names. Because in our spreadsheet we have 2 rows
 of contextual information, we want the JSON to start on row 3 to find
-column headers. 4. <code>var rows = [],</code> the script will loop over
-all rows to add them to the JSON.</p>
+column headers.<br> 4. <code>var rows = [],</code> the script will loop
+over all rows to add them to the JSON.<br></p>
 <hr></section><section id="action-plan"><h2 class="section-heading"><a href="action-plan.html">Action Plan for Promotion and Collaboration</a></h2>
 <hr class="half-width"></section>
 </div>

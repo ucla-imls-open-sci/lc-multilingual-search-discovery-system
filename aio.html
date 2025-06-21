@@ -402,7 +402,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -470,7 +470,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -535,7 +535,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -558,7 +558,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -572,7 +572,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -770,16 +770,58 @@ App Script, delete the default function:</p>
 <span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>  <span class="cf">return</span> ContentService<span class="op">.</span><span class="fu">createTextOutput</span>(output)<span class="op">.</span><span class="fu">setMimeType</span>(ContentService<span class="op">.</span><span class="at">MimeType</span><span class="op">.</span><span class="at">JSON</span>)<span class="op">;</span></span>
 <span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>}</span></code></pre>
 </div>
-<p>Let’s take this code step by step: 1.
+<p>Let’s take this code step by step:<br> 1.
 <code>function doGet(request)</code> is a stock function in Google App
-Script that handles a GET request made to your script’s web app URL. 2.
-Your spreadsheetid is available in the URL for the spreadsheet. Copy the
-string of alphanumeric characters in the URL of your spreadsheet: <img src="https://drive.google.com/file/d/1ZGz9MOPGdGOb01TtnLmkmE5NC5GivU_l/view" alt="Screenshot of the spreadsheet’s URL." class="figure"> 3.
+Script that handles a GET request made to your script’s web app URL.<br>
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy
+the string of alphanumeric characters in the URL of your
+spreadsheet:<br><img src="spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
 <code>var headers = dataValues[2]</code>, set the index of where the
 JSON should read header names. Because in our spreadsheet we have 2 rows
 of contextual information, we want the JSON to start on row 3 to find
-column headers. 4. <code>var rows = [],</code> the script will loop over
-all rows to add them to the JSON.</p>
+column headers.<br> 4. <code>var rows = [],</code> the script will loop
+over all rows to add them to the JSON.<br></p>
+<p>The last step is launching the web app:</p>
+<iframe src="https://drive.google.com/file/d/1h3vF1022Ksv5TrI7_gnhYYw1FcAdhnL5/preview" width="640" height="480" allow="autoplay">
+</iframe>
+<div id="keep-the-url-handy" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="keep-the-url-handy" class="callout-inner">
+<h3 class="callout-title">Keep the URL handy!</h3>
+<div class="callout-content">
+<p>At the end of the video, you see that a red box appears around the
+Webapp URL. This URL will act as our API endpoint and enable our
+discovery system to import all the data from our Google Sheet in JSON.
+Take a moment to copy this URL into your browser. You’ll see that now
+all our spreadsheet data is represented in JSON.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="connect-your-website-and-database">Connect your Website and Database<a class="anchor" aria-label="anchor" href="#connect-your-website-and-database"></a>
+</h2>
+<hr class="half-width">
+<p>In this section we will take the API endpoint we created in episode
+2.2 and connect it to our website. We’ll then display that data on our
+website.</p>
+<p>To get started, download <code>webapp</code>, which contains the
+starting files for our website. Your file structure will look like
+this:</p>
+<pre><code>–webapp
+	–app.js
+	–index.html
+	–style.css</code></pre>
+<p>Open index.html in the browser and you will see a basic structure for
+our discovery system. I’ve already given you some basic styling. We
+won’t be looking at style.css during this lesson, but feel free to
+modify it after.</p>
+<p>From top to bottom: we have our language selection buttons, which we
+will use in a later episode to translate our page. Then we have our
+search bar, search button, and refresh button. We will use these in the
+next episode to enable users to search through the research data by with
+keywords. Last, in the blank white space is where we will populate our
+website with our research data.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
