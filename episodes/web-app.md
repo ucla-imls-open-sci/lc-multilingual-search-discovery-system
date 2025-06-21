@@ -92,7 +92,7 @@ function doGet(request) {
 Let's take this code step by step:<br>
 1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br>
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br>
-![Screenshot of the spreadsheet's URL.](spreadsheet-url.png)<br>
+![Screenshot of the spreadsheet's URL.](media/spreadsheet-url.png)<br>
 3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br>
 4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br>
 
@@ -122,3 +122,21 @@ Open index.html in the browser and you will see a basic structure for our discov
 
 From top to bottom: we have our language selection buttons, which we will use in a later episode to translate our page. Then we have our search bar, search button, and refresh button. We will use these in the next episode to enable users to search through the research data by with keywords. Last, in the blank white space is where we will populate our website with our research data.
 
+![Basic discovery interface.](media/basic-discovery-system.png)
+
+Now open the `webapp` folder in your preferred Integrated development environment (IDE). Let’s take a look at `app.js`, which will drive our site’s functionality. Right now, we only have a road map of how we will build our system:
+
+```app.js
+// Define API endpoint and DOM elements
+const googleSheet = '';
+
+
+// Get Data
+
+
+// Filter Data
+
+
+// Display Data
+
+```
