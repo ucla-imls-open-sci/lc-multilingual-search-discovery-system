@@ -54,7 +54,7 @@ An API is a set of protocols that delivers data to a website. We want our site t
 
 To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. In the Google Drive folder where you copied lacli-sample-data create a Google App Script File and name it Convert Sheet to JSON. When you open it, add the Google Sheets API under Services:
 
-VIDEO HERE
+![Video showing how to create App Script file.](media/CreateAppScriptFile.mp4)
 
 Now that the Sheets API is set up, we will instruct it to wrap up our spreadsheet data in JSON. First, in the text editing window of Google App Script, delete the default function:
 
@@ -91,5 +91,8 @@ function doGet(request) {
 
 Let's take this code step by step:
 1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.
-2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet: IMAGE HERE
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:
+![Screenshot of the spreadsheet's URL.](media/spreadsheet-url.png)
+3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.
+4. `var rows = [],` the script will loop over all rows to add them to the JSON.
 
