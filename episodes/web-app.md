@@ -89,10 +89,36 @@ function doGet(request) {
 }
 ```
 
-Let's take this code step by step:
-1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.
-2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:
-![Screenshot of the spreadsheet's URL.](https://drive.google.com/file/d/1ZGz9MOPGdGOb01TtnLmkmE5NC5GivU_l/view)
-3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.
-4. `var rows = [],` the script will loop over all rows to add them to the JSON.
+Let's take this code step by step:<br>
+1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br>
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br>
+![Screenshot of the spreadsheet's URL.](spreadsheet-url.png)<br>
+3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br>
+4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br>
+
+The last step is launching the web app:
+
+<iframe src="https://drive.google.com/file/d/1h3vF1022Ksv5TrI7_gnhYYw1FcAdhnL5/preview" width="640" height="480" allow="autoplay"></iframe>
+
+::: callout
+### Keep the URL handy!
+
+At the end of the video, you see that a red box appears around the Webapp URL. This URL will act as our API endpoint and enable our discovery system to import all the data from our Google Sheet in JSON. Take a moment to copy this URL into your browser. You’ll see that now all our spreadsheet data is represented in JSON.
+:::
+
+## Connect your Website and Database
+In this section we will take the API endpoint we created in episode 2.2 and connect it to our website. We’ll then display that data on our website.
+
+To get started, download `webapp`, which contains the starting files for our website. Your file structure will look like this:
+
+```
+–webapp
+	–app.js
+	–index.html
+	–style.css
+```
+
+Open index.html in the browser and you will see a basic structure for our discovery system. I’ve already given you some basic styling. We won’t be looking at style.css during this lesson, but feel free to modify it after. 
+
+From top to bottom: we have our language selection buttons, which we will use in a later episode to translate our page. Then we have our search bar, search button, and refresh button. We will use these in the next episode to enable users to search through the research data by with keywords. Last, in the blank white space is where we will populate our website with our research data.
 
