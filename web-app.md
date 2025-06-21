@@ -27,7 +27,7 @@ In any technical project, it's essential to establish clear functional requireme
 
 During the development of the LACLI project, we arrived at a series of functional requirements. Many of which are shared by digital projects in the humanities and social sciences:
 
-| Functional Requirement    | Solution |
+|     Functional Requirement    |    Solution    |
 | :--------: | :-------: |
 | A free, intuitive, and collaborative database solution that can be easily edited by multiple volunteers without prior database knowledge.  | Google Sheets is a free, cloud-based spreadsheet solution that is intuitive to use, supports real-time collaboration by multiple users, and does not require extensive database knowledge.    |
 | Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
@@ -53,3 +53,43 @@ The first technological hurtle is the fact that a Google Sheet is not automatica
 An API is a set of protocols that delivers data to a website. We want our site to receive the data in our spreadsheet as JSON (JavaScript Object Notation), which is a text-based data format to transmit data objects between a web server and a client-side application. When we talk about server-side, we are talking about operations that happen in the database on the servers. When we talk about client-side, we are talking about operations that occur in the user’s browser.
 
 To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. In the Google Drive folder where you copied lacli-sample-data create a Google App Script File and name it Convert Sheet to JSON. When you open it, add the Google Sheets API under Services:
+
+VIDEO HERE
+
+Now that the Sheets API is set up, we will instruct it to wrap up our spreadsheet data in JSON. First, in the text editing window of Google App Script, delete the default function:
+
+```javascript
+function myFunction() {
+ }
+```
+
+We will replace it with the following code:
+
+```javascript
+function doGet(request) {
+  var spreadsheetId = '....'; // Replace with Google Sheet ID
+  var sheetName = 'Main'; // Replace with the sheet you want to retrieve data from
+  // make sure the advanced sheets service is enabled for this script
+  var dataValues = Sheets.Spreadsheets.Values.get(spreadsheetId, sheetName).values;
+  
+  // Change the index from 0 to 2 to use row 3 as column headings
+  var headers = dataValues[2];
+  
+  var rows = [];
+  for (var i = 3; i < dataValues.length; i++) { // Start from row 4, as row 3 is the column headings
+    var row = {};
+    for (var j = 0; j < headers.length; j++) {
+      row[headers[j]] = dataValues[i][j];
+    }
+    rows.push(row);
+  }
+  
+  var output = JSON.stringify(rows);
+  return ContentService.createTextOutput(output).setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+Let's take this code step by step:
+1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet: IMAGE HERE
+
