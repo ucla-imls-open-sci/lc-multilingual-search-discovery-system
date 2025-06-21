@@ -428,7 +428,11 @@ JSON data requires creating a Google App Script file. In the Google
 Drive folder where you copied lacli-sample-data create a Google App
 Script File and name it Convert Sheet to JSON. When you open it, add the
 Google Sheets API under Services:</p>
-<p>VIDEO HERE</p>
+<div class="float">
+<video src="media/CreateAppScriptFile.mp4" controls=""><a href="../media/CreateAppScriptFile.mp4">Video showing how to create App
+Script file.</a></video><div class="figcaption">Video showing how to create App Script
+file.</div>
+</div>
 <p>Now that the Sheets API is set up, we will instruct it to wrap up our
 spreadsheet data in JSON. First, in the text editing window of Google
 App Script, delete the default function:</p>
@@ -468,8 +472,12 @@ App Script, delete the default function:</p>
 <code>function doGet(request)</code> is a stock function in Google App
 Script that handles a GET request made to your script’s web app URL. 2.
 Your spreadsheetid is available in the URL for the spreadsheet. Copy the
-string of alphanumeric characters in the URL of your spreadsheet: IMAGE
-HERE</p>
+string of alphanumeric characters in the URL of your spreadsheet: <img src="../media/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"> 3.
+<code>var headers = dataValues[2]</code>, set the index of where the
+JSON should read header names. Because in our spreadsheet we have 2 rows
+of contextual information, we want the JSON to start on row 3 to find
+column headers. 4. <code>var rows = [],</code> the script will loop over
+all rows to add them to the JSON.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
