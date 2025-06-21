@@ -92,7 +92,7 @@ function doGet(request) {
 Let's take this code step by step:
 1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:
-![Screenshot of the spreadsheet's URL.](media/spreadsheet-url.png)
+![Screenshot of the spreadsheet's URL.](https://drive.google.com/file/d/1ZGz9MOPGdGOb01TtnLmkmE5NC5GivU_l/view)
 3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.
 4. `var rows = [],` the script will loop over all rows to add them to the JSON.
 
