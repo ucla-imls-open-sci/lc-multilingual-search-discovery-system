@@ -15,8 +15,9 @@ This lesson is based on the authors’ experience developing [LACLI](https://lac
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
 ## Prerequisites
-1. Learners need to have a foundational understanding of HTML, CSS, and JavaScript.
-2. Learners should have basic experience using spreadsheets like Google Sheets.
+1. Learners need a Google account.
+2. Learners need a foundational understanding of HTML, CSS, and JavaScript.
+3. Learners need basic experience using spreadsheets like Google Sheets.
    
 ::::::::::::::::::::::::::::::::::::::::::
 
