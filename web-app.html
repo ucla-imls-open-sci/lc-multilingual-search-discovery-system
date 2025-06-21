@@ -469,7 +469,7 @@ App Script, delete the default function:</p>
 Script that handles a GET request made to your script’s web app URL.<br>
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy
 the string of alphanumeric characters in the URL of your
-spreadsheet:<br><img src="spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
+spreadsheet:<br><img src="media/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
 <code>var headers = dataValues[2]</code>, set the index of where the
 JSON should read header names. Because in our spreadsheet we have 2 rows
 of contextual information, we want the JSON to start on row 3 to find
@@ -514,6 +514,26 @@ search bar, search button, and refresh button. We will use these in the
 next episode to enable users to search through the research data by with
 keywords. Last, in the blank white space is where we will populate our
 website with our research data.</p>
+<figure><img src="media/basic-discovery-system.png" alt="Basic discovery interface." class="figure mx-auto d-block"><div class="figcaption">Basic discovery interface.</div>
+</figure><p>Now open the <code>webapp</code> folder in your preferred Integrated
+development environment (IDE). Let’s take a look at <code>app.js</code>,
+which will drive our site’s functionality. Right now, we only have a
+road map of how we will build our system:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">// Define API endpoint and DOM elements</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">const</span> googleSheet <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">// Get Data</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">// Filter Data</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">// Display Data</span></span></code></pre>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
