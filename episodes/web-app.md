@@ -288,3 +288,81 @@ You can see what we are iterating over all the data and placing each object’s 
 Open `index.html` in the browser and you will see the "Resource_Title" of each object in our data array now populating the formerly blank white space below the search bar.
 
 ![Discovery interface displaying all resource titles.](media/title-display.png)
+
+In our [lacli-sample-data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet, we have a lot of other data about each resource that is useful to users:
+- Resource_Types
+- Languages
+- Countries
+- URL
+- Subjects_in_English
+- Materias_en_Espanol
+- Assuntos_em_Portugues
+- Time_Coverage
+- Institutional_Hosts
+- Summary
+
+Thus, the hierarchy we apply to this data when we populate it on our website should reflect some kind of logic. For example, the "Resource_Title" should serve as a "URL" link to the resource. Below the title, we should have the "Institutional_Hosts." The rest of the data is there to describe the resource so that a user can quickly evaluate whether they are interested in a given resource. Here is one possible arrangement of this data in html:
+
+```html
+<article class="item">
+    <div class="item-header">
+        <h2><a href="${object.URL}" target="_blank" rel="noopener noreferrer">${object.Resource_Title}</a></h2>
+        <p>${object.Institutional_Hosts}</p>
+    </div>
+    <div class="item-description">
+        <p><span class="inline-label">Resource Types: </span>${object.Resource_Types}</p>
+        <p><span class="inline-label">Subjects in English: </span>${object.Subjects_in_English}</p>
+        <p><span class="inline-label">Materias en Español: </span>${object.Materias_en_Espanol}</p>
+        <p><span class="inline-label">Assuntos em Português: </span>${object.Assuntos_em_Portugues}</p>
+        <p><span class="inline-label">Languages: </span>${object.Languages}</p>
+        <p><span class="inline-label">Countries: </span>${object.Countries}</p>
+        <p><span class="inline-label">Time Coverage: </span>${object.Time_Coverage}</p>
+        <p><span class="inline-label">Summary: </span>${object.Summary}</p>
+    </div>
+</article>
+```
+
+As we discussed above when we were just applying `object.Resource_Title`, here you can see that we can call all the different data elements per resource with this same notation. Want to call the language of the resource? `object.Languages`. Materias en Español? `object.Materias_en_Espanol`. Again, all borrowing the column headings from our Google Sheet. We wrap each resource in an article tag as it defines independent content and thus improves accessibility by providing clear structure for assistive technologies.
+
+We can copy this html into our displayData() function like this:
+
+```app.js
+const display = document.getElementById('display');
+
+// Display data
+function displayData(data) {
+ let dataDisplay = data.map((object) => {
+   return `
+<article class="item">
+   <div class="item-header">
+       <h2><a href="${object.URL}" target="_blank" rel="noopener noreferrer">${object.Resource_Title}</a></h2>
+       <p>${object.Institutional_Hosts}</p>
+   </div>
+   <div class="item-description">
+       <p><span class="inline-label">Resource Types: </span>${object.Resource_Types}</p>
+       <p><span class="inline-label">Subjects in English: </span>${object.Subjects_in_English}</p>
+       <p><span class="inline-label">Materias en Español: </span>${object.Materias_en_Espanol}</p>
+       <p><span class="inline-label">Assuntos em Português: </span>${object.Assuntos_em_Portugues}</p>
+       <p><span class="inline-label">Languages: </span>${object.Languages}</p>
+       <p><span class="inline-label">Countries: </span>${object.Countries}</p>
+       <p><span class="inline-label">Time Coverage: </span>${object.Time_Coverage}</p>
+       <p><span class="inline-label">Summary: </span>${object.Summary}</p>
+   </div>
+</article>
+   `;
+ }).join('');  
+
+ display.innerHTML = dataDisplay;
+};
+```
+
+The CSS I’ve already provided will handle the formatting of our data, to aid in readability and reinforce our hierarchy of information. 
+
+![CSS applied to resources display.](media/styled-resource-display.png)
+
+::: callout
+### What we've accomplished so far
+This flowchart recaps the key functions we've written that move the data from our spreadsheet to our website.
+
+![Flowchart of data from spreadsheet to web app.](media/flowchart.png)
+:::
