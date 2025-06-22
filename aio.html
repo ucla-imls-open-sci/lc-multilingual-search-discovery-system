@@ -998,7 +998,64 @@ a specific row.</p>
 </section><section><h2 class="section-heading" id="display-your-data-on-the-site">Display your Data on the Site<a class="anchor" aria-label="anchor" href="#display-your-data-on-the-site"></a>
 </h2>
 <hr class="half-width">
-<!--
+<p>Now let’s move to displaying this data on the website in a
+user-friendly format. In our <code>index.html</code> file, you will see
+we have a <code>&lt;div&gt;</code> element with the id of “display”
+within the <code>&lt;main&gt;</code> part of our document.</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">INDEX.HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode index.html" tabindex="0"><code class="sourceCode djangotemplate"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>   <span class="kw">&lt;main&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>       <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"display"</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>   <span class="kw">&lt;/main&gt;</span></span></code></pre>
+</div>
+<p>To display our data, we will target
+<code>&lt;div id="display"&gt;</code> in our <code>app.js</code> file
+and dynamically inject html containing our data here. To target this
+<code>&lt;div&gt;</code>, we will get this element by its id in
+<code>app.js</code>:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">const</span> display <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'display'</span>)<span class="op">;</span></span></code></pre>
+</div>
+<p>Now that it’s targeted, we can control the html injection with a new
+function in <code>app.js</code> called <code>displayData()</code>:</p>
+<pre class="app,js"><code>const display = document.getElementById('display');
+
+// Display data
+function displayData(data) {
+ let dataDisplay = data.map((object) =&gt; {
+   return `
+&lt;h2&gt;${object.Resource_Title}&lt;/h2&gt;
+`;
+ }).join('');
+
+ display.innerHTML = dataDisplay;
+};</code></pre>
+<p>This function takes our data as input. It then creates an object
+called <code>dataDisplay</code> where we will store our formatted data
+for display to the user. The key part of <code>displayData()</code> is
+the use of the <code>.map()</code> method. In Javascript,
+<code>.map()</code> creates a new array from an existing array by
+applying a provided function to each element in the existing array. In
+our project, <code>.map</code> will take our data array, a create a new
+array, <code>dataDisplay</code>, that will take each object and format
+it in html, ready to be injected into <code>index.html</code>, which
+occurs in the last line of the code above,
+<code>display.innerHTML = dataDisplay;</code></p>
+<p>You can see what we are iterating over all the data and placing each
+object’s “Resource_Title” within <code>&lt;h2&gt;</code> tags. The map
+function makes it easy to specify where you’d like what piece of data
+within the html by calling:
+<code>object.&lt;insert column name from spreadsheet&gt;</code>. Here we
+are using <code>object.Resource_Title</code>.</p>
+<p>Open <code>index.html</code> in the browser and you will see the
+“Resource_Title” of each object in our data array now populating the
+formerly blank white space below the search bar.</p>
+<figure><img src="media/title-display.png" alt="Discovery interface displaying all resource titles." class="figure mx-auto d-block"><div class="figcaption">Discovery interface displaying all resource
+titles.</div>
+</figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
