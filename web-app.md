@@ -96,18 +96,18 @@ Let's take this code step by step:<br>
 3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br>
 4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br>
 
-The last step is launching the web app:
+The last step is launching the Apps Script web app:
 
 <iframe src="https://drive.google.com/file/d/1h3vF1022Ksv5TrI7_gnhYYw1FcAdhnL5/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ::: callout
 ### Keep the URL handy!
 
-At the end of the video, you see that a red box appears around the Webapp URL. This URL will act as our API endpoint and enable our discovery system to import all the data from our Google Sheet in JSON. Take a moment to copy this URL into your browser. You’ll see that now all our spreadsheet data is represented in JSON.
+At the end of the video, you see that a red box appears around the Apps Script web app URL. This URL will act as our API endpoint and enable our discovery system to import all the data from our Google Sheet in JSON. Save this URL. You can also copy this URL into your browser, hit return, and you'll see all our spreadsheet data represented in JSON.
 :::
 
 ## Connect your Website and Database
-In this section we will take the API endpoint we created in episode 2.2 and connect it to our website. We’ll then display that data on our website.
+In this section we will take the API endpoint, which we created with Apps Script, and connect it to our website. We’ll then display that data on our website.
 
 To get started, download `webapp`, which contains the starting files for our website. Your file structure will look like this:
 
@@ -140,3 +140,113 @@ const googleSheet = '';
 // Display Data
 
 ```
+
+In `app.js`, we have a variable `googleSheet`. Let’s set this to the URL of the Apps Script web app by copying the URL between the single quotes. 
+
+```app.js
+const googleSheet = 'https://script.google.com/macros/s/....';
+```
+
+Now we need to have `app.js` request that our webapp send our site the JSON data. We will do this by creating our first function, `getData()`.
+1. Create an object called apiData where we will store the incoming data.
+
+```app.js
+let apiData = [];
+```
+
+2. Create an async function that will make a fetch request to our Google Sheet.
+
+```app.js
+// Get data
+let apiData = [];
+
+
+async function getData(url) {
+   const response = await fetch(url);
+   const data = await response.json();
+   apiData = data;
+}
+```
+
+The `getData` function will use an API endpoint (the URL of our Apps Script web app) to fetch data and save it in a object called `response`. Next, we will format the response as JSON in an object called `data`. Lastly, we assign that formatted data from the fetch request as our `apiData` object.
+
+A unique attribute of JavaScript are promises. Promises are objects that represents the eventual completion (or failure) of an asynchronous operation. Promises typically do not happen as soon as a page loads, but take some time. In our case, we assign the async keyword before declaring the getData function because we know that the request for the Google Sheet data will take some time to reach our webpage. Similarly, the await keyword is used when we make the fetch request and format our fetch response in JSON because we are anticipating that the data will not arrive when the page loads.
+
+3. As a result of using promises, it is best practice too use the try/catch error handling block in our function in case there is some error retrieving the data. Our final getData() function should look like this:
+
+```app.js
+// Get data
+let apiData = [];
+
+
+async function getData(url) {
+ try {
+   const response = await fetch(url);
+   const data = await response.json();
+   apiData = data;
+ } catch (error) {
+   window.alert(error.message);
+ }
+}
+```
+
+4. Lets test to make sure we are getting the data from our Google Sheet. We can log our incoming data to the console. Right below line 7, let’s add `console.log(apiData);` Our full `app.js` should look like this:
+
+```app.js
+// Define API endpoint and DOM elements
+const googleSheet = 'https://script.google.com/macros/s/...';
+
+// Get data
+let apiData = [];
+
+async function getData(url) {
+ try {
+   const response = await fetch(url);
+   const data = await response.json();
+   apiData = data;
+   console.log(apiData); //Test if data fetch is working correctly
+ } catch (error) {
+   window.alert(error.message);
+ }
+};
+
+getData(googleSheet);
+```
+
+5. We now need to link our `app.js` file and our `index.html`. Open up `index.html` and just before the end body tag, link the `app.js` file:
+
+```index.html
+   </main>
+<script src="app.js"></script>
+</body>
+</html>
+```
+
+6. Open `index.html` in the browser (I suggest Chrome) and open developer tools. Then click on the console tab and you should see your data in an array:
+
+<iframe src="https://drive.google.com/file/d/1haD32ZBJpX2MTLqcu2fG4IJ0swM5Z5yQ/preview" width="640" height="480" allow="autoplay"></iframe>
+
+::: callout
+### Examine the JSON Object
+
+Success! Lets look at this data to get a sense of what is going on. Let’s expand the first item in the array:
+
+```console
+0:
+	Assuntos_em_Portugues: "Povos indígenas; Ambientalismo"
+	Countries: "Brasil"
+	Institutional_Hosts: "Instituto Socioambiental "
+	Languages: "Português"
+	Materias_en_Espanol: "Pueblos indígenas; Ambientalismo"
+	Resource_Title: "Acervo Digital sobre Povos Indígenas, Populações Tradicionais e Meio Ambiente"
+	Resource_Types: "Audiovisual Materials; Books; Texts (Other); Visual Materials"
+	Subjects_in_English: "Indigenous peoples; Environmentalism"
+	Summary: "\"O ISA possui um vasto acervo relativo a povos indígenas, populações tradicionais e meio ambiente, formado desde 1974, compreendendo diversos tipos de materiais arquivísticos, audiovisuais, bibliográficos (artigos, livros, dissertações e teses), e notícias de jornais.  O acervo está indexado por etnias, categorias de população tradicional (caiçaras, quilombolas, seringueiros), unidades de conservação, terras indígenas, biomas, bacias, temas (biodiversidade, educação e saúde indígena, energia, estradas, etnografia, florestas, mudanças climáticas, recursos hídricos, recursos minerais, política socioambiental, entre outros), sub-temas e palavras-chave.\""
+	Time_Coverage: "20th century; 21st century"
+	URL: "https://acervo.socioambiental.org/"
+```
+
+JSON works in key-value format. This format will be the same for every entry in our data. All the keys are exactly the column headings in our Google Sheet. This is very useful because we can call specific pieces of data about a resource in our data table by using the column headings. The values, presented within quotes, is the data per row of our data. So here we are look at all the data, for the first row in our table. So, for example, if we want to display the title of a resource in our data table, we can ask JavaScript to show us the Resource_Title for a specific row.
+:::
+
+## Display your Data on the Site
