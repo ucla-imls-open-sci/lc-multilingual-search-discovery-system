@@ -29,7 +29,7 @@ We will first create a new file called `translation.js` where we will create our
 	–app.js
 	–index.html
 	–style.css
-  –translation.js
+	–translation.js
 ```
 
 Next we will need to link this new JavaScript file with our webpage. Open up `index.html` and add a link using a `<script>` tag at the bottom of the file:
