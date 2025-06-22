@@ -637,10 +637,21 @@ Sheet data on a website.</li>
 </div>
 </div>
 </div>
-<p>In this part we will create a single page website that displays a
-search and discovery system for data on a Google Sheet using
-JavaScript.</p>
-<section><h2 class="section-heading" id="establish-functional-requirements">Establish Functional Requirements<a class="anchor" aria-label="anchor" href="#establish-functional-requirements"></a>
+<p>In this episode we will create a single page website that displays a
+search and discovery system for data on a Google Sheet using JavaScript.
+You’ll begin by establishing functional requirements for your project,
+setting clear goals and selecting free, open-source solutions. Next,
+you’ll transform a Google Sheet into a database by converting it into a
+dynamic JSON-based API endpoint using Google App Script, allowing your
+website to retrieve data. You’ll then connect your website and database
+via the <code>getData()</code> function to fetch data and the
+<code>displayData()</code> function to display the data to the user.
+Finally, you’ll build the logic behind the search interface, which will
+include <em>data normalization</em>, an important consideration to
+ensure search results are accurate and comprehensive by search keywords
+inputted by the user (e.g., handling variations in capitalization,
+accents, or special characters).</p>
+<section><h2 class="section-heading" id="functional-requirements">Functional Requirements<a class="anchor" aria-label="anchor" href="#functional-requirements"></a>
 </h2>
 <hr class="half-width">
 <p>In any technical project, it’s essential to establish clear
@@ -723,7 +734,7 @@ requirements.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="transform-a-google-sheet-into-an-api-endpoint">Transform a Google Sheet into an API Endpoint<a class="anchor" aria-label="anchor" href="#transform-a-google-sheet-into-an-api-endpoint"></a>
+</section><section><h2 class="section-heading" id="transform-a-google-sheet-into-an-api-endpoint-with-apps-script">Transform a Google Sheet into an API Endpoint with Apps Script<a class="anchor" aria-label="anchor" href="#transform-a-google-sheet-into-an-api-endpoint-with-apps-script"></a>
 </h2>
 <hr class="half-width">
 <p>The first technological hurtle is the fact that a Google Sheet is not
@@ -812,7 +823,7 @@ JSON.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="connect-your-website-and-database">Connect your Website and Database<a class="anchor" aria-label="anchor" href="#connect-your-website-and-database"></a>
+</section><section><h2 class="section-heading" id="connect-your-website-and-database-getdata">Connect your Website and Database: getData()<a class="anchor" aria-label="anchor" href="#connect-your-website-and-database-getdata"></a>
 </h2>
 <hr class="half-width">
 <p>In this section we will take the API endpoint, which we created with
@@ -1007,7 +1018,7 @@ a specific row.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="display-your-data-on-the-site">Display your Data on the Site<a class="anchor" aria-label="anchor" href="#display-your-data-on-the-site"></a>
+</section><section><h2 class="section-heading" id="display-your-data-on-the-site-displaydata">Display your Data on the Site: displayData()<a class="anchor" aria-label="anchor" href="#display-your-data-on-the-site-displaydata"></a>
 </h2>
 <hr class="half-width">
 <p>Now let’s move to displaying this data on the website in a
@@ -1162,7 +1173,7 @@ app.</div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="filter-your-data">Filter your data<a class="anchor" aria-label="anchor" href="#filter-your-data"></a>
+</section><section><h2 class="section-heading" id="filter-your-data-filterdata">Filter your Data: filterData()<a class="anchor" aria-label="anchor" href="#filter-your-data-filterdata"></a>
 </h2>
 <hr class="half-width">
 <p>Up to this point, we’ve focused on connecting our site to our Google
@@ -1494,9 +1505,9 @@ filterData() function like this:</p>
 <span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>}</span></code></pre>
 </div>
 </div>
-<div class="section level3">
-<h3 id="refresh-button">Refresh Button<a class="anchor" aria-label="anchor" href="#refresh-button"></a>
-</h3>
+</section><section><h2 class="section-heading" id="refresh-button">Refresh Button<a class="anchor" aria-label="anchor" href="#refresh-button"></a>
+</h2>
+<hr class="half-width">
 <p>The last feature we need to add is a refresh button. This button will
 take users back to the full API dataset without forcing them to refresh
 the page.</p>
@@ -1548,7 +1559,6 @@ data efficiently.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></section><section id="aio-translation"><p>Content from <a href="translation.html">Translation</a></p>
 <hr>
 <p>Last updated on 2025-06-22 |
