@@ -266,7 +266,7 @@ const display = document.getElementById('display');
 
 Now that it's targeted, we can control the html injection with a new function in `app.js` called `displayData()`:
 
-```app,js
+```app.js
 const display = document.getElementById('display');
 
 // Display data
@@ -365,4 +365,229 @@ The CSS I’ve already provided will handle the formatting of our data, to aid i
 This flowchart recaps the key functions we've written that move the data from our spreadsheet to our website.
 
 ![Flowchart of data from spreadsheet to web app.](media/flowchart.png)
+:::
+
+## Filter your data
+
+Up to this point, we’ve focused on connecting our site to our Google Sheet API and displaying that data in the browser. We haven’t touched the search functionality. To call this functionality searching very much anthropomorphizes the code. Humans search using a variety of emotion, reason, and what we might call algorithms to sift through information to determine what is most relevant at a given time. What our will do is much simpler and a better way to describe it is filtering the data. We will filter the data according to whether the data we have describing a resource matches or does not match the user’s keywords. For example, if a user enters the keyword “periodicals,” we want to return all resources whose "Resource_Types" include “periodicals.” 
+
+Filtering the data will occur after the browser has received data from the Google Sheet API, the `getData()` function, and before that data is displayed on the website to the user, the `displayData()` function.
+
+It is very important to remember that after getData() is called, all of the data is loaded into the user’s browser. This means that once the page loads, and the getData() promise is resolved, our website will not request data again from our Google Sheet API. All our filtering will occur on the client-side, which is to say in the browser and not in our Google Sheet database. This organization helps us achieve the Functional Requirements we established in Episode 2.1 and has a few benefits:
+
+- After `getData()` loads the data, filtering data is almost instantaneous, because we do not need to keep request new data from the Google Sheets API.
+- As laid out in the Functional Requirements at the start of this episode, we want free database and web hosting solutions. Limiting our API requests ensures that we can continue with Google Sheets as our simple database.
+- Security: We want a simple web solution, and a single get request from the API excludes any two way communication with our server, such as Post requests or the ability of users to inject malicious code back into our database. Our system is very simple, and this simplicity is its strength.
+
+Let’s take a look at our search bar in our `index.html`:
+
+```index.html
+<div class="search-bar">
+               <input id="input" autocomplete="off" type="text" aria-label="Enter keywords to search">
+               <button id="search-btn" aria-label="Run search button">Search</button>
+               <button id="refresh-btn" title="Refresh" aria-label="Refresh search results button">Refresh</button>
+</div>
+```
+
+In html, search bars are created using `<input>` elements. Ours additionally has the id of “input.” We also have a search button, this is the first `<button>` element with an id of “search-btn.” We need to capture these two elements in our `app.js` file in order to process a user’s search.
+
+Switching to `app.js`, let’s target these two html elements:
+
+```app.js
+// Define API endpoint and DOM elements
+const googleSheet = '<your Google Sheet API here>';
+const display = document.getElementById('display');
+const input = document.getElementById('input');
+const searchBtn = document.getElementById('search-btn');
+```
+
+The first goal is to capture a user’s keywords in the search bar. 
+
+1. Let’s create a function called `runSearch()` that will process a user’s keywords. `searchTerms` will get us the value inside the `<input>` html element as well as trim off any incidental white space at the beginning or end of the user’s keywords. For now, we will `console.log` the user’s keywords.
+
+```app.js
+// Filter data
+function runSearch() {
+ const searchTerms = input.value.trim();
+ console.log(searchTerms)
+}
+```
+
+2. Now we need to create an event listener that will trigger the runSearch(). An event listener in JavaScript is a function that is triggered when a user interacts with an HTML element. In our case, we want to trigger runSearch() when the user hits the return key or clicks the search button.
+
+```app.js
+// Event listeners for search bar
+// When the user clicks the search button
+searchBtn.addEventListener('click', runSearch);
+// When the user presses the return key in the search window
+input.addEventListener('keypress', (event) => {
+   if (event.key === 'Enter') {
+       runSearch();
+   }
+});
+```
+In this video you can see that when there is text in the search bar and the user either hits the return key or presses the search button, our `runSearch()` function is activated and in turn logs the text in the console. 
+
+<iframe src="https://drive.google.com/file/d/1B9Ls7CKPQVMIw6qpalQZLH7pU0vn1gcP/preview" width="640" height="480" allow="autoplay"></iframe>
+
+Now we can create our `filterData()` function. First, create a function called `filterData()` and have it accept as an argument the user’s query. We capture this query in the `runSearch()` function. We want to first have some logic here. We want to check whether or not a user even has a keyword in the search bar. Maybe they hit the search button without entering any keywords.
+
+```app.js
+function filterData(query) {
+ if (query) {
+ // Our filter function will go here
+
+
+ } else {
+   displayData(apiData);
+ }
+};
+```
+
+In this case, if the user does provide a query, our function will do something with that query to filter our data. If the user does not provide a query, our function does nothing and passes along the full dataset from our API to our displayData() function.
+
+### Normalization
+
+We need to consider the variety of ways our users might search for material:
+
+- **Capitalization:** Some users may capitalize words differently. They might use CAPSLOCK or all lowercase or Title Case Their Searches. Our filter function needs to be ready to handle all of these cases.
+- **Word Order:** We want to search each keyword as if it were a unique search term as opposed to searching with one long string. For example, if we search as one string, and a user searches “art in mexico” or “mexico art,” the filter function will only return results that also have the words in the same order. What the user wants is all resources that mention art *and* mexico.
+- **Diacritics:** Diacritics are the accent marks used in Spanish. Given that we are looking at a bilingual database and expect Spanish speaking users, we need to manage diacritics. It is best to make our filtering diacritic agnostic. For example, someone could misspell Pueblos indígenas as Pueblos *indigenas*.
+
+The process to manage all the variety of ways users might enter search terms is called normalization. We will normalize all search input to prevent our filter function from excluding results because of capitalized letters, word order, or missing diacritics.
+
+JavaScript makes normalizing for capitalization and word order easy. Let’s return to our `filterData()` function, and add this code if a user supplies a query:
+
+```app.js
+function filterData(query) {
+ if (query) {
+     const searchTerms = query.toLowerCase().split(/\s+/)
+
+
+ } else {
+   displayData(apiData);
+ }
+};
+```
+
+We created a new variable called `searchTerms`. Inside this variable, we will first apply the `.toLowerCase()` method which makes the user’s input keywords in lowercase and should eliminate any problems around mismatched capitalization. Then we use the `.split()` method to split up the user’s input on each space (/\s+/) which is a regular expression that identifies spaces and creates a new search term on the space. In the end, searchTerms will be an array of search terms that we will use to filter our data.
+
+Diacritics are require an additional step, we must create our own function that will strip the diacritics from the user’s keywords:
+
+```app.js
+function removeDiacritics(str) {
+ return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+```
+
+This function takes a string, the user’s input, and applies `.normalize("NFD")`. This command normalizes the input string using the "Normalization Form D" (NFD) algorithm, which separates base characters and diacritic markings. For example, "é" becomes "e" and ‘. Then the `.replace()` method replaces all diacritic marks with an empty string. The g flag ensures that all markings within the string are replaced. 
+
+Now let’s add this `removeDiacritics` function and finish normalizing the user’s input:
+
+```app.js
+function filterData(query) {
+ if (query) {
+     const searchTerms = query.toLowerCase().split(/\s+/).map(term => removeDiacritics(term));
+
+
+ } else {
+   displayData(apiData);
+ }
+};
+```
+
+### Apply .map()
+
+The `.map()` function is very useful in JavaScript. This function in JavaScript creates a new array by applying a provided function to each element of the original array. That's important because remember that searchTerms is actually an array of every term, separated by spaces, from the user’s input. We then use the arrow function, which takes each term in the array and applies the `removeDiacritics` function on that argument.
+
+Now that we’ve normalized the user’s search terms, we can use it to filter the data. We will use the JavaScript `filter()` function to return only those results in our data that match the user’s search keywords:
+
+```app.js
+// Filter data
+function filterData(query) {
+ if (query) {
+   const searchTerms = query.toLowerCase().split(/\s+/).map(term => removeDiacritics(term));
+
+   const filteredData = apiData.filter(allData => {
+     return searchTerms.every(term => {
+       return (
+         Object.values(allData).some(value => {
+           if (value && typeof value === 'string') {
+             return removeDiacritics(value.toLowerCase()).includes(term);
+           }
+           return false;
+         })
+       );
+     });
+   });
+
+   displayData(filteredData);
+ } else {
+   displayData(apiData);
+ }
+};
+
+     });
+   });
+
+   displayData(filteredData);
+ } else {
+   displayData(apiData);
+ }
+}
+```
+
+::: callout
+### filter(), every(), & some()
+
+We use three important methods to conduct the search: filter(), every(), and some(). 
+
+1. **Filter()** We use to iterate over every object in our API data to determine if it matches with the user’s search keywords.
+2. **Every()** Iterates over each search term in the searchTerms array. If all search terms match, the `every()` method returns true, indicating that the object should be included in the filtered results.
+3. **Some()** Here is where the real matching occurs. It is iterating over all the values for each object in the array. We can think of each object in the array of API data as one resource in our dataset. The values of the object are those we have in our dataset per resource. For example, Resource_Title, Materias_en_Espanol, Languages, and Summary. The `Some()` function will take each search term and see if it matches within the values of an object and returns a boolean true or false. All search terms be true meaning that a resource must contain all the search terms in order for it to be included in the filteredData object. Within this some function, we include a bit of logic and processing on the API data. We first check that the data is a string, this way we can match the string of the user’s input to the string in the data. If it is a string, we apply the same normalization of capitalization and diacritics we applied to the keywords to the data. This way we remove any possibility for a missed match due to differences in capitalization or diacritic placement. In other words, we compare lowercase, diacritic-free search terms with lowercase, diacritic-free data.
+:::
+
+### Displaying Filtered Data
+
+In the end, we will pass our `filteredData` array to our `displayData()` function to display the search results to our user.
+
+Now we are ready to test it. We need to make a small change to our runSearch() function, which at this time is logging our searchTerms to the console. We want to now pass the user’s supplied keywords to our new filterData() function like this:
+
+```app.js
+// Filter data
+function runSearch() {
+ const searchTerms = input.value.trim();
+ filterData(searchTerms);
+}
+```
+
+### Refresh Button
+
+The last feature we need to add is a refresh button. This button will take users back to the full API dataset without forcing them to refresh the page. 
+
+Let’s identify the refresh button in `app.js`:
+
+```app.js
+const refreshBtn = document.getElementById('refresh-btn');
+```
+
+This button will clear all user keywords so they see all resources with no filtering. We will do this by running the `runSearch()` function with no user keywords.
+
+```app.js
+refreshBtn.addEventListener('click', () => {
+ input.value = '';
+ runSearch();
+});
+```
+
+:::keypoints
+### Episode Summary
+
+**Establishing Functional Requirements:** We learned how to define clear goals for a technical project, identifying optimal, free, and open-source solutions like Google Sheets, GitHub Pages, and Vanilla JavaScript for building a robust search and discovery system.
+
+***Transforming Google Sheets into a Database:*** We successfully converted a Google Sheet into a dynamic JSON-based API endpoint using Google App Script, enabling our website to retrieve and utilize the data.
+
+***Connecting Website and Database:** We developed the JavaScript `getData()` function to fetch JSON data from our Google Sheet API and the `displayData()` function to present this information effectively on the webpage.
+
+**Implementing Data Filtering and Search:** We built robust client-side filtering capabilities, including normalization for capitalization and diacritics, allowing users to search the displayed data efficiently.
 :::
