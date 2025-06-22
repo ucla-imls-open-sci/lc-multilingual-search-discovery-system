@@ -15,12 +15,14 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+## Background
 Translation remains an elusive problem on the web. Browsers permit the use of 3rd party tools like Google Translate to translate a web page on the fly. There are also subscription AI tools like Transifex. Translation has come a long way and it is now very good and enable users to access content from a variety of languages. But language is complicated by regionalisms, varieties, and problems between literal and figurative speech. At times, AI translation services miss these subtleties. JavaScript enables us a straightforward way to customize our translation for users and be sure that we have full control of the content user’s see.
 
 In this episode we will focus on setting up our language selection buttons in the top right corner of our page:
 
 ![Translation buttons at the top of our webpage.](media/translation-buttons.png)
+
+## User Interface
 
 We will first create a new file called `translation.js` where we will create our language selection app. Your file structure should look like this:
 
@@ -71,6 +73,8 @@ Next, lets take a look at the HTML elements we want to translate:
 
 We have our welcome message in the `<h1>`, search button, and refresh button. All of these elements have an id element that will let us target and translate them in `translation.js`.
 
+## Storing our Translations
+
 Now let's switch over to `translation.js`. We will first target all three of these elements:
 
 ```translation.js
@@ -97,6 +101,8 @@ const translations = {
 ```
 
 As you can see, we reference the element we want to target, for example `welcomeMSG`. And then under each language, we put the content we want to display.
+
+## translatePage() Function
 
 Now we will create a function that will execute our translation:
 
