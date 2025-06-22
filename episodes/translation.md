@@ -5,7 +5,7 @@ exercises: 3
 ---
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- How can JavaScript be used to dynamically update text based on a user's language preference.
+- Implement a client-side JavaScript translation solution that displays specific content based on user language preferences.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
