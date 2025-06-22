@@ -11,7 +11,7 @@ exercises: 3
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Why might a custom JavaScript translation be preferred over third-party translation tools for specific web content?
+- Why might a custom JavaScript translation be preferred over third-party translation tools for web content?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
