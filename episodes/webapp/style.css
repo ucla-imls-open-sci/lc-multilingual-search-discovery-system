@@ -1,0 +1,101 @@
+:root{
+    --dark: #6B7C8F;
+    --main: #032a7e;
+    --highlight: #FBC231;
+    --gray: #EFEFEF;
+    --neutral: #DCC8AC;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: var(--dark);
+    color: white;
+    border-bottom: 10px solid var(--neutral);
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+}
+
+.translation {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.translation a {
+    color: white;
+}
+
+a {
+    color: var(--main);
+}
+
+a:hover {
+    color: var(--highlight);
+}
+
+.search-bar {
+    margin-top: 2rem;
+}
+
+#input, #search-btn, #refresh-btn {
+    height: 2.5rem;
+    padding: 0 0.5rem; 
+    border: none;
+    font-size: 1rem; 
+    border-radius: 5px;
+}
+
+#search-btn:hover, #refresh-btn:hover {
+    cursor: pointer;
+    background-color: var(--highlight);
+}
+
+main {
+    padding: 0 0.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.item {
+    margin-bottom: 2rem;
+}
+
+.item p {
+    font-size: 14px;
+}
+
+.item-header h2 {
+    font-size: 1.3rem;
+}
+
+.item-header p {
+    font-style: italic;
+    color: var(--dark);
+}
+
+.item-description {
+    padding: 0.3rem 0 0 3rem;
+    font-size: 14px;
+}
+
+.item-description p {
+    padding-bottom: 5px;
+}
+
+.inline-label, .label {
+    font-weight: bold;
+}
