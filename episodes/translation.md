@@ -3,10 +3,18 @@ title: "Translation"
 teaching: 45
 exercises: 3
 ---
-
 ::::::::::::::::::::::::::::::::::::::: objectives
-- Implement client-side content translation using JavaScript to dynamically update text based on user language selection.
+
+- How can JavaScript be used to dynamically update text based on a user's language preference.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- Why might a custom JavaScript translation be preferred over third-party translation tools for specific web content?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 Translation remains an elusive problem on the web. Browsers permit the use of 3rd party tools like Google Translate to translate a web page on the fly. There are also subscription AI tools like Transifex. Translation has come a long way and it is now very good and enable users to access content from a variety of languages. But language is complicated by regionalisms, varieties, and problems between literal and figurative speech. At times, AI translation services miss these subtleties. JavaScript enables us a straightforward way to customize our translation for users and be sure that we have full control of the content user’s see.
 
@@ -127,7 +135,7 @@ When a user clicks on a language link, the script will retrieve the two-characte
 
 :::keypoints
 ### Episode Summary
-**Implementing Custom In-Page Translation:** We successfully set up a client-side translation system using JavaScript, creating and linking a dedicated translation.js file to our webpage.
+**Implementing Custom In-Page Translation:** We set up a client-side translation system using JavaScript, creating and linking a dedicated translation.js file to our webpage.
 
 **Dynamically Updating Content:** We learned to define a translation table within a JavaScript object and dynamically update the text content of HTML elements based on user-selected languages, providing full control over the translated content.
 :::
