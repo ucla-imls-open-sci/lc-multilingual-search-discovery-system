@@ -225,7 +225,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#functional-requirements">Functional Requirements</a></li>
+        <ul><li><a href="#background">Background</a></li>
+<li><a href="#functional-requirements">Functional Requirements</a></li>
 <li><a href="#google-sheet-as-api-endpoint">Google Sheet as API Endpoint</a></li>
 <li><a href="#get-your-data-getdata">Get your Data: getData()</a></li>
 <li><a href="#display-your-data-displaydata">Display your Data: displayData()</a></li>
@@ -357,7 +358,8 @@ Sheet data on a website.</li>
 </div>
 </div>
 </div>
-<p>In this episode we will create a single page website that displays a
+<section><h2 class="section-heading" id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a></h2>
+<hr class="half-width"><p>In this episode we will create a single page website that displays a
 search and discovery system for data on a Google Sheet using JavaScript.
 You’ll begin by establishing functional requirements for your project,
 setting clear goals and selecting free, open-source solutions. Next,
@@ -366,12 +368,12 @@ dynamic JSON-based API endpoint using Google App Script, allowing your
 website to retrieve data. You’ll then connect your website and database
 via the <code>getData()</code> function to fetch data and the
 <code>displayData()</code> function to display the data to the user.
-Finally, you’ll build the logic behind the search interface, which will
-include <em>data normalization</em>, an important consideration to
-ensure search results are accurate and comprehensive by search keywords
-inputted by the user (e.g., handling variations in capitalization,
-accents, or special characters).</p>
-<section><h2 class="section-heading" id="functional-requirements">Functional Requirements<a class="anchor" aria-label="anchor" href="#functional-requirements"></a></h2>
+Finally, you’ll build the logic behind the search interface
+(<code>filterData()</code>), which will include <em>data
+normalization</em>, an important consideration to ensure search results
+match different user provided keywords (e.g., handling variations in
+capitalization, accents, or special characters).</p>
+</section><section><h2 class="section-heading" id="functional-requirements">Functional Requirements<a class="anchor" aria-label="anchor" href="#functional-requirements"></a></h2>
 <hr class="half-width"><p>In any technical project, it’s essential to establish clear
 functional requirements before diving into the technical details. This
 ensures that the team stays focused on the core objectives of the
