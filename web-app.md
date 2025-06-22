@@ -250,3 +250,41 @@ JSON works in key-value format. This format will be the same for every entry in 
 :::
 
 ## Display your Data on the Site
+Now let’s move to displaying this data on the website in a user-friendly format. In our `index.html` file, you will see we have a `<div>` element with the id of “display” within the `<main>` part of our document. 
+
+```index.html
+   <main>
+       <div id="display"></div>
+   </main>
+```
+
+To display our data, we will target `<div id="display">` in our `app.js` file and dynamically inject html containing our data here. To target this `<div>`, we will get this element by its id in `app.js`:
+
+```app.js
+const display = document.getElementById('display');
+```
+
+Now that it's targeted, we can control the html injection with a new function in `app.js` called `displayData()`:
+
+```app,js
+const display = document.getElementById('display');
+
+// Display data
+function displayData(data) {
+ let dataDisplay = data.map((object) => {
+   return `
+<h2>${object.Resource_Title}</h2>
+`;
+ }).join('');  
+
+ display.innerHTML = dataDisplay;
+};
+```
+
+This function takes our data as input. It then creates an object called `dataDisplay` where we will store our formatted data for display to the user. The key part of `displayData()` is the use of the `.map()` method. In Javascript, `.map()` creates a new array from an existing array by applying a provided function to each element in the existing array. In our project, `.map` will take our data array, a create a new array, `dataDisplay`, that will take each object and format it in html, ready to be injected into `index.html`, which occurs in the last line of the code above, `display.innerHTML = dataDisplay;`
+
+You can see what we are iterating over all the data and placing each object’s "Resource_Title" within `<h2>` tags. The map function makes it easy to specify where you’d like what piece of data within the html by calling: `object.<insert column name from spreadsheet>`. Here we are using `object.Resource_Title`.
+
+Open `index.html` in the browser and you will see the "Resource_Title" of each object in our data array now populating the formerly blank white space below the search bar.
+
+![Discovery interface displaying all resource titles.](media/title-display.png)
