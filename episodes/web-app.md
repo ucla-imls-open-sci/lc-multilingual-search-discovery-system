@@ -35,7 +35,7 @@ In any technical project, it's essential to establish clear functional requireme
 
 During the development of the LACLI project, we arrived at a series of functional requirements. Many of which are shared by digital projects in the humanities and social sciences:
 
-|     Functional Requirement    |    Solution    |
+| Functional Requirement | Solution |
 | :--------: | :-------: |
 | A free, intuitive, and collaborative database solution that can be easily edited by multiple volunteers without prior database knowledge.  | Google Sheets is a free, cloud-based spreadsheet solution that is intuitive to use, supports real-time collaboration by multiple users, and does not require extensive database knowledge.    |
 | Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
@@ -589,10 +589,9 @@ refreshBtn.addEventListener('click', () => {
  runSearch();
 });
 ```
+## Episode Summary
 
 :::keypoints
-### Episode Summary
-
 **Establishing Functional Requirements:** We learned how to define clear goals for a technical project, identifying optimal, free, and open-source solutions like Google Sheets, GitHub Pages, and Vanilla JavaScript for building a robust search and discovery system.
 
 **Transforming Google Sheets into a Database:** We successfully converted a Google Sheet into a dynamic JSON-based API endpoint using Google App Script, enabling our website to retrieve and utilize the data.
