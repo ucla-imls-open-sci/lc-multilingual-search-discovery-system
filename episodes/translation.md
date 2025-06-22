@@ -48,7 +48,7 @@ Next we will need to link this new JavaScript file with our webpage. Open up `in
 Within our `index.html` file, we should also examine the structure of the language selector:
 
 ```index.html
-...]       
+[...]       
 <div class="translation">
       <a href="" data-lang="en">English</a>
       <a href="" data-lang="es">Español</a>
@@ -135,7 +135,6 @@ When a user clicks on a language link, the script will retrieve the two-characte
 
 :::keypoints
 ### Episode Summary
-**Implementing Custom In-Page Translation:** We set up a client-side translation system using JavaScript, creating and linking a dedicated translation.js file to our webpage.
 
-**Dynamically Updating Content:** We learned to define a translation table within a JavaScript object and dynamically update the text content of HTML elements based on user-selected languages, providing full control over the translated content.
+In this episode, we implemented a custom, client-side translation system by creating and linking a translation.js file. We did this by utilizing "data-lang" attributes and event listeners to capture a user's language preference ("en" & "es"). Once a user makes a selection, our site's content is dynamically translated with our predefined translation, giving us a free--and far more reliable--option than subscription or AI-based solutions.
 :::
