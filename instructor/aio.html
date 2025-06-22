@@ -1562,25 +1562,6 @@ any links that you are not going to use.
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
 <p>Translation remains an elusive problem on the web. Browsers permit
 the use of 3rd party tools like Google Translate to translate a web page
 on the fly. There are also subscription AI tools like Transifex.
@@ -1592,7 +1573,147 @@ subtleties. JavaScript enables us a straightforward way to customize our
 translation for users and be sure that we have full control of the
 content user’s see.</p>
 <p>In this episode we will focus on setting up our language selection
-buttons in the top right corner of our page.</p></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
+buttons in the top right corner of our page:</p>
+<figure><img src="../media/translation-buttons.png" alt="Translation buttons at the top of our webpage." class="figure mx-auto d-block"><div class="figcaption">Translation buttons at the top of our
+webpage.</div>
+</figure><p>We will first create a new file called <code>translation.js</code>
+where we will create our language selection app. Your file structure
+should look like this:</p>
+<pre><code>–webapp
+	–app.js
+	–index.html
+	–style.css
+  –translation.js</code></pre>
+<p>Next we will need to link this new JavaScript file with our webpage.
+Open up <code>index.html</code> and add a link using a
+<code>&lt;script&gt;</code> tag at the bottom of the file:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">INDEX.HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode index.html" tabindex="0"><code class="sourceCode djangotemplate"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>[...]</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="kw">&lt;main&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>       <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"display"</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>   <span class="kw">&lt;/main&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"translation.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"app.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre>
+</div>
+<p>Within our <code>index.html</code> file, we should also examine the
+structure of the language selector:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">INDEX.HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode index.html" tabindex="0"><code class="sourceCode djangotemplate"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>...]       </span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"translation"</span><span class="kw">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>      <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">""</span> <span class="er">data-lang</span><span class="ot">=</span><span class="st">"en"</span><span class="kw">&gt;</span>English<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>      <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">""</span> <span class="er">data-lang</span><span class="ot">=</span><span class="st">"es"</span><span class="kw">&gt;</span>Español<span class="kw">&lt;/a&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre>
+</div>
+<p>We see that these are actually anchor elements
+<code>&lt;a&gt;</code>. We have left the href empty because these links
+will not direct users to a new page, but instead will trigger our
+<code>translation.js</code> script. Also, we have this custom element
+data-lang, which we will use to cue our <code>translation.js</code>
+script, through the two-character language codes <em>en</em> and
+<em>es</em>, as to what language the user prefers to read in.</p>
+<p>Next, lets take a look at the HTML elements we want to translate:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">INDEX.HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode index.html" tabindex="0"><code class="sourceCode djangotemplate"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>[...]</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">&lt;h1</span> <span class="er">id</span><span class="ot">=</span><span class="st">"welcome-msg"</span><span class="kw">&gt;</span>Explore the Collection<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"search-bar"</span><span class="kw">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>       <span class="kw">&lt;input</span> <span class="er">id</span><span class="ot">=</span><span class="st">"input"</span> <span class="er">autocomplete</span><span class="ot">=</span><span class="st">"off"</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Enter keywords to search"</span><span class="kw">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>       <span class="kw">&lt;button</span> <span class="er">id</span><span class="ot">=</span><span class="st">"search-btn"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Run search button"</span><span class="kw">&gt;</span>Search<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>       <span class="kw">&lt;button</span> <span class="er">id</span><span class="ot">=</span><span class="st">"refresh-btn"</span> <span class="er">title</span><span class="ot">=</span><span class="st">"Refresh"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Refresh search results button"</span><span class="kw">&gt;</span>Refresh<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>   <span class="kw">&lt;/div&gt;</span></span></code></pre>
+</div>
+<p>We have our welcome message in the <code>&lt;h1&gt;</code>, search
+button, and refresh button. All of these elements have an id element
+that will let us target and translate them in
+<code>translation.js</code>.</p>
+<p>Now let’s switch over to <code>translation.js</code>. We will first
+target all three of these elements:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode translation.js" tabindex="0"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">const</span> welcomeMsg <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'welcome-msg'</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="kw">const</span> searchButton <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'search-btn'</span>)<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">const</span> refreshButton <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'refresh-btn'</span>)<span class="op">;</span></span></code></pre>
+</div>
+<p>Translation using JavaScript works by creating a 1:1 translation
+table. When our script receives the language code, <em>en</em> or
+<em>es</em>, it will then look what text to display for the elements we
+just targeted above. We will create an object called translations that
+has a set of content for English (en) and Spanish (es).</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode translation.js" tabindex="0"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">const</span> translations <span class="op">=</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>   <span class="dt">en</span><span class="op">:</span> {</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>       <span class="dt">welcomeMsg</span><span class="op">:</span> <span class="st">'Explore the collection'</span><span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>       <span class="dt">searchBtn</span><span class="op">:</span> <span class="st">'Search'</span><span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>       <span class="dt">refreshBtn</span><span class="op">:</span> <span class="st">'Refresh'</span><span class="op">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>   }<span class="op">,</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>   <span class="dt">es</span><span class="op">:</span> {</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>       <span class="dt">welcomeMsg</span><span class="op">:</span> <span class="st">'Explorar la colección'</span><span class="op">,</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>       <span class="dt">searchBtn</span><span class="op">:</span> <span class="st">'Buscar'</span><span class="op">,</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>       <span class="dt">refreshBtn</span><span class="op">:</span> <span class="st">'Recargar'</span><span class="op">,</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>   }</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
+<p>As you can see, we reference the element we want to target, for
+example <code>welcomeMSG</code>. And then under each language, we put
+the content we want to display.</p>
+<p>Now we will create a function that will execute our translation:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode translation.js" tabindex="0"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">let</span> currentLanguage <span class="op">=</span> <span class="st">'en'</span><span class="op">;</span> <span class="co">// Default language</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">function</span> <span class="fu">translatePage</span>(language) {</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>   currentLanguage <span class="op">=</span> language<span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>   <span class="co">// Update text content for the specified language</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>   welcomeMsg<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> translations[language]<span class="op">.</span><span class="at">welcomeMsg</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>   searchButton<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> translations[language]<span class="op">.</span><span class="at">searchBtn</span><span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>   refreshButton<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> translations[language]<span class="op">.</span><span class="at">refreshBtn</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>}</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">// Initial translation based on the default language</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">translatePage</span>(currentLanguage)<span class="op">;</span></span></code></pre>
+</div>
+<p>We start by setting our default language to English (en). Then we
+create the function <code>translatePage()</code>, which takes as an
+argument the two-character language code. Then for each element on our
+page we want to translate, JavaScript first manipulates the textContent
+in the HTML by looking up in the translations object which nest table of
+translations to use. It then within that nest table for either en or es,
+finds the prescribed content to push to our HTML.</p>
+<p>Finally, we need to create an event listener that will pass the
+two-character language code to our <code>translatePage()</code> function
+when a user clicks on their preferred language:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode translation.js" tabindex="0"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co">// Handle language selection from translation language links</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.translation'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>   <span class="kw">const</span> selectedLanguage <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="fu">getAttribute</span>(<span class="st">'data-lang'</span>)<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>   <span class="cf">if</span> (selectedLanguage) {</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>       <span class="bu">event</span><span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span> <span class="co">// Prevent default page reload</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>       <span class="fu">translatePage</span>(selectedLanguage)<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>   }</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>})<span class="op">;</span></span></code></pre>
+</div>
+<p>When a user clicks on a language link, the script will retrieve the
+two-character code listed by the <code>data-lang</code> custom element.
+<code>event.preventDefault()</code> will prevent the
+<code>&lt;a&gt;</code> tag from carrying out its normal link action and
+refreshing the page. If it refreshes the page, it will cause us to have
+to reload the API data, which will make our site a much slower
+experience for users. Finally, we pass the two-character language code
+to <code>translatePage()</code> function.</p></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
 <hr>
 <p>Last updated on 2025-06-18 |
 
