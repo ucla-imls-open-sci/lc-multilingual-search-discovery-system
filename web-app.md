@@ -20,9 +20,10 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this part we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.
+In this episode we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.  You'll begin by establishing functional requirements for your project, setting clear goals and selecting free, open-source solutions. Next, you'll transform a Google Sheet into a database by converting it into a dynamic JSON-based API endpoint using Google App Script, allowing your website to retrieve data. You'll then connect your website and database via the `getData()` function to fetch data and the `displayData()` function to display the data to the user. Finally, you'll build the logic behind the search interface, which will include *data normalization*, an important consideration to ensure search results are accurate and comprehensive by search keywords inputted by the user (e.g., handling variations in capitalization, accents, or special characters).
 
-## Establish Functional Requirements
+
+## Functional Requirements
 In any technical project, it's essential to establish clear functional requirements before diving into the technical details. This ensures that the team stays focused on the core objectives of the project, rather than getting sidetracked by fancy features or bells and whistles.
 
 During the development of the LACLI project, we arrived at a series of functional requirements. Many of which are shared by digital projects in the humanities and social sciences:
@@ -43,7 +44,7 @@ Based on the functional requirement assessment above, create your own two column
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Transform a Google Sheet into an API Endpoint
+## Transform a Google Sheet into an API Endpoint with Apps Script
 
 The first technological hurtle is the fact that a Google Sheet is not automatically set up like a database. We will do this in three steps:
 1. Create a Google App Script file that uses the Google Sheets API.
@@ -106,7 +107,7 @@ The last step is launching the Apps Script web app:
 At the end of the video, you see that a red box appears around the Apps Script web app URL. This URL will act as our API endpoint and enable our discovery system to import all the data from our Google Sheet in JSON. Save this URL. You can also copy this URL into your browser, hit return, and you'll see all our spreadsheet data represented in JSON.
 :::
 
-## Connect your Website and Database
+## Connect your Website and Database: getData()
 In this section we will take the API endpoint, which we created with Apps Script, and connect it to our website. We’ll then display that data on our website.
 
 To get started, download `webapp`, which contains the starting files for our website. Your file structure will look like this:
@@ -249,7 +250,7 @@ Success! Lets look at this data to get a sense of what is going on. Let’s expa
 JSON works in key-value format. This format will be the same for every entry in our data. All the keys are exactly the column headings in our Google Sheet. This is very useful because we can call specific pieces of data about a resource in our data table by using the column headings. The values, presented within quotes, is the data per row of our data. So here we are look at all the data, for the first row in our table. So, for example, if we want to display the title of a resource in our data table, we can ask JavaScript to show us the Resource_Title for a specific row.
 :::
 
-## Display your Data on the Site
+## Display your Data on the Site: displayData()
 Now let’s move to displaying this data on the website in a user-friendly format. In our `index.html` file, you will see we have a `<div>` element with the id of “display” within the `<main>` part of our document. 
 
 ```index.html
@@ -367,7 +368,7 @@ This flowchart recaps the key functions we've written that move the data from ou
 ![Flowchart of data from spreadsheet to web app.](media/flowchart.png)
 :::
 
-## Filter your data
+## Filter your Data: filterData()
 
 Up to this point, we’ve focused on connecting our site to our Google Sheet API and displaying that data in the browser. We haven’t touched the search functionality. To call this functionality searching very much anthropomorphizes the code. Humans search using a variety of emotion, reason, and what we might call algorithms to sift through information to determine what is most relevant at a given time. What our will do is much simpler and a better way to describe it is filtering the data. We will filter the data according to whether the data we have describing a resource matches or does not match the user’s keywords. For example, if a user enters the keyword “periodicals,” we want to return all resources whose "Resource_Types" include “periodicals.” 
 
@@ -561,7 +562,7 @@ function runSearch() {
 }
 ```
 
-### Refresh Button
+## Refresh Button
 
 The last feature we need to add is a refresh button. This button will take users back to the full API dataset without forcing them to refresh the page. 
 
