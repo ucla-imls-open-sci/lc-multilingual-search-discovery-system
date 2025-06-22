@@ -125,7 +125,9 @@ document.querySelector('.translation').addEventListener('click', function (event
 
 When a user clicks on a language link, the script will retrieve the two-character code listed by the `data-lang` custom element. `event.preventDefault()` will prevent the `<a>` tag from carrying out its normal link action and refreshing the page. If it refreshes the page, it will cause us to have to reload the API data, which will make our site a much slower experience for users. Finally, we pass the two-character language code to `translatePage()` function.
 
+:::keypoints
+### Episode Summary
+**Implementing Custom In-Page Translation:** We successfully set up a client-side translation system using JavaScript, creating and linking a dedicated translation.js file to our webpage.
 
-
-
-
+**Dynamically Updating Content:** We learned to define a translation table within a JavaScript object and dynamically update the text content of HTML elements based on user-selected languages, providing full control over the translated content.
+:::
