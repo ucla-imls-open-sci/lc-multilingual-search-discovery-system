@@ -24,6 +24,11 @@ exercises: 1
 
 In this episode we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.  You'll begin by establishing functional requirements for your project, setting clear goals and selecting free, open-source solutions. Next, you'll transform a Google Sheet into a database by converting it into a dynamic JSON-based API endpoint using Google App Script, allowing your website to retrieve data. You'll then connect your website and database via the `getData()` function to fetch data and the `displayData()` function to display the data to the user. Finally, you'll build the logic behind the search interface (`filterData()`), which will include *data normalization*, an important consideration to ensure search results match different user provided keywords (e.g., handling variations in capitalization, accents, or special characters).
 
+:::::::::::::::::::::::::::::::::::::::::: prereq
+- Copy our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet to a new folder in your Google Drive. You can name this folder whatever you like.
+- Download our starting code files: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/webapp/webapp.zip)
+  
+::::::::::::::::::::::::::::::::::::::::::
 
 ## Functional Requirements
 In any technical project, it's essential to establish clear functional requirements before diving into the technical details. This ensures that the team stays focused on the core objectives of the project, rather than getting sidetracked by fancy features or bells and whistles.
@@ -55,7 +60,9 @@ The first technological hurtle is the fact that a Google Sheet is not automatica
 
 An API is a set of protocols that delivers data to a website. We want our site to receive the data in our spreadsheet as JSON (JavaScript Object Notation), which is a text-based data format to transmit data objects between a web server and a client-side application. When we talk about server-side, we are talking about operations that happen in the database on the servers. When we talk about client-side, we are talking about operations that occur in the user’s browser.
 
-To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. In the Google Drive folder where you copied lacli-sample-data create a Google App Script File and name it Convert Sheet to JSON. When you open it, add the Google Sheets API under Services:
+To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. 
+
+In a Google Drive folder, make a copy of our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet. In this folder you'll also create a Google App Script File and name it Convert Sheet to JSON. This video will show you how to create the file and add the Google Sheets API under Services:
 
 <iframe src="https://drive.google.com/file/d/1WScfIWv2PFTf4IoY_Z01r3qIUa194Muk/preview" width="640" height="480" allow="autoplay"></iframe>
 
