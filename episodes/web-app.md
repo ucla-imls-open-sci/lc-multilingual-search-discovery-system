@@ -1,7 +1,7 @@
 ---
 title: "Building the Search Web App"
-teaching: 45
-exercises: 3
+teaching: 60
+exercises: 1
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -44,7 +44,7 @@ Based on the functional requirement assessment above, create your own two column
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Transform a Google Sheet into an API Endpoint with Apps Script
+## Google Sheet as API Endpoint
 
 The first technological hurtle is the fact that a Google Sheet is not automatically set up like a database. We will do this in three steps:
 1. Create a Google App Script file that uses the Google Sheets API.
@@ -107,7 +107,7 @@ The last step is launching the Apps Script web app:
 At the end of the video, you see that a red box appears around the Apps Script web app URL. This URL will act as our API endpoint and enable our discovery system to import all the data from our Google Sheet in JSON. Save this URL. You can also copy this URL into your browser, hit return, and you'll see all our spreadsheet data represented in JSON.
 :::
 
-## Connect your Website and Database: getData()
+## Get your Data: getData()
 In this section we will take the API endpoint, which we created with Apps Script, and connect it to our website. We’ll then display that data on our website.
 
 To get started, download `webapp`, which contains the starting files for our website. Your file structure will look like this:
@@ -250,7 +250,7 @@ Success! Lets look at this data to get a sense of what is going on. Let’s expa
 JSON works in key-value format. This format will be the same for every entry in our data. All the keys are exactly the column headings in our Google Sheet. This is very useful because we can call specific pieces of data about a resource in our data table by using the column headings. The values, presented within quotes, is the data per row of our data. So here we are look at all the data, for the first row in our table. So, for example, if we want to display the title of a resource in our data table, we can ask JavaScript to show us the Resource_Title for a specific row.
 :::
 
-## Display your Data on the Site: displayData()
+## Display your Data: displayData()
 Now let’s move to displaying this data on the website in a user-friendly format. In our `index.html` file, you will see we have a `<div>` element with the id of “display” within the `<main>` part of our document. 
 
 ```index.html
