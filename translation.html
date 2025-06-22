@@ -224,12 +224,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         3. Translation
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#background">Background</a></li>
+<li><a href="#user-interface">User Interface</a></li>
+<li><a href="#storing-our-translations">Storing our Translations</a></li>
+<li><a href="#translatepage-function">translatePage() Function</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -336,7 +346,8 @@ displays specific content based on user language preferences.</li>
 </div>
 </div>
 </div>
-<p>Translation remains an elusive problem on the web. Browsers permit
+<section><h2 class="section-heading" id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a></h2>
+<hr class="half-width"><p>Translation remains an elusive problem on the web. Browsers permit
 the use of 3rd party tools like Google Translate to translate a web page
 on the fly. There are also subscription AI tools like Transifex.
 Translation has come a long way and it is now very good and enable users
@@ -350,7 +361,8 @@ content user’s see.</p>
 buttons in the top right corner of our page:</p>
 <figure><img src="media/translation-buttons.png" alt="Translation buttons at the top of our webpage." class="figure mx-auto d-block"><div class="figcaption">Translation buttons at the top of our
 webpage.</div>
-</figure><p>We will first create a new file called <code>translation.js</code>
+</figure></section><section><h2 class="section-heading" id="user-interface">User Interface<a class="anchor" aria-label="anchor" href="#user-interface"></a></h2>
+<hr class="half-width"><p>We will first create a new file called <code>translation.js</code>
 where we will create our language selection app. Your file structure
 should look like this:</p>
 <pre><code>–webapp
@@ -407,7 +419,8 @@ script, through the two-character language codes <em>en</em> and
 button, and refresh button. All of these elements have an id element
 that will let us target and translate them in
 <code>translation.js</code>.</p>
-<p>Now let’s switch over to <code>translation.js</code>. We will first
+</section><section><h2 class="section-heading" id="storing-our-translations">Storing our Translations<a class="anchor" aria-label="anchor" href="#storing-our-translations"></a></h2>
+<hr class="half-width"><p>Now let’s switch over to <code>translation.js</code>. We will first
 target all three of these elements:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -440,7 +453,8 @@ has a set of content for English (en) and Spanish (es).</p>
 <p>As you can see, we reference the element we want to target, for
 example <code>welcomeMSG</code>. And then under each language, we put
 the content we want to display.</p>
-<p>Now we will create a function that will execute our translation:</p>
+</section><section><h2 class="section-heading" id="translatepage-function">translatePage() Function<a class="anchor" aria-label="anchor" href="#translatepage-function"></a></h2>
+<hr class="half-width"><p>Now we will create a function that will execute our translation:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -509,10 +523,7 @@ subscription or AI-based solutions.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="web-app.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="action-plan.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

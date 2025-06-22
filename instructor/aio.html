@@ -417,7 +417,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -485,7 +485,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -550,7 +550,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -573,7 +573,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -587,7 +587,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -1589,6 +1589,9 @@ displays specific content based on user language preferences.</li>
 </div>
 </div>
 </div>
+<section><h2 class="section-heading" id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a>
+</h2>
+<hr class="half-width">
 <p>Translation remains an elusive problem on the web. Browsers permit
 the use of 3rd party tools like Google Translate to translate a web page
 on the fly. There are also subscription AI tools like Transifex.
@@ -1603,7 +1606,10 @@ content user’s see.</p>
 buttons in the top right corner of our page:</p>
 <figure><img src="../media/translation-buttons.png" alt="Translation buttons at the top of our webpage." class="figure mx-auto d-block"><div class="figcaption">Translation buttons at the top of our
 webpage.</div>
-</figure><p>We will first create a new file called <code>translation.js</code>
+</figure></section><section><h2 class="section-heading" id="user-interface">User Interface<a class="anchor" aria-label="anchor" href="#user-interface"></a>
+</h2>
+<hr class="half-width">
+<p>We will first create a new file called <code>translation.js</code>
 where we will create our language selection app. Your file structure
 should look like this:</p>
 <pre><code>–webapp
@@ -1660,6 +1666,9 @@ script, through the two-character language codes <em>en</em> and
 button, and refresh button. All of these elements have an id element
 that will let us target and translate them in
 <code>translation.js</code>.</p>
+</section><section><h2 class="section-heading" id="storing-our-translations">Storing our Translations<a class="anchor" aria-label="anchor" href="#storing-our-translations"></a>
+</h2>
+<hr class="half-width">
 <p>Now let’s switch over to <code>translation.js</code>. We will first
 target all three of these elements:</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -1693,6 +1702,9 @@ has a set of content for English (en) and Spanish (es).</p>
 <p>As you can see, we reference the element we want to target, for
 example <code>welcomeMSG</code>. And then under each language, we put
 the content we want to display.</p>
+</section><section><h2 class="section-heading" id="translatepage-function">translatePage() Function<a class="anchor" aria-label="anchor" href="#translatepage-function"></a>
+</h2>
+<hr class="half-width">
 <p>Now we will create a function that will execute our translation:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">TRANSLATION.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1757,7 +1769,12 @@ translation, giving us a free–and far more reliable–option than
 subscription or AI-based solutions.</p>
 </div>
 </div>
-</div></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-action-plan"><p>Content from <a href="action-plan.html">Action Plan for Promotion and Collaboration</a></p>
 <hr>
 <p>Last updated on 2025-06-18 |
 
