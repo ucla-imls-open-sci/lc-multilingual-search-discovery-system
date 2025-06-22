@@ -229,6 +229,7 @@
 <li><a href="#transform-a-google-sheet-into-an-api-endpoint">Transform a Google Sheet into an API Endpoint</a></li>
 <li><a href="#connect-your-website-and-database">Connect your Website and Database</a></li>
 <li><a href="#display-your-data-on-the-site">Display your Data on the Site</a></li>
+<li><a href="#filter-your-data">Filter your data</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -702,18 +703,22 @@ and dynamically inject html containing our data here. To target this
 </div>
 <p>Now that it’s targeted, we can control the html injection with a new
 function in <code>app.js</code> called <code>displayData()</code>:</p>
-<pre class="app,js"><code>const display = document.getElementById('display');
-
-// Display data
-function displayData(data) {
- let dataDisplay = data.map((object) =&gt; {
-   return `
-&lt;h2&gt;${object.Resource_Title}&lt;/h2&gt;
-`;
- }).join('');
-
- display.innerHTML = dataDisplay;
-};</code></pre>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="kw">const</span> display <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'display'</span>)<span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="co">// Display data</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayData</span>(data) {</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a> <span class="kw">let</span> dataDisplay <span class="op">=</span> data<span class="op">.</span><span class="fu">map</span>((object) <span class="kw">=&gt;</span> {</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a>   <span class="cf">return</span> <span class="vs">`</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="vs">&lt;h2&gt;</span><span class="sc">${</span>object<span class="op">.</span><span class="at">Resource_Title</span><span class="sc">}</span><span class="vs">&lt;/h2&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a> })<span class="op">.</span><span class="fu">join</span>(<span class="st">''</span>)<span class="op">;</span>  </span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a> display<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> dataDisplay<span class="op">;</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
 <p>This function takes our data as input. It then creates an object
 called <code>dataDisplay</code> where we will store our formatted data
 for display to the user. The key part of <code>displayData()</code> is
@@ -826,10 +831,377 @@ app.</div>
 </figure></div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="filter-your-data">Filter your data<a class="anchor" aria-label="anchor" href="#filter-your-data"></a></h2>
+<hr class="half-width"><p>Up to this point, we’ve focused on connecting our site to our Google
+Sheet API and displaying that data in the browser. We haven’t touched
+the search functionality. To call this functionality searching very much
+anthropomorphizes the code. Humans search using a variety of emotion,
+reason, and what we might call algorithms to sift through information to
+determine what is most relevant at a given time. What our will do is
+much simpler and a better way to describe it is filtering the data. We
+will filter the data according to whether the data we have describing a
+resource matches or does not match the user’s keywords. For example, if
+a user enters the keyword “periodicals,” we want to return all resources
+whose “Resource_Types” include “periodicals.”</p>
+<p>Filtering the data will occur after the browser has received data
+from the Google Sheet API, the <code>getData()</code> function, and
+before that data is displayed on the website to the user, the
+<code>displayData()</code> function.</p>
+<p>It is very important to remember that after getData() is called, all
+of the data is loaded into the user’s browser. This means that once the
+page loads, and the getData() promise is resolved, our website will not
+request data again from our Google Sheet API. All our filtering will
+occur on the client-side, which is to say in the browser and not in our
+Google Sheet database. This organization helps us achieve the Functional
+Requirements we established in Episode 2.1 and has a few benefits:</p>
+<ul><li>After <code>getData()</code> loads the data, filtering data is
+almost instantaneous, because we do not need to keep request new data
+from the Google Sheets API.</li>
+<li>As laid out in the Functional Requirements at the start of this
+episode, we want free database and web hosting solutions. Limiting our
+API requests ensures that we can continue with Google Sheets as our
+simple database.</li>
+<li>Security: We want a simple web solution, and a single get request
+from the API excludes any two way communication with our server, such as
+Post requests or the ability of users to inject malicious code back into
+our database. Our system is very simple, and this simplicity is its
+strength.</li>
+</ul><p>Let’s take a look at our search bar in our
+<code>index.html</code>:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">INDEX.HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode index.html" tabindex="0"><code class="sourceCode djangotemplate"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"search-bar"</span><span class="kw">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>               <span class="kw">&lt;input</span> <span class="er">id</span><span class="ot">=</span><span class="st">"input"</span> <span class="er">autocomplete</span><span class="ot">=</span><span class="st">"off"</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Enter keywords to search"</span><span class="kw">&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>               <span class="kw">&lt;button</span> <span class="er">id</span><span class="ot">=</span><span class="st">"search-btn"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Run search button"</span><span class="kw">&gt;</span>Search<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>               <span class="kw">&lt;button</span> <span class="er">id</span><span class="ot">=</span><span class="st">"refresh-btn"</span> <span class="er">title</span><span class="ot">=</span><span class="st">"Refresh"</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">"Refresh search results button"</span><span class="kw">&gt;</span>Refresh<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre>
+</div>
+<p>In html, search bars are created using <code>&lt;input&gt;</code>
+elements. Ours additionally has the id of “input.” We also have a search
+button, this is the first <code>&lt;button&gt;</code> element with an id
+of “search-btn.” We need to capture these two elements in our
+<code>app.js</code> file in order to process a user’s search.</p>
+<p>Switching to <code>app.js</code>, let’s target these two html
+elements:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co">// Define API endpoint and DOM elements</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="kw">const</span> googleSheet <span class="op">=</span> <span class="st">'&lt;your Google Sheet API here&gt;'</span><span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="kw">const</span> display <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'display'</span>)<span class="op">;</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="kw">const</span> input <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'input'</span>)<span class="op">;</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="kw">const</span> searchBtn <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'search-btn'</span>)<span class="op">;</span></span></code></pre>
+</div>
+<p>The first goal is to capture a user’s keywords in the search bar.</p>
+<ol style="list-style-type: decimal"><li>Let’s create a function called <code>runSearch()</code> that will
+process a user’s keywords. <code>searchTerms</code> will get us the
+value inside the <code>&lt;input&gt;</code> html element as well as trim
+off any incidental white space at the beginning or end of the user’s
+keywords. For now, we will <code>console.log</code> the user’s
+keywords.</li>
+</ol><div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co">// Filter data</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="kw">function</span> <span class="fu">runSearch</span>() {</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a> <span class="kw">const</span> searchTerms <span class="op">=</span> input<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(searchTerms)</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>}</span></code></pre>
+</div>
+<ol start="2" style="list-style-type: decimal"><li>Now we need to create an event listener that will trigger the
+runSearch(). An event listener in JavaScript is a function that is
+triggered when a user interacts with an HTML element. In our case, we
+want to trigger runSearch() when the user hits the return key or clicks
+the search button.</li>
+</ol><div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co">// Event listeners for search bar</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="co">// When the user clicks the search button</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>searchBtn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> runSearch)<span class="op">;</span></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co">// When the user presses the return key in the search window</span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>input<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keypress'</span><span class="op">,</span> (<span class="bu">event</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>   <span class="cf">if</span> (<span class="bu">event</span><span class="op">.</span><span class="fu">key</span> <span class="op">===</span> <span class="st">'Enter'</span>) {</span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a>       <span class="fu">runSearch</span>()<span class="op">;</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a>   }</span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a>})<span class="op">;</span></span></code></pre>
+</div>
+<p>In this video you can see that when there is text in the search bar
+and the user either hits the return key or presses the search button,
+our <code>runSearch()</code> function is activated and in turn logs the
+text in the console.</p>
+<iframe src="https://drive.google.com/file/d/1B9Ls7CKPQVMIw6qpalQZLH7pU0vn1gcP/preview" width="640" height="480" allow="autoplay">
+</iframe>
+<p>Now we can create our <code>filterData()</code> function. First,
+create a function called <code>filterData()</code> and have it accept as
+an argument the user’s query. We capture this query in the
+<code>runSearch()</code> function. We want to first have some logic
+here. We want to check whether or not a user even has a keyword in the
+search bar. Maybe they hit the search button without entering any
+keywords.</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">filterData</span>(query) {</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a> <span class="cf">if</span> (query) {</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a> <span class="co">// Our filter function will go here</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a> } <span class="cf">else</span> {</span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>   <span class="fu">displayData</span>(apiData)<span class="op">;</span></span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a> }</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
+<p>In this case, if the user does provide a query, our function will do
+something with that query to filter our data. If the user does not
+provide a query, our function does nothing and passes along the full
+dataset from our API to our displayData() function.</p>
+<div class="section level3">
+<h3 id="normalization">Normalization<a class="anchor" aria-label="anchor" href="#normalization"></a></h3>
+<p>We need to consider the variety of ways our users might search for
+material:</p>
+<ul><li>
+<strong>Capitalization:</strong> Some users may capitalize words
+differently. They might use CAPSLOCK or all lowercase or Title Case
+Their Searches. Our filter function needs to be ready to handle all of
+these cases.</li>
+<li>
+<strong>Word Order:</strong> We want to search each keyword as if it
+were a unique search term as opposed to searching with one long string.
+For example, if we search as one string, and a user searches “art in
+mexico” or “mexico art,” the filter function will only return results
+that also have the words in the same order. What the user wants is all
+resources that mention art <em>and</em> mexico.</li>
+<li>
+<strong>Diacritics:</strong> Diacritics are the accent marks used in
+Spanish. Given that we are looking at a bilingual database and expect
+Spanish speaking users, we need to manage diacritics. It is best to make
+our filtering diacritic agnostic. For example, someone could misspell
+Pueblos indígenas as Pueblos <em>indigenas</em>.</li>
+</ul><p>The process to manage all the variety of ways users might enter
+search terms is called normalization. We will normalize all search input
+to prevent our filter function from excluding results because of
+capitalized letters, word order, or missing diacritics.</p>
+<p>JavaScript makes normalizing for capitalization and word order easy.
+Let’s return to our <code>filterData()</code> function, and add this
+code if a user supplies a query:</p>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">filterData</span>(query) {</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a> <span class="cf">if</span> (query) {</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>     <span class="kw">const</span> searchTerms <span class="op">=</span> query<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a> } <span class="cf">else</span> {</span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a>   <span class="fu">displayData</span>(apiData)<span class="op">;</span></span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a> }</span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
+<p>We created a new variable called <code>searchTerms</code>. Inside
+this variable, we will first apply the <code>.toLowerCase()</code>
+method which makes the user’s input keywords in lowercase and should
+eliminate any problems around mismatched capitalization. Then we use the
+<code>.split()</code> method to split up the user’s input on each space
+(/+/) which is a regular expression that identifies spaces and creates a
+new search term on the space. In the end, searchTerms will be an array
+of search terms that we will use to filter our data.</p>
+<p>Diacritics are require an additional step, we must create our own
+function that will strip the diacritics from the user’s keywords:</p>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">removeDiacritics</span>(str) {</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a> <span class="cf">return</span> str<span class="op">.</span><span class="fu">normalize</span>(<span class="st">"NFD"</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">[\u0300-\u036f]</span><span class="ss">/g</span><span class="op">,</span> <span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
+<p>This function takes a string, the user’s input, and applies
+<code>.normalize("NFD")</code>. This command normalizes the input string
+using the “Normalization Form D” (NFD) algorithm, which separates base
+characters and diacritic markings. For example, “é” becomes “e” and ’.
+Then the <code>.replace()</code> method replaces all diacritic marks
+with an empty string. The g flag ensures that all markings within the
+string are replaced.</p>
+<p>Now let’s add this <code>removeDiacritics</code> function and finish
+normalizing the user’s input:</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">filterData</span>(query) {</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a> <span class="cf">if</span> (query) {</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>     <span class="kw">const</span> searchTerms <span class="op">=</span> query<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">map</span>(term <span class="kw">=&gt;</span> <span class="fu">removeDiacritics</span>(term))<span class="op">;</span></span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a> } <span class="cf">else</span> {</span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>   <span class="fu">displayData</span>(apiData)<span class="op">;</span></span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a> }</span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a>}<span class="op">;</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="apply--map">Apply .map()<a class="anchor" aria-label="anchor" href="#apply--map"></a></h3>
+<p>The <code>.map()</code> function is very useful in JavaScript. This
+function in JavaScript creates a new array by applying a provided
+function to each element of the original array. That’s important because
+remember that searchTerms is actually an array of every term, separated
+by spaces, from the user’s input. We then use the arrow function, which
+takes each term in the array and applies the
+<code>removeDiacritics</code> function on that argument.</p>
+<p>Now that we’ve normalized the user’s search terms, we can use it to
+filter the data. We will use the JavaScript <code>filter()</code>
+function to return only those results in our data that match the user’s
+search keywords:</p>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co">// Filter data</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="kw">function</span> <span class="fu">filterData</span>(query) {</span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a> <span class="cf">if</span> (query) {</span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>   <span class="kw">const</span> searchTerms <span class="op">=</span> query<span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span>)<span class="op">.</span><span class="fu">map</span>(term <span class="kw">=&gt;</span> <span class="fu">removeDiacritics</span>(term))<span class="op">;</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>   <span class="kw">const</span> filteredData <span class="op">=</span> apiData<span class="op">.</span><span class="fu">filter</span>(allData <span class="kw">=&gt;</span> {</span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a>     <span class="cf">return</span> searchTerms<span class="op">.</span><span class="fu">every</span>(term <span class="kw">=&gt;</span> {</span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a>       <span class="cf">return</span> (</span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>         <span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(allData)<span class="op">.</span><span class="fu">some</span>(value <span class="kw">=&gt;</span> {</span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a>           <span class="cf">if</span> (value <span class="op">&amp;&amp;</span> <span class="kw">typeof</span> value <span class="op">===</span> <span class="st">'string'</span>) {</span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>             <span class="cf">return</span> <span class="fu">removeDiacritics</span>(value<span class="op">.</span><span class="fu">toLowerCase</span>())<span class="op">.</span><span class="fu">includes</span>(term)<span class="op">;</span></span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a>           }</span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a>           <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a>         })</span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a>       )<span class="op">;</span></span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a>     })<span class="op">;</span></span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a>   })<span class="op">;</span></span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a></span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a>   <span class="fu">displayData</span>(filteredData)<span class="op">;</span></span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a> } <span class="cf">else</span> {</span>
+<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a>   <span class="fu">displayData</span>(apiData)<span class="op">;</span></span>
+<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a> }</span>
+<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a></span>
+<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a>     })<span class="op">;</span></span>
+<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a>   })<span class="op">;</span></span>
+<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a></span>
+<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a>   <span class="fu">displayData</span>(filteredData)<span class="op">;</span></span>
+<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a> } <span class="cf">else</span> {</span>
+<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a>   <span class="fu">displayData</span>(apiData)<span class="op">;</span></span>
+<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a> }</span>
+<span id="cb25-32"><a href="#cb25-32" tabindex="-1"></a>}</span></code></pre>
+</div>
+<div id="filter-every-some" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="filter-every-some" class="callout-inner">
+<h3 class="callout-title">filter(), every(), &amp; some()</h3>
+<div class="callout-content">
+<p>We use three important methods to conduct the search: filter(),
+every(), and some().</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Filter()</strong> We use to iterate over every object in our
+API data to determine if it matches with the user’s search
+keywords.</li>
+<li>
+<strong>Every()</strong> Iterates over each search term in the
+searchTerms array. If all search terms match, the <code>every()</code>
+method returns true, indicating that the object should be included in
+the filtered results.</li>
+<li>
+<strong>Some()</strong> Here is where the real matching occurs. It
+is iterating over all the values for each object in the array. We can
+think of each object in the array of API data as one resource in our
+dataset. The values of the object are those we have in our dataset per
+resource. For example, Resource_Title, Materias_en_Espanol, Languages,
+and Summary. The <code>Some()</code> function will take each search term
+and see if it matches within the values of an object and returns a
+boolean true or false. All search terms be true meaning that a resource
+must contain all the search terms in order for it to be included in the
+filteredData object. Within this some function, we include a bit of
+logic and processing on the API data. We first check that the data is a
+string, this way we can match the string of the user’s input to the
+string in the data. If it is a string, we apply the same normalization
+of capitalization and diacritics we applied to the keywords to the data.
+This way we remove any possibility for a missed match due to differences
+in capitalization or diacritic placement. In other words, we compare
+lowercase, diacritic-free search terms with lowercase, diacritic-free
+data.</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="displaying-filtered-data">Displaying Filtered Data<a class="anchor" aria-label="anchor" href="#displaying-filtered-data"></a></h3>
+<p>In the end, we will pass our <code>filteredData</code> array to our
+<code>displayData()</code> function to display the search results to our
+user.</p>
+<p>Now we are ready to test it. We need to make a small change to our
+runSearch() function, which at this time is logging our searchTerms to
+the console. We want to now pass the user’s supplied keywords to our new
+filterData() function like this:</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co">// Filter data</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="kw">function</span> <span class="fu">runSearch</span>() {</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a> <span class="kw">const</span> searchTerms <span class="op">=</span> input<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a> <span class="fu">filterData</span>(searchTerms)<span class="op">;</span></span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>}</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="refresh-button">Refresh Button<a class="anchor" aria-label="anchor" href="#refresh-button"></a></h3>
+<p>The last feature we need to add is a refresh button. This button will
+take users back to the full API dataset without forcing them to refresh
+the page.</p>
+<p>Let’s identify the refresh button in <code>app.js</code>:</p>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="kw">const</span> refreshBtn <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'refresh-btn'</span>)<span class="op">;</span></span></code></pre>
+</div>
+<p>This button will clear all user keywords so they see all resources
+with no filtering. We will do this by running the
+<code>runSearch()</code> function with no user keywords.</p>
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">APP.JS<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode app.js" tabindex="0"><code class="sourceCode javascript"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>refreshBtn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a> input<span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a> <span class="fu">runSearch</span>()<span class="op">;</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>})<span class="op">;</span></span></code></pre>
+</div>
+<div id="episode-summary" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div id="episode-summary" class="callout-inner">
+<h3 class="callout-title">Episode Summary</h3>
+<div class="callout-content">
+<p><strong>Establishing Functional Requirements:</strong> We learned how
+to define clear goals for a technical project, identifying optimal,
+free, and open-source solutions like Google Sheets, GitHub Pages, and
+Vanilla JavaScript for building a robust search and discovery
+system.</p>
+<p><strong><em>Transforming Google Sheets into a Database:</em></strong>
+We successfully converted a Google Sheet into a dynamic JSON-based API
+endpoint using Google App Script, enabling our website to retrieve and
+utilize the data.</p>
+<p>*<strong>Connecting Website and Database:</strong> We developed the
+JavaScript <code>getData()</code> function to fetch JSON data from our
+Google Sheet API and the <code>displayData()</code> function to present
+this information effectively on the webpage.</p>
+<p><strong>Implementing Data Filtering and Search:</strong> We built
+robust client-side filtering capabilities, including normalization for
+capitalization and diacritics, allowing users to search the displayed
+data efficiently.</p>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="description-standards.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
