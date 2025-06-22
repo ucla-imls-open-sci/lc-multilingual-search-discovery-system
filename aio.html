@@ -654,6 +654,23 @@ Finally, you’ll build the logic behind the search interface
 normalization</em>, an important consideration to ensure search results
 match different user provided keywords (e.g., handling variations in
 capitalization, accents, or special characters).</p>
+<div id="prereq1" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Prerequisite</h3>
+<div class="callout-content">
+<ul>
+<li>Copy our <a href="https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing" class="external-link">LACLI
+Sample Data</a> spreadsheet to a new folder in your Google Drive. You
+can name this folder whatever you like.</li>
+<li>Download our starting code files: <a href="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/webapp/webapp.zip" class="external-link">webapp.zip</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="functional-requirements">Functional Requirements<a class="anchor" aria-label="anchor" href="#functional-requirements"></a>
 </h2>
 <hr class="half-width">
@@ -755,10 +772,12 @@ about server-side, we are talking about operations that happen in the
 database on the servers. When we talk about client-side, we are talking
 about operations that occur in the user’s browser.</p>
 <p>To activate the Google Sheet API and transform our Spreadsheet into
-JSON data requires creating a Google App Script file. In the Google
-Drive folder where you copied lacli-sample-data create a Google App
-Script File and name it Convert Sheet to JSON. When you open it, add the
-Google Sheets API under Services:</p>
+JSON data requires creating a Google App Script file.</p>
+<p>In a Google Drive folder, make a copy of our <a href="https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing" class="external-link">LACLI
+Sample Data</a> spreadsheet. In this folder you’ll also create a Google
+App Script File and name it Convert Sheet to JSON. This video will show
+you how to create the file and add the Google Sheets API under
+Services:</p>
 <iframe src="https://drive.google.com/file/d/1WScfIWv2PFTf4IoY_Z01r3qIUa194Muk/preview" width="640" height="480" allow="autoplay">
 </iframe>
 <p>Now that the Sheets API is set up, we will instruct it to wrap up our
