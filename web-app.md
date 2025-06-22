@@ -20,7 +20,9 @@ exercises: 1
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this episode we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.  You'll begin by establishing functional requirements for your project, setting clear goals and selecting free, open-source solutions. Next, you'll transform a Google Sheet into a database by converting it into a dynamic JSON-based API endpoint using Google App Script, allowing your website to retrieve data. You'll then connect your website and database via the `getData()` function to fetch data and the `displayData()` function to display the data to the user. Finally, you'll build the logic behind the search interface, which will include *data normalization*, an important consideration to ensure search results are accurate and comprehensive by search keywords inputted by the user (e.g., handling variations in capitalization, accents, or special characters).
+## Background
+
+In this episode we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.  You'll begin by establishing functional requirements for your project, setting clear goals and selecting free, open-source solutions. Next, you'll transform a Google Sheet into a database by converting it into a dynamic JSON-based API endpoint using Google App Script, allowing your website to retrieve data. You'll then connect your website and database via the `getData()` function to fetch data and the `displayData()` function to display the data to the user. Finally, you'll build the logic behind the search interface (`filterData()`), which will include *data normalization*, an important consideration to ensure search results match different user provided keywords (e.g., handling variations in capitalization, accents, or special characters).
 
 
 ## Functional Requirements
