@@ -102,7 +102,7 @@ function doGet(request) {
 Let's take this code step by step:<br>
 1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br>
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br>
-![Screenshot of the spreadsheet's URL.](media/spreadsheet-url.png)<br>
+![Screenshot of the spreadsheet's URL.](fig/spreadsheet-url.png)<br>
 3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br>
 4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br>
 
@@ -119,7 +119,7 @@ At the end of the video, you see that a red box appears around the Apps Script w
 ## Get your Data: getData()
 In this section we will take the API endpoint, which we created with Apps Script, and connect it to our website. We’ll then display that data on our website.
 
-To begin, download the webapp code as a zip file: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/webapp/webapp.zip), which contains the starting files for our website. Your file structure will look like this:
+To begin, download the webapp code as a zip file: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip), which contains the starting files for our website. Your file structure will look like this:
 
 ```
 –webapp
@@ -132,7 +132,7 @@ Open index.html in the browser and you will see a basic structure for our discov
 
 From top to bottom: we have our language selection buttons, which we will use in a later episode to translate our page. Then we have our search bar, search button, and refresh button. We will use these in the next episode to enable users to search through the research data by with keywords. Last, in the blank white space is where we will populate our website with our research data.
 
-![Basic discovery interface.](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/basic-discovery-system.png)
+![Basic discovery interface.](fig/basic-discovery-system.png)
 
 Now open the `webapp` folder in your preferred Integrated development environment (IDE). Let’s take a look at `app.js`, which will drive our site’s functionality. Right now, we only have a road map of how we will build our system:
 
@@ -297,7 +297,7 @@ You can see what we are iterating over all the data and placing each object’s 
 
 Open `index.html` in the browser and you will see the "Resource_Title" of each object in our data array now populating the formerly blank white space below the search bar.
 
-![Discovery interface displaying all resource titles.](media/title-display.png)
+![Discovery interface displaying all resource titles.](fig/title-display.png)
 
 In our [lacli-sample-data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet, we have a lot of other data about each resource that is useful to users:
 - Resource_Types
@@ -368,13 +368,13 @@ function displayData(data) {
 
 The CSS I’ve already provided will handle the formatting of our data, to aid in readability and reinforce our hierarchy of information. 
 
-![CSS applied to resources display.](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/styled-resource-display.png)
+![CSS applied to resources display.](fig/styled-resource-display.png)
 
 ::: callout
 ### What we've accomplished so far
 This flowchart recaps the key functions we've written that move the data from our spreadsheet to our website.
 
-![Flowchart of data from spreadsheet to web app.](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/flowchart.png)
+![Flowchart of data from spreadsheet to web app.](fig/flowchart.png)
 :::
 
 ## Filter your Data: filterData()
