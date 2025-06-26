@@ -414,7 +414,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -482,7 +482,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -547,7 +547,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -570,7 +570,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -584,7 +584,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -820,7 +820,7 @@ App Script, delete the default function:</p>
 Script that handles a GET request made to your script’s web app URL.<br>
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy
 the string of alphanumeric characters in the URL of your
-spreadsheet:<br><img src="media/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
+spreadsheet:<br><img src="fig/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
 <code>var headers = dataValues[2]</code>, set the index of where the
 JSON should read header names. Because in our spreadsheet we have 2 rows
 of contextual information, we want the JSON to start on row 3 to find
@@ -851,7 +851,7 @@ JSON.</p>
 <p>In this section we will take the API endpoint, which we created with
 Apps Script, and connect it to our website. We’ll then display that data
 on our website.</p>
-<p>To begin, download the webapp code as a zip file: <a href="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/webapp/webapp.zip" class="external-link">webapp.zip</a>,
+<p>To begin, download the webapp code as a zip file: <a href="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip" class="external-link">webapp.zip</a>,
 which contains the starting files for our website. Your file structure
 will look like this:</p>
 <pre><code>–webapp
@@ -868,7 +868,7 @@ search bar, search button, and refresh button. We will use these in the
 next episode to enable users to search through the research data by with
 keywords. Last, in the blank white space is where we will populate our
 website with our research data.</p>
-<figure><img src="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/basic-discovery-system.png" alt="Basic discovery interface." class="figure mx-auto d-block"><div class="figcaption">Basic discovery interface.</div>
+<figure><img src="fig/basic-discovery-system.png" alt="Basic discovery interface." class="figure mx-auto d-block"><div class="figcaption">Basic discovery interface.</div>
 </figure><p>Now open the <code>webapp</code> folder in your preferred Integrated
 development environment (IDE). Let’s take a look at <code>app.js</code>,
 which will drive our site’s functionality. Right now, we only have a
@@ -1102,7 +1102,7 @@ are using <code>object.Resource_Title</code>.</p>
 <p>Open <code>index.html</code> in the browser and you will see the
 “Resource_Title” of each object in our data array now populating the
 formerly blank white space below the search bar.</p>
-<figure><img src="media/title-display.png" alt="Discovery interface displaying all resource titles." class="figure mx-auto d-block"><div class="figcaption">Discovery interface displaying all resource
+<figure><img src="fig/title-display.png" alt="Discovery interface displaying all resource titles." class="figure mx-auto d-block"><div class="figcaption">Discovery interface displaying all resource
 titles.</div>
 </figure><p>In our <a href="https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing" class="external-link">lacli-sample-data</a>
 spreadsheet, we have a lot of other data about each resource that is
@@ -1179,7 +1179,7 @@ providing clear structure for assistive technologies.</p>
 </div>
 <p>The CSS I’ve already provided will handle the formatting of our data,
 to aid in readability and reinforce our hierarchy of information.</p>
-<figure><img src="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/styled-resource-display.png" alt="CSS applied to resources display." class="figure mx-auto d-block"><div class="figcaption">CSS applied to resources display.</div>
+<figure><img src="fig/styled-resource-display.png" alt="CSS applied to resources display." class="figure mx-auto d-block"><div class="figcaption">CSS applied to resources display.</div>
 </figure><div id="what-weve-accomplished-so-far" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1189,7 +1189,7 @@ to aid in readability and reinforce our hierarchy of information.</p>
 <div class="callout-content">
 <p>This flowchart recaps the key functions we’ve written that move the
 data from our spreadsheet to our website.</p>
-<figure><img src="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/flowchart.png" alt="Flowchart of data from spreadsheet to web app." class="figure mx-auto d-block"><div class="figcaption">Flowchart of data from spreadsheet to web
+<figure><img src="fig/flowchart.png" alt="Flowchart of data from spreadsheet to web app." class="figure mx-auto d-block"><div class="figcaption">Flowchart of data from spreadsheet to web
 app.</div>
 </figure>
 </div>
@@ -1586,7 +1586,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-translation"><p>Content from <a href="translation.html">Translation</a></p>
 <hr>
-<p>Last updated on 2025-06-22 |
+<p>Last updated on 2025-06-26 |
 
         <a href="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/edit/main/episodes/translation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1634,7 +1634,7 @@ translation for users and be sure that we have full control of the
 content user’s see.</p>
 <p>In this episode we will focus on setting up our language selection
 buttons in the top right corner of our page:</p>
-<figure><img src="https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/translation-buttons.png" alt="Translation buttons at the top of our webpage." class="figure mx-auto d-block"><div class="figcaption">Translation buttons at the top of our
+<figure><img src="fig/translation-buttons.png" alt="Translation buttons at the top of our webpage." class="figure mx-auto d-block"><div class="figcaption">Translation buttons at the top of our
 webpage.</div>
 </figure></section><section><h2 class="section-heading" id="user-interface">User Interface<a class="anchor" aria-label="anchor" href="#user-interface"></a>
 </h2>
