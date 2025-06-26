@@ -374,7 +374,7 @@ The CSS I’ve already provided will handle the formatting of our data, to aid i
 ### What we've accomplished so far
 This flowchart recaps the key functions we've written that move the data from our spreadsheet to our website.
 
-![Flowchart of data from spreadsheet to web app.](fig/flowchart.png)
+![Flowchart of data from spreadsheet to web app.](fig/flow-chart.png)
 :::
 
 ## Filter your Data: filterData()
