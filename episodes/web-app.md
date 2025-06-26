@@ -26,7 +26,7 @@ In this episode we will create a single page website that displays a search and 
 
 :::::::::::::::::::::::::::::::::::::::::: prereq
 - Copy our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet to a new folder in your Google Drive. You can name this folder whatever you like.
-- Download our starting code files: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/webapp/webapp.zip)
+- Download our starting code files: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip,)
   
 ::::::::::::::::::::::::::::::::::::::::::
 
