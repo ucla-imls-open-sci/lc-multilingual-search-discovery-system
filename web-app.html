@@ -507,18 +507,24 @@ App Script, delete the default function:</p>
 <span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>  <span class="cf">return</span> ContentService<span class="op">.</span><span class="fu">createTextOutput</span>(output)<span class="op">.</span><span class="fu">setMimeType</span>(ContentService<span class="op">.</span><span class="at">MimeType</span><span class="op">.</span><span class="at">JSON</span>)<span class="op">;</span></span>
 <span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>}</span></code></pre>
 </div>
-<p>Let’s take this code step by step:<br> 1.
-<code>function doGet(request)</code> is a stock function in Google App
-Script that handles a GET request made to your script’s web app URL.<br>
-2. Your spreadsheetid is available in the URL for the spreadsheet. Copy
+<div class="section level3">
+<h3 id="lets-take-this-code-step-by-step">Let’s take this code step by step:<a class="anchor" aria-label="anchor" href="#lets-take-this-code-step-by-step"></a></h3>
+<ol style="list-style-type: decimal"><li>
+<code>function doGet(request)</code> is a stock function in Google
+App Script that handles a GET request made to your script’s web app
+URL.<br><br></li>
+<li>Your spreadsheetid is available in the URL for the spreadsheet. Copy
 the string of alphanumeric characters in the URL of your
-spreadsheet:<br><img src="fig/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br> 3.
+spreadsheet:<br><br><img src="fig/spreadsheet-url.png" alt="Screenshot of the spreadsheet’s URL." class="figure"><br><br></li>
+<li>
 <code>var headers = dataValues[2]</code>, set the index of where the
 JSON should read header names. Because in our spreadsheet we have 2 rows
 of contextual information, we want the JSON to start on row 3 to find
-column headers.<br> 4. <code>var rows = [],</code> the script will loop
-over all rows to add them to the JSON.<br></p>
-<p>The last step is launching the Apps Script web app:</p>
+column headers.<br><br></li>
+<li>
+<code>var rows = [],</code> the script will loop over all rows to
+add them to the JSON.<br><br></li>
+</ol><p>The last step is launching the Apps Script web app:</p>
 <iframe src="https://drive.google.com/file/d/1h3vF1022Ksv5TrI7_gnhYYw1FcAdhnL5/preview" width="640" height="480" allow="autoplay">
 </iframe>
 <div id="keep-the-url-handy" class="callout">
@@ -534,6 +540,7 @@ enable our discovery system to import all the data from our Google Sheet
 in JSON. Save this URL. You can also copy this URL into your browser,
 hit return, and you’ll see all our spreadsheet data represented in
 JSON.</p>
+</div>
 </div>
 </div>
 </div>
