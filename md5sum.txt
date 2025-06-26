@@ -10,5 +10,5 @@
 "episodes/action-plan.md" "a9b7f51c96e9bf20a2c97d8c782f5b03" "site/built/action-plan.md" "2025-06-18"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-03-16"
-"learners/setup.md" "2a2d69428a46e2e4b2de31f4e50582c7" "site/built/setup.md" "2025-06-17"
+"learners/setup.md" "97777fac05e0b3836ef0700629f33118" "site/built/setup.md" "2025-06-26"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2022-04-22"
