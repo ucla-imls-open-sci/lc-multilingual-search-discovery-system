@@ -20,7 +20,7 @@ Translation remains an elusive problem on the web. Browsers permit the use of 3r
 
 In this episode we will focus on setting up our language selection buttons in the top right corner of our page:
 
-![Translation buttons at the top of our webpage.](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/translation-buttons.png)
+![Translation buttons at the top of our webpage.](fig/translation-buttons.png)
 
 ## User Interface
 
