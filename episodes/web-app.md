@@ -99,12 +99,13 @@ function doGet(request) {
 }
 ```
 
-Let's take this code step by step:<br>
-1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br>
-2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br>
-![Screenshot of the spreadsheet's URL.](fig/spreadsheet-url.png)<br>
-3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br>
-4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br>
+### Let's take this code step by step:
+
+1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br><br>
+2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br><br>
+![Screenshot of the spreadsheet's URL.](fig/spreadsheet-url.png)<br><br>
+3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br><br>
+4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br><br>
 
 The last step is launching the Apps Script web app:
 
