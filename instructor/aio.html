@@ -1878,9 +1878,13 @@ any links that you are not going to use.
 now its time to deploy it to the internet. In this episode, we will use
 GitHub pages to freely host our web app files online and GitHub Pages to
 serve our site to the public at large.</p>
-<div class="section level3">
-<h3 id="what-is-github">What is GitHub?<a class="anchor" aria-label="anchor" href="#what-is-github"></a>
-</h3>
+<div id="what-is-github" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="what-is-github" class="callout-inner">
+<h3 class="callout-title">What is GitHub?</h3>
+<div class="callout-content">
 <p>GitHub is a platform where developers create, store, manage, and
 share their code. Its power lies in that it tracks every change you make
 to your code, essentially letting you “time travel” back to any previous
@@ -1890,15 +1894,20 @@ make to your files. Over time, GitHub has expanded its services and now
 offers one called GitHub Pages, which allows you to host websites
 directly from your GitHub account for free.</p>
 </div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="create-a-github-account">Create a GitHub Account<a class="anchor" aria-label="anchor" href="#create-a-github-account"></a>
 </h2>
 <hr class="half-width">
-<p>To begin, you’ll need to create a free GitHub account. 1. Got to <a href="https://github.com/" class="external-link">github.com</a> and click <code>Sign Up</code>
-2. Next, enter your email then create a password and username. This
+<p>To begin, you’ll need to create a free GitHub account.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/" class="external-link">github.com</a> and click
+<code>Sign Up</code></p></li>
+<li><p>Next, enter your email then create a password and username. This
 username is very important as it is your unique identifier for your
 profile and projects, and a key for hosting your site through GitHub
-Pages.</p>
-</section><section><h2 class="section-heading" id="upload-your-files-to-a-repository">Upload your Files to a Repository<a class="anchor" aria-label="anchor" href="#upload-your-files-to-a-repository"></a>
+Pages.</p></li>
+</ol></section><section><h2 class="section-heading" id="upload-your-files-to-a-repository">Upload your Files to a Repository<a class="anchor" aria-label="anchor" href="#upload-your-files-to-a-repository"></a>
 </h2>
 <hr class="half-width">
 <p>Web projects tend to be composed of several files including HTML and
@@ -1920,20 +1929,12 @@ the screen.</li>
 </li>
 <li>Now click the big green <code>New</code> button on the top of the
 page.</li>
-<li>Next, you will be prompted to configure your repository:</li>
-</ol>
-<ul>
-<li>Repository Name: <code>webapp.</code>
-</li>
-<li>Description:
+<li>Next, you will be prompted to configure your repository: -
+Repository Name: <code>webapp.</code> - Description:
 <code>A Search and Discovery Web App for Collaborative Multilingual Projects.</code>
+- Make sure it is set to <code>Public.</code> - Check the box next to
+<code>Add a README file.</code>
 </li>
-<li>Make sure it is set to <code>Public.</code>
-</li>
-<li>Check the box next to <code>Add a README file.</code>
-</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
 <li>Click Repository at the bottom of the page.</li>
 </ol>
 </div>
@@ -1942,12 +1943,11 @@ page.</li>
 <p>These steps above have guided you on how to create an empty repo. Now
 we will upload our web app files to the repo:</p>
 <ol style="list-style-type: decimal">
-<li>Next to the green <code>Code</code> button, click
-<code>Add file</code> then select <code>Upload files.</code>
-</li>
-<li>Now drag and drop the HTML, CSS, and JavaScript files we’ve worked
-on in the previous episodes.</li>
-<li>When we add files to make changes to files, Git (which manages
+<li><p>Next to the green <code>Code</code> button, click
+<code>Add file</code> then select <code>Upload files.</code></p></li>
+<li><p>Now drag and drop the HTML, CSS, and JavaScript files we’ve
+worked on in the previous episodes.</p></li>
+<li><p>When we add files to make changes to files, Git (which manages
 GitHub’s version control system) calls this confirmation step a
 “commit.” In other words, we are committing to making these changes to
 the repo. It is customary to briefly summarize your changes when you
@@ -1957,8 +1957,9 @@ you commit documents to a repo for the first time. These commit comments
 let you search back through time for previous versions of your code.
 However, this capability is beyond the scope of this episode. Go ahead
 and write “First Commit” in the top text field and click the green
-“Commit changes” button. IMAGE</li>
+“Commit changes” button.</p></li>
 </ol>
+<p>IMAGE</p>
 <p>Congratualtions! You’ve just commited your first code to GitHub! All
 your hard work on the web app is now saved to the repo and you can share
 it with your friends and colleagues.</p>
@@ -1966,15 +1967,20 @@ it with your friends and colleagues.</p>
 </h2>
 <hr class="half-width">
 <p>GitHub Pages will use the documents in your repo to create a publicly
-accessible website for free. 1. Click on the settings tab on the top
-navigation bar above your repo. 2. On the left side of the page, go to
-<code>Code and automation</code> and click <code>Pages</code>. 3. Under
-<code>Branch</code> click the drop down menu that is displaying
-<code>None</code> and select <code>main</code> instead. Then click
-<code>Save</code>. 4. GitHub Pages will take a few moments to launch
-your site. Don’t navigate away from this page, wait for GitHub pages to
-generate the URL for your site. It will look like: <a href="https://%5ByourUserNameHere%5D.github.io/webbapp" class="external-link uri">https://[yourUserNameHere].github.io/webbapp</a></p>
-<div id="callout1" class="callout">
+accessible website for free.</p>
+<ol style="list-style-type: decimal">
+<li><p>Click on the settings tab on the top navigation bar above your
+repo.</p></li>
+<li><p>On the left side of the page, go to
+<code>Code and automation</code> and click <code>Pages</code>.</p></li>
+<li><p>Under <code>Branch</code> click the drop down menu that is
+displaying <code>None</code> and select <code>main</code> instead. Then
+click <code>Save</code>.</p></li>
+<li><p>GitHub Pages will take a few moments to launch your site. Don’t
+navigate away from this page, wait for GitHub pages to generate the URL
+for your site. It will look like: <a href="https://%5ByourUserNameHere%5D.github.io/webbapp" class="external-link uri">https://[yourUserNameHere].github.io/webbapp</a></p></li>
+</ol>
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
