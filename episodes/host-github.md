@@ -48,12 +48,16 @@ Before we can launch our site, we need to create a repo in which we will store a
 ![New repo button.](fig/green-new-btn.png)
 
 4. Next, you will be prompted to configure your repository:
-        - Repository Name: `webapp.`
-        - Description: `A Search and Discovery Web App for Collaborative Multilingual Projects.`
-        - Make sure it is set to `Public.`
-        - Check the box next to `Add a README file.`
 
-5. Click `Create repository` at the bottom of the page.
+           - Repository Name: `webapp.`
+
+           - Description: `A Search and Discovery Web App for Collaborative Multilingual Projects.`
+
+           - Make sure it is set to `Public.`
+
+           - Check the box next to `Add a README file.`
+
+6. Click `Create repository` at the bottom of the page.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
