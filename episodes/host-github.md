@@ -40,14 +40,20 @@ Before we can launch our site, we need to create a repo in which we will store a
 ### Create Your First Repo
 
 1. Click on your User Profile, the circle in the top right corner of the screen.
+
 2. Select `Your Repositories`
+
 3. Now click the big green `New` button on the top of the page.
+
+![New repo button.](fig/green-new-btn.png)
+
 4. Next, you will be prompted to configure your repository:
         - Repository Name: `webapp.`
         - Description: `A Search and Discovery Web App for Collaborative Multilingual Projects.`
         - Make sure it is set to `Public.`
         - Check the box next to `Add a README file.`
-5. Click Repository at the bottom of the page.
+
+5. Click `Create repository` at the bottom of the page.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -60,7 +66,7 @@ These steps above have guided you on how to create an empty repo. Now we will up
 
 3. When we add files to make changes to files, Git (which manages GitHub's version control system) calls this confirmation step a "commit." In other words, we are committing to making these changes to the repo. It is customary to briefly summarize your changes when you commit them to the repo. You'll do this in the first text field as seen in the screen shot below. Another custom is to write "First Commit" when you commit documents to a repo for the first time. These commit comments let you search back through time for previous versions of your code. However, this capability is beyond the scope of this episode. Go ahead and write "First Commit" in the top text field and click the green "Commit changes" button.
 
-IMAGE
+![Commit dialog box.](fig/commit-screen.png)
 
 Congratualtions! You've just commited your first code to GitHub! All your hard work on the web app is now saved to the repo and you can share it with your friends and colleagues.
 
@@ -68,6 +74,8 @@ Congratualtions! You've just commited your first code to GitHub! All your hard w
 GitHub Pages will use the documents in your repo to create a publicly accessible website for free.
 
 1. Click on the settings tab on the top navigation bar above your repo.
+
+![Settings menu.](fig/settings-btn.png)
 
 2. On the left side of the page, go to `Code and automation` and click `Pages`.
 
