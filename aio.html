@@ -426,7 +426,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -494,7 +494,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -559,7 +559,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -582,7 +582,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -596,7 +596,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -1917,19 +1917,21 @@ create a repo in which we will store all of our project files.</p>
 <h3 class="callout-title">Create Your First Repo</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
-<li>Click on your User Profile, the circle in the top right corner of
-the screen.</li>
-<li>Select <code>Your Repositories</code>
-</li>
-<li>Now click the big green <code>New</code> button on the top of the
-page.</li>
-<li>Next, you will be prompted to configure your repository: -
+<li><p>Click on your User Profile, the circle in the top right corner of
+the screen.</p></li>
+<li><p>Select <code>Your Repositories</code></p></li>
+<li><p>Now click the big green <code>New</code> button on the top of the
+page.</p></li>
+</ol>
+<figure><img src="fig/green-new-btn.png" alt="New repo button." class="figure mx-auto d-block"><div class="figcaption">New repo button.</div>
+</figure><ol start="4" style="list-style-type: decimal">
+<li><p>Next, you will be prompted to configure your repository: -
 Repository Name: <code>webapp.</code> - Description:
 <code>A Search and Discovery Web App for Collaborative Multilingual Projects.</code>
 - Make sure it is set to <code>Public.</code> - Check the box next to
-<code>Add a README file.</code>
-</li>
-<li>Click Repository at the bottom of the page.</li>
+<code>Add a README file.</code></p></li>
+<li><p>Click <code>Create repository</code> at the bottom of the
+page.</p></li>
 </ol>
 </div>
 </div>
@@ -1953,8 +1955,8 @@ However, this capability is beyond the scope of this episode. Go ahead
 and write “First Commit” in the top text field and click the green
 “Commit changes” button.</p></li>
 </ol>
-<p>IMAGE</p>
-<p>Congratualtions! You’ve just commited your first code to GitHub! All
+<figure><img src="fig/commit-screen.png" alt="Commit dialog box." class="figure mx-auto d-block"><div class="figcaption">Commit dialog box.</div>
+</figure><p>Congratualtions! You’ve just commited your first code to GitHub! All
 your hard work on the web app is now saved to the repo and you can share
 it with your friends and colleagues.</p>
 </section><section><h2 class="section-heading" id="deploy-with-github-pages">Deploy with GitHub Pages<a class="anchor" aria-label="anchor" href="#deploy-with-github-pages"></a>
@@ -1963,8 +1965,11 @@ it with your friends and colleagues.</p>
 <p>GitHub Pages will use the documents in your repo to create a publicly
 accessible website for free.</p>
 <ol style="list-style-type: decimal">
-<li><p>Click on the settings tab on the top navigation bar above your
-repo.</p></li>
+<li>Click on the settings tab on the top navigation bar above your
+repo.</li>
+</ol>
+<figure><img src="fig/settings-btn.png" alt="Settings menu." class="figure mx-auto d-block"><div class="figcaption">Settings menu.</div>
+</figure><ol start="2" style="list-style-type: decimal">
 <li><p>On the left side of the page, go to
 <code>Code and automation</code> and click <code>Pages</code>.</p></li>
 <li><p>Under <code>Branch</code> click the drop down menu that is
