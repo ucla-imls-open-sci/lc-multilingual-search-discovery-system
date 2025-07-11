@@ -1,5 +1,5 @@
 ---
-title: "Action Plan for Promotion and Collaboration"
+title: "Develop an Action Plan to Promote Your Project and Encourage Participation and Collaboration"
 teaching: 45
 exercises: 3
 ---
