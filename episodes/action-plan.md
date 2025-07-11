@@ -28,7 +28,7 @@ In this episode, you will explore how to expand the impact of your project and e
 * Allow reuse of your data by selecting a [creative commons license appropriate to your work](https://chooser-beta.creativecommons.org/). Also, share your data with similar projects so that you can reuse their content and they can reuse yours. 
 * Encourage librarians to link to your project in:
   + E-resources/database finder platforms. Example: [Library of Congress E-Resources Platform](https://eresources.loc.gov/c/fdij6k/database/details/100009828?alphamenufacet=&count=25&highlightTag=mark&offset=1&orderby=relevance&search=lacli&searchField=keyword&searchType=contains&subjectFacetSchemaFilter=library%20of%20congress)
-  + Library Guides. You can track those created using LibGuides, a content management and information sharing system, in this [website](
+  + Library Guides. You can track those created using LibGuides, a content management and information sharing system, in this [LibGuides Community website](
   https://community.libguides.com/)
 * Suggest other library projects or initiatives to include a metadata record for your project. Example: project LACLI in the [Handbook of Latin American Studies](https://hlasopac.loc.gov/vwebv/search?searchArg=lacli&searchCode=GKEY%5E*&searchType=0&recCount=25&sk=en_US) and [Resources for College Libraries](https://www.rclweb.net/) (this database requires a subscription).
 
