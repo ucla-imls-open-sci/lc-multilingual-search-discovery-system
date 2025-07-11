@@ -85,7 +85,11 @@ Now, let's proceed to our second objective: we will explore strategies to increa
 
 ## Organize an Edit-a-thon
 
-Also known as an editathon. It is a collaborative event where people come together to create, update or improve content on a specific project. For example, there is a long tradition of edit-a-thons to contribute content to Wikipedia. These events usually have a specific focus, such as adding content related to a certain subject area, addressing content gaps, or focusing on underrepresented topics, cultures, or perspectives. Edit-a-thons are typically organized for a set period and include a training component, making them suitable for both experienced editors and newcomers. While traditionally held as in-person events, edit-a-thons can also be conducted virtually, allowing for wider participation.
+:::::::::::::::::::::::::::::::::::::::::: callout
+### What is an Edit-a-thon?
+It is a collaborative event where people come together to create, update or improve content on a specific project. For example, there is a long tradition of edit-a-thons to contribute content to Wikipedia. These events usually have a specific focus, such as adding content related to a certain subject area, addressing content gaps, or focusing on underrepresented topics, cultures, or perspectives. Edit-a-thons are typically organized for a set period and include a training component, making them suitable for both experienced editors and newcomers. While traditionally held as in-person events, edit-a-thons can also be conducted virtually, allowing for wider participation.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Participate in Conference Presentations and Create Events Such as Webinars, Lectures, etc.
 
