@@ -56,3 +56,36 @@ Use Analytics Tools to figure out aspects such as:
 Google Analytics is the tool we use to monitor how people interact with the LACLI website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
 
 You can also use AI tools to undertake additional types of analysis. For example, if you want to compare your project with similar projects, you could use this prompt: Compare [name of your project] to other similar online repositories specialized in  [specify your subject(s)] Always ask follow-up questions when using AI tools. This helps you get more accurate and relevant answers.
+
+## Apply for Awards and Grants
+
+Apply for Awards and Grants that could bring both recognition and financial support. 
+
+For this type of content, you'll find several specialized databases that can be particularly helpful: 
+* Subscription-based (it might include some partial access under some circumstances):
+  Foundation Directory Online (FDO)
+  Pivot-RP
+*Free access:
+  Grants.gov
+
+Consider applying to awards and grants by organizations that support digital projects such as:
+* International organizations such as the Global Sustainability Coalition for Open Science Services (Scoss), a network of organizations committed to helping secure OA and OS infrastructure. It provides funding for open infrastructure https://scoss.org/need-funding-for-open-infra/ 
+* National organizations. The ones below are US-based. Think of any available in the country where you develop your project.
+    National Endowment for the Humanities (NEH). The NEH Office of Digital Humanities offers several grant programs specifically for          digital projects. These grants support various stages of digital projects, from early development to implementation and evaluation. 
+  Institute of Museum and Library Services (IMLS)
+  Mellon Foundation
+  American Council of Learned Societies (ACLS). Digital Extension Grants
+  Council on Library and Information Resources (CLIR) 
+* Professional organizations.
+  For example, in the case of LACLI, it was awarded the award for best public project by LASA’s Archives, Libraries, and Digital Scholarship section and the SALALM Award for Institutional Collaborative Initiatives. Beyond prestige, these awards bring visibility to your project in specific communities interested in your content. It can also encourage others to explore collaborations. In the case of the SALALM, this award recognizes international collaborations. In addition to professional organizations at the national level, please also consider those at the international level (e.g. the Alliance of Digital Humanities Organizations (ADHO), regional and local level. 
+
+Beyond organization-specific awards, there are independent recognition programs for digital humanities and scholarship projects, such as the Digital Humanities Awards. While these may not offer financial support, they can significantly boost your project's visibility and recognition in the field.
+
+Now, let's proceed to our second objective: we will explore strategies to increase user engagement in your project and foster partnerships that improve your web-based tool's ability to support multiple languages and its overall global usefulness.
+
+## Organize an Edit-a-thon
+
+Also known as an editathon. It is a collaborative event where people come together to create, update or improve content on a specific project. For example, there is a long tradition of edit-a-thons to contribute content to Wikipedia. These events usually have a specific focus, such as adding content related to a certain subject area, addressing content gaps, or focusing on underrepresented topics, cultures, or perspectives. Edit-a-thons are typically organized for a set period and include a training component, making them suitable for both experienced editors and newcomers. While traditionally held as in-person events, edit-a-thons can also be conducted virtually, allowing for wider participation.
+Community building is an important aspect of these events as they often serve as networking venues for people with similar interests and help build a sense of community among participants. This can translate into future collaborative partnerships.  Edit-a-thons have become popular tools for institutions, organizations, and communities to engage people in content creation and improvement while promoting digital literacy and collaborative knowledge sharing. Ultimately, edit-a-thons can be a perfect venue to  increase multilingual content and global reach by organizing edit-a-thons that can focus on a specific language, country etc. 
+The underlying concept is that your project's quality and effectiveness will significantly improve through diverse contributions from individuals representing various cultural backgrounds, linguistic groups, and nationalities. This approach will ensure that the content included in your project is respectful of different values and perspectives. We learn together, we contribute together. Nobody holds the whole knowledge on one topic.  This diversity of perspectives and experiences enhances the project's overall scope, relevance, and applicability across different contexts. Global collaboration enables projects to become more comprehensive, inclusive, and diverse by incorporating knowledge and perspectives from people worldwide.
+
