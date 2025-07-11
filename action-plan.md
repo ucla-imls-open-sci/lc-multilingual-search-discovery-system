@@ -4,6 +4,7 @@ teaching: 45
 exercises: 3
 ---
 Congratulations on developing a search and discovery system for data stored in a Google Sheet! This is an impressive achievement. In this episode, you will explore how to expand the impact of your project and encourage participation and collaboration. After this episode, you will be able to:
+
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Identify and evaluate effective strategies to promote and increase visibility of your project among your diverse and global potential users.
@@ -19,3 +20,4 @@ Congratulations on developing a search and discovery system for data stored in a
 - How do we foster multilingual and culturally diverse collaborations?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+Let's begin by exploring various strategies to increase the visibility of your project. Think about how you bring people in! How can you effectively promote your website to reach potential users who might find it valuable? While not all of these possibilities may be directly applicable to your specific situation, it's valuable to consider a wide range of options. Use the following checklist to help you identify the most effective ways to promote your project.
