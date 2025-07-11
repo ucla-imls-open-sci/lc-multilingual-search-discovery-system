@@ -114,6 +114,7 @@ In the spirit of avoiding redundant work, seek out opportunities to collaborate 
 
 Experiential learning offers numerous advantages for students and creators of projects. This hands-on approach to education provides an engaging learning environment that goes beyond traditional classroom instruction. Students develop a wide range of skills that are valuable in both academic and professional settings. By engaging in real-world challenges, students learn to approach problems creatively and think outside the box. If you develop one of these opportunities, make sure you clearly articulate the following in your position announcement: your learning objectives, skills required, benefits, outcomes, and mentorship provided. 
 
+
 :::::::::::::::::::::::::::::::::::::::::: challenge
 
 ### ACTIVITY - AUTHENTIC ASSESSMENT 
