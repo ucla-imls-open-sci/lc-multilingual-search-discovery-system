@@ -3,7 +3,7 @@ title: "Develop an Action Plan to Promote Your Project and Encourage Participati
 teaching: 45
 exercises: 3
 ---
-
+Congratulations on developing a search and discovery system for data stored in a Google Sheet! This is an impressive achievement. In this episode, you will explore how to expand the impact of your project and encourage participation and collaboration. After this episode, you will be able to:
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Identify and evaluate effective strategies to promote and increase visibility of your project among your diverse and global potential users.
