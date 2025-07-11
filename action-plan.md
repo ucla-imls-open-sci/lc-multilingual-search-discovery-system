@@ -46,3 +46,13 @@ These listservs could be from both library and subject related organizations. In
 * Promote your project by using hashtags such as #DataScience or #TidyTuesday so others can contribute content to your project or reuse it to create other digital objects such as visualizations. 
 * Be aware of the limitations of social media. When you rely solely on social media platforms, you're not necessarily casting the widest possible net for your audience. While some individuals engage deeply with content and actively participate in discussions, many others interact differently. Furthermore, numerous individuals confine their social media use strictly to personal matters, avoiding professional or project-related content entirely. A significant portion of users tend to passively consume content. This passive consumption can limit the meaningful interactions and collaborations you might be hoping to achieve for your project.
 
+## Use Analytics Tools 
+
+Use Analytics Tools to figure out aspects such as:
+* Best day and time to post your content
+* Visitor metrics
+* Type of content with more views and reactions
+
+Google Analytics is the tool we use to monitor how people interact with the LACLI website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
+
+You can also use AI tools to undertake additional types of analysis. For example, if you want to compare your project with similar projects, you could use this prompt: Compare [name of your project] to other similar online repositories specialized in  [specify your subject(s)] Always ask follow-up questions when using AI tools. This helps you get more accurate and relevant answers.
