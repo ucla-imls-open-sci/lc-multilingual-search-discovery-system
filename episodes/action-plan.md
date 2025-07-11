@@ -32,4 +32,8 @@ In this episode, you will explore how to expand the impact of your project and e
   https://community.libguides.com/)
  ....* Suggest other library projects or initiatives to include a metadata record for your project. Example: project LACLI in the [Handbook of Latin American Studies] (https://hlasopac.loc.gov/vwebv/search?searchArg=lacli&searchCode=GKEY%5E*&searchType=0&recCount=25&sk=en_US) and [Resources for College Libraries] (https://www.rclweb.net/) (this database requires a subscription).
 
+## Disseminate Information about Your Project via Listservs of Professional Organizations 
+
+These listservs could be from both library and subject related organizations. In the case of our project LACLI, we promote it in organizations such as the Seminar on the Acquisition of Latin American Library Materials (SALALM), sections of the Latin American Studies Association (LASA), the ACRL’s European Studies Section (WESS), and the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
+
   ## Disseminate Information about Your Project via Listservs of Professional Organizations 
