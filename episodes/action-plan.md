@@ -86,25 +86,32 @@ Apply for Awards and Grants that could bring both recognition and financial supp
 
 For this type of content, you'll find several specialized databases that can be particularly helpful: 
 
-* Subscription-based (it might include some partial access under some circumstances):
+* **Subscription-based** (it might include some partial access under some circumstances):
   
   * [Foundation Directory Online (FDO)](https://fconline.foundationcenter.org/)
     
   * [Pivot-RP](https://pivot.proquest.com/)
   
-* Free access:
+* **Free access**:
   
   * [Grants.gov](https://grants.gov/)
 
 Consider applying to awards and grants by organizations that support digital projects such as:
-* International organizations such as the Global Sustainability Coalition for Open Science Services (Scoss), a network of organizations committed to helping secure OA and OS infrastructure. It provides funding for open infrastructure https://scoss.org/need-funding-for-open-infra/ 
-* National organizations. The ones below are US-based. Think of any available in the country where you develop your project.
-    National Endowment for the Humanities (NEH). The NEH Office of Digital Humanities offers several grant programs specifically for          digital projects. These grants support various stages of digital projects, from early development to implementation and evaluation. 
-  Institute of Museum and Library Services (IMLS)
-  Mellon Foundation
-  American Council of Learned Societies (ACLS). Digital Extension Grants
-  Council on Library and Information Resources (CLIR) 
-* Professional organizations.
+
+* **International organizations** such as the [Global Sustainability Coalition for Open Science Services (Scoss)](https://scoss.org/), a network of organizations committed to helping secure OA and OS infrastructure. It provides funding for [open infrastructure](https://scoss.org/need-funding-for-open-infra/)
+  
+* **National organizations**. The ones below are US-based. Think of any available in the country where you develop your project.
+   * [National Endowment for the Humanities (NEH)](https://www.neh.gov). The [NEH Office of Digital Humanities]([https://www.neh.gov/divisions](https://www.neh.gov/divisions/odh) offers several grant programs specifically for digital projects. These grants support various stages of digital projects, from early development to implementation and evaluation.
+     
+  * [Institute of Museum and Library Services (IMLS)](https://www.imls.gov/)
+    
+  * [Mellon Foundation]9https://www.mellon.org)
+    
+  * [American Council of Learned Societies (ACLS). Digital Extension Grants](https://www.acls.org/programs/digital-extension/)
+  
+  * [Council on Library and Information Resources (CLIR)](https://www.clir.org/)
+    
+* **Professional organizations**
   For example, in the case of LACLI, it was awarded the award for best public project by LASA’s Archives, Libraries, and Digital Scholarship section and the SALALM Award for Institutional Collaborative Initiatives. Beyond prestige, these awards bring visibility to your project in specific communities interested in your content. It can also encourage others to explore collaborations. In the case of the SALALM, this award recognizes international collaborations. In addition to professional organizations at the national level, please also consider those at the international level (e.g. the Alliance of Digital Humanities Organizations (ADHO), regional and local level. 
 
 Beyond organization-specific awards, there are independent recognition programs for digital humanities and scholarship projects, such as the Digital Humanities Awards. While these may not offer financial support, they can significantly boost your project's visibility and recognition in the field.
