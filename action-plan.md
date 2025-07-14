@@ -48,7 +48,7 @@ For example, **Linkedin** might be a good option to target professionals across 
 
 ::::::::::::::::::::::::::::::::::::::: 
 
-* Follow organizations and people related to the subject of your project. Make sure you tag them when you create content related to something of their interest or that has been created by them. This is a low-maintenance way to start building connections with them by helping promote their own content or share with them related content connected to their interests. For example, in [LACLI] (https://lacli.info/) we create weekly posts featuring sources from our database. If we promote a source created by an organization, we tag it along with tags to potential individual users interested in it. This also expands the visibility of your posts to anyone that follows the account you are tagging.
+* Follow organizations and people related to the subject of your project. Make sure you tag them when you create content related to something of their interest or that has been created by them. This is a low-maintenance way to start building connections with them by helping promote their own content or share with them related content connected to their interests. For example, in [LACLI](https://lacli.info/) we create weekly posts featuring sources from our database. If we promote a source created by an organization, we tag it along with tags to potential individual users interested in it. This also expands the visibility of your posts to anyone that follows the account you are tagging.
   
 * Be strategic about the context, nature of the content and when you post it. For example, in [LACLI](https://lacli.info/)  we have featured content related to historical commemorations or celebrations. During the “back to school” period, we have promoted free OER resources. Make sure you use hashtags to increase the visibility of your posts. Also, use at least one hashtag that can bring all the posts related to a specific theme or focus together. For example, for [LACLI](https://lacli.info/)  we use the hashtag #LACLIresources to bring all the resources that we feature together. In terms of content, explore various tones depending on your audience but keep them short and to the point. In the case of [LACLI](https://lacli.info/), we focus on the value and uniqueness of each featured resource.
 
@@ -76,7 +76,7 @@ Use Analytics Tools to figure out aspects such as:
   
 * Type of content with more views and reactions
 
-Google Analytics is the tool we use to monitor how people interact with the LACLI website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
+Google Analytics is the tool we use to monitor how people interact with the [LACLI](https://lacli.info/) website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
 
 You can also use AI tools to undertake additional types of analysis. For example, if you want to compare your project with similar projects, you could use this prompt: Compare [name of your project] to other similar online repositories specialized in  [specify your subject(s)] Always ask follow-up questions when using AI tools. This helps you get more accurate and relevant answers.
 
@@ -85,11 +85,16 @@ You can also use AI tools to undertake additional types of analysis. For example
 Apply for Awards and Grants that could bring both recognition and financial support. 
 
 For this type of content, you'll find several specialized databases that can be particularly helpful: 
+
 * Subscription-based (it might include some partial access under some circumstances):
-  Foundation Directory Online (FDO)
-  Pivot-RP
-*Free access:
-  Grants.gov
+  
+  * [Foundation Directory Online (FDO)](https://fconline.foundationcenter.org/)
+    
+  * [Pivot-RP](https://pivot.proquest.com/)
+  
+* Free access:
+  
+  * [Grants.gov](https://grants.gov/)
 
 Consider applying to awards and grants by organizations that support digital projects such as:
 * International organizations such as the Global Sustainability Coalition for Open Science Services (Scoss), a network of organizations committed to helping secure OA and OS infrastructure. It provides funding for open infrastructure https://scoss.org/need-funding-for-open-infra/ 
