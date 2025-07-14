@@ -69,8 +69,11 @@ When crafting your posts, carefully consider two key language aspects:
 ## Use Analytics Tools 
 
 Use Analytics Tools to figure out aspects such as:
+
 * Best day and time to post your content
+  
 * Visitor metrics
+  
 * Type of content with more views and reactions
 
 Google Analytics is the tool we use to monitor how people interact with the LACLI website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
