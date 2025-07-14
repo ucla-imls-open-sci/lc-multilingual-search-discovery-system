@@ -164,3 +164,32 @@ Apply what you have learned so far in this episode! Now it is your turn to come 
 Note: Use the table below to guide your thinking process as you design your action plan.
 
 ::::::::::::::::::::::::::::::::::::::::::
+
++-----------------------+-----------------------+
+|            ACTION PLAN                       |
++-----------------------+-----------------------+
+|            Centered Text (Row 2)            |
++-----------------------+-----------------------+
+|            Centered Text (Row 3)            |
++-----------------------+-----------------------+
+| Small Col 1 (Row 4)   | Larger Col 2 (Row 4)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 5)   | Larger Col 2 (Row 5)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 6)   | Larger Col 2 (Row 6)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 7)   | Larger Col 2 (Row 7)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 8)   | Larger Col 2 (Row 8)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 9)   | Larger Col 2 (Row 9)  |
++-----------------------+-----------------------+
+| Small Col 1 (Row 10)  | Larger Col 2 (Row 10) |
++-----------------------+-----------------------+
+| Small Col 1 (Row 11)  | Larger Col 2 (Row 11) |
++-----------------------+-----------------------+
+| Small Col 1 (Row 12)  | Larger Col 2 (Row 12) |
++-----------------------+-----------------------+
+| Small Col 1 (Row 13)  | Larger Col 2 (Row 13) |
++-----------------------+-----------------------+
+
