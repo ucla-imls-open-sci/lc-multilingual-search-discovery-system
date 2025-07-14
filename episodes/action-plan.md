@@ -101,11 +101,11 @@ Consider applying to awards and grants by organizations that support digital pro
 * **International organizations** such as the [Global Sustainability Coalition for Open Science Services (Scoss)](https://scoss.org/), a network of organizations committed to helping secure OA and OS infrastructure. It provides funding for [open infrastructure](https://scoss.org/need-funding-for-open-infra/)
   
 * **National organizations**. The ones below are US-based. Think of any available in the country where you develop your project.
-   * [National Endowment for the Humanities (NEH)](https://www.neh.gov). The [NEH Office of Digital Humanities]([https://www.neh.gov/divisions](https://www.neh.gov/divisions/odh) offers several grant programs specifically for digital projects. These grants support various stages of digital projects, from early development to implementation and evaluation.
+   * [National Endowment for the Humanities (NEH)](https://www.neh.gov). The [NEH Office of Digital Humanities](https://www.neh.gov/divisions/odh) offers several grant programs specifically for digital projects. These grants support various stages of digital projects, from early development to implementation and evaluation.
      
   * [Institute of Museum and Library Services (IMLS)](https://www.imls.gov/)
     
-  * [Mellon Foundation]9https://www.mellon.org)
+  * [Mellon Foundation](https://www.mellon.org)
     
   * [American Council of Learned Societies (ACLS). Digital Extension Grants](https://www.acls.org/programs/digital-extension/)
   
