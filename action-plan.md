@@ -115,6 +115,8 @@ Consider applying to awards and grants by organizations that support digital pro
 
 Beyond organization-specific awards, there are independent recognition programs for digital humanities and scholarship projects, such as the [Digital Humanities Awards](http://dhawards.org/). While these may not offer financial support, they can significantly boost your project's visibility and recognition in the field.
 
+----
+
 Now, let's proceed to our second objective: we will explore strategies to increase user engagement in your project and foster partnerships that improve your web-based tool's ability to support multiple languages and its overall global usefulness.
 
 ## Organize an Edit-a-thon
