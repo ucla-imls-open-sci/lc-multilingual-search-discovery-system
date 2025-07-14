@@ -34,7 +34,7 @@ In this episode, you will explore how to expand the impact of your project and e
 
 ## Disseminate Information about Your Project via Listservs of Professional Organizations 
 
-These listservs could be from both library and subject related organizations. In the case of our project LACLI, we promote it in organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the[ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
+These listservs could be from both library and subject related organizations. In the case of our project LACLI, we promote it in organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)] (https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
 
 ## Build an Effective Social Media Strategy 
 
