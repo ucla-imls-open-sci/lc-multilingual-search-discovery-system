@@ -429,7 +429,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -497,7 +497,7 @@ fits our data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Answer: B.</strong> HAPI Subject Headings align neatly with
 our defined area. While based in part on LCSH, HAPI is more focused
@@ -562,7 +562,7 @@ to your data? (Choose all that apply)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p><strong>Answer: A &amp; B.</strong> While A, B, and C are all useful
 metadata, adding additional columns for subject access in Spanish and
@@ -585,7 +585,7 @@ following two questions.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There are typos that may result in inaccurate search results. How might you edit this? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Use tutorials and other existing Google Sheet shortcuts. Filtering
 within a column, for example, is a fast way to pull out terms only used
@@ -599,7 +599,7 @@ once, some of which may in fact be typos.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Use Find &amp; Replace</p>
 </div>
@@ -2429,11 +2429,79 @@ design your action plan.</p>
 </div>
 </div>
 </div>
+<table style="width:67%;" class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="2"><div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>       <span class="ex">ACTION</span> PLAN                       <span class="kw">|</span></span></code></pre>
+</div></td>
+</tr>
+<tr class="even">
+<td colspan="2"><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>       <span class="ex">Centered</span> Text <span class="er">(</span><span class="ex">Row</span> 2<span class="kw">)</span>            <span class="kw">|</span></span></code></pre>
+</div></td>
+</tr>
+<tr class="odd">
+<td colspan="2"><div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>       <span class="ex">Centered</span> Text <span class="er">(</span><span class="ex">Row</span> 3<span class="kw">)</span>            <span class="kw">|</span></span></code></pre>
+</div></td>
+</tr>
+<tr class="even">
+<td>Small Col 1 (Row 4)</td>
+<td>Larger Col 2 (Row 4)</td>
+</tr>
+<tr class="odd">
+<td>Small Col 1 (Row 5)</td>
+<td>Larger Col 2 (Row 5)</td>
+</tr>
+<tr class="even">
+<td>Small Col 1 (Row 6)</td>
+<td>Larger Col 2 (Row 6)</td>
+</tr>
+<tr class="odd">
+<td>Small Col 1 (Row 7)</td>
+<td>Larger Col 2 (Row 7)</td>
+</tr>
+<tr class="even">
+<td>Small Col 1 (Row 8)</td>
+<td>Larger Col 2 (Row 8)</td>
+</tr>
+<tr class="odd">
+<td>Small Col 1 (Row 9)</td>
+<td>Larger Col 2 (Row 9)</td>
+</tr>
+<tr class="even">
+<td>Small Col 1 (Row 10)</td>
+<td>Larger Col 2 (Row 10)</td>
+</tr>
+<tr class="odd">
+<td>Small Col 1 (Row 11)</td>
+<td>Larger Col 2 (Row 11)</td>
+</tr>
+<tr class="even">
+<td>Small Col 1 (Row 12)</td>
+<td>Larger Col 2 (Row 12)</td>
+</tr>
+<tr class="odd">
+<td>Small Col 1 (Row 13)</td>
+<td>Larger Col 2 (Row 13)</td>
+</tr>
+</tbody>
+</table>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></section>
+ --></section></section>
 </div>
     </main>
 </div>
