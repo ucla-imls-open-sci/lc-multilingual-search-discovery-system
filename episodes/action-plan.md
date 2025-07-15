@@ -169,7 +169,9 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 **Your project title:** 
 
-| Promoting Your Project | |
+| **Promoting Your Project** | |
+
+| Task | Checklist|
 |:----------------|:------------------------------------------------------------|
 | 1.  Create diverse content about your project and encourage others to link to it and reuse your data  |
 - [ ] Set up project
