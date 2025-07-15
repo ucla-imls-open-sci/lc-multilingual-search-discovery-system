@@ -168,7 +168,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 | Functional Requirement | Solution |
 | -------- | ------- |
-| 1. Create diverse content about your project and encourage others to link to it and reuse your data.  | Some ideas (delete these as you go): * Wikipedia entry * Select a creative commons license appropriate to your work  * Encourage librarians to link to your project * Encourage other library projects or initiatives to include a metadata record for your project|
+| 1. Create diverse content about your project and encourage others to link to it and reuse your data.  | |
 | Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
 | The client-side technology should be open-source and avoid the use of front-end frameworks, which have a steep learning curve and can dissuade collaboration among those unfamiliar with a given framework.    | Vanilla JavaScript is the core programming language of the web and is open-source. It provides for collaboration and easy maintenance as it is framework independent.    |
 | The user interface should allow users to search through the data using keywords and present resources in an attractive, easy-to-read format that includes links to the original resources.    | JavaScript can make API calls, filter data, and display data on a webpage by injecting HTML into the site at run time.    |
