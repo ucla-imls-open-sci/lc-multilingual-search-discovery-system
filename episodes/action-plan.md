@@ -168,10 +168,16 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 | Promoting Your Project | |
 | -------- | ------- |
-| 1. Create diverse content about your project and encourage others to link to it and reuse your data.  | |
+| 1. Create diverse content about your project and encourage others to link to it and reuse your data  | |
 | 2. Disseminate information about your project via Listservs of professional organizations |      |
 | 3. Build an effective social media strategy |    |
 | 4. Use analytics and AI tools |     |
-| 5.    |    |
+| 5. Apply for awards and grants   |    |
 
-
+| Encouraging Participation and Collaboration| |
+| -------- | ------- |
+| 6. Organize an edit-a-thon  | |
+| 7. Participate in conference presentations and create events such as webinars, lectures, etc. |      |
+| 8. Choose and apply research methods to meet any specific goals you might have for your project|    |
+| 9. Explore potential collaborations to provide a national and international dimension for your project |     |
+| 10.Design experiential learning opportunities  |    |
