@@ -175,7 +175,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 [ ] oasis 
 
-[ ] oasa|
+[ ] oasa |
 | 2.  Disseminate information about your project via Listservs of professional organizations |      |
 | 3.  Build an effective social media strategy |    |
 | 4.  Use analytics and AI tools |     |
