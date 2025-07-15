@@ -169,7 +169,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 ## Your project title: 
 
-## <center>Promoting Your Project</center>
+## <p align="center">Promoting Your Project</p>
 
 | Task | Checklist|
 |:-------|:---------------------------------------------------------------------|
