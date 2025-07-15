@@ -165,7 +165,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 ::::::::::::::::::::::::::::::::::::::::::
 
-****ACTION PLAN****
+**ACTION PLAN**
 
 **Your project title:** 
 
