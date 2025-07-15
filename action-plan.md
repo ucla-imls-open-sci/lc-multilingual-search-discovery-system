@@ -179,7 +179,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 4.  Use analytics and AI tools |  [ ] Best day and time to post your content<br> [ ] Visitor metrics <br> [ ] Type of content with more views and reactions <br> [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects|
 | 5.  Apply for awards and grants   |  [ ] Find information about them in specialized databases <br> [ ] Think of organizations that might support projects like yours (national agencies, professional organizations, etc.)|
 
-## Encouraging Participation and Collaboration 
+## <p align="center">Encouraging Participation and Collaboration </p>
 
 | Task | Checklist|
 |:-------|:---------------------------------------------------------------------|
