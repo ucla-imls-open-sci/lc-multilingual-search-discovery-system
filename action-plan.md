@@ -166,7 +166,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 ::::::::::::::::::::::::::::::::::::::::::
 
 
-| Functional Requirement | Solution |
+| **Promoting Your Project** |
 | -------- | ------- |
 | 1. Create diverse content about your project and encourage others to link to it and reuse your data.  | |
 | 2. Disseminate information about your project via Listservs of professional organizations |      |
