@@ -185,3 +185,23 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 9.  Explore potential collaborations to provide a national and international dimension for your project |     |
 | 10. Design experiential learning opportunities  |    |
  
+|               ACTION PLAN               |       |       |
+|:-------------------------------------------------:|:------|:------|
+|               *Your project title*               |       |       |
+|                  Promoting your Project            |       |       |
+| Create diverse content about your project and encourage others to link to it and reuse your data   | Some ideas (delete these as you go):
+Utlizar task list like - [ ] an unchecked task list item FOUND HERE https://pandoc.org/MANUAL.html#extension-pipe_tables
+Wikipedia entry
+Select a creative commons license appropriate to your work 
+Encourage librarians to link to your project
+Encourage other library projects or initiatives to include a metadata record for your project
+         |
+| Item1 | This is some wider content in the right column      |
+| X     | The right column can include explanations           |
+| Y     | Or even entire paragraphs for documentation         |
+| Age   | Enter the age here                                 |
+| Name  | A longer, possibly multi-word name                 |
+| Date  | 2025-07-15                                         |
+| ID    | Unique identifier or code                          |
+| Foo   | Additional notes or remarks                        |
+| Bar   | Closing statement or summary for this section      |
