@@ -186,10 +186,10 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 10. Design experiential learning opportunities  |    |
  
 |               ACTION PLAN               |       |       |
-|:-------------------------------------------------:|:------|:------|
+|:-------------------------------------------------|:------|:------|
 |               *Your project title*               |       |       |
 |                  Promoting your Project            |       |       |
-| Create diverse content about your project and encourage others to link to it and reuse your data   | Some ideas (delete these as you go):
+| 1. Create diverse content about your project and encourage others to link to it and reuse your data   | Some ideas (delete these as you go):
 Utlizar task list like - [ ] an unchecked task list item FOUND HERE https://pandoc.org/MANUAL.html#extension-pipe_tables
 Wikipedia entry
 Select a creative commons license appropriate to your work 
