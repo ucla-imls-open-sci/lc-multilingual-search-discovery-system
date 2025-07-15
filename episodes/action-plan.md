@@ -164,6 +164,7 @@ Apply what you have learned so far in this episode! Now it is your turn to come 
 Note: Use the table below to guide your thinking process as you design your action plan.
 
 ::::::::::::::::::::::::::::::::::::::::::
+
 **ACTION PLAN**
 
 **Your project title:** 
