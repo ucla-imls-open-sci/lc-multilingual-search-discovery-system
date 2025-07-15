@@ -182,6 +182,8 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 5.  Apply for awards and grants   |    |
 
 | Encouraging Participation and Collaboration| |
+
+| Task | Checklist|
 |:----------------|:------------------------------------------------------------|
 | 6.  Organize an edit-a-thon  | |
 | 7.  Participate in conference presentations and create events such as webinars, lectures, etc. |  [ ] oasis [ ] oasa    |
