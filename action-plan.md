@@ -178,7 +178,8 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 3.  Build an effective social media strategy |  [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience<br> [ ] Follow organizations and people related to the subject of your project <br> [ ] Be strategic about the context, nature of the content and when you post it<br> [ ] Promote your project by using hashtags <br> [ ] Be aware of the limitations of social media |
 | 4.  Use analytics and AI tools |  [ ] Best day and time to post your content<br> [ ] Visitor metrics <br> [ ] Type of content with more views and reactions <br> [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects|
 | 2.  Disseminate information about your project via Listservs of professional organizations |  [ ] Think of both subject-related and library/archive related organizations   |
-| 5.  Apply for awards and grants   |    |
+| 5.  Apply for awards and grants   |  [ ] Find information about them in specialized databases <br> [ ] Think of organizations that might support projects like yours (national agencies, professional organizations, etc.)
+  |
 
 | Encouraging Participation and Collaboration| |
 
@@ -191,13 +192,4 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 10. Design experiential learning opportunities  |    |
 
 
-+-------------+------------------------------------+
-| Task        | Checklist                          |
-+=============+====================================+
-| Write code  | - [ ] Set up project               |
-|             | - [ ] Write the core feature       |
-+-------------+------------------------------------+
-| Review      | - [x] Proofread                    |
-|             | - [ ] Refactor code                |
-+-------------+------------------------------------+
 
