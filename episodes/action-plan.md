@@ -186,7 +186,8 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 8.  Choose and apply research methods to meet any specific goals you might have for your project|    |
 | 9.  Explore potential collaborations to provide a national and international dimension for your project |     |
 | 10. Design experiential learning opportunities  |    |
- 
+
+
 +-------------+------------------------------------+
 | Task        | Checklist                          |
 +=============+====================================+
