@@ -173,7 +173,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 | Task | Checklist|
 |:----------------|:------------------------------------------------------------|
-| 1.  Create diverse content about your project and encourage others to link to it and reuse your data  |
+| 1.  Create diverse content about your project and encourage others to link to it and reuse your data |
 - [ ] Set up project
 - [ ] Write the core feature |
 | 2.  Disseminate information about your project via Listservs of professional organizations |      |
