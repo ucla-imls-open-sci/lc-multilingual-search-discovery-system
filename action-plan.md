@@ -66,7 +66,7 @@ When crafting your posts, carefully consider two key language aspects:
 * Be aware of the limitations of social media. When you rely solely on social media platforms, you're not necessarily casting the widest possible net for your audience. While some individuals engage deeply with content and actively participate in discussions, many others interact differently. Furthermore, numerous individuals confine their social media use strictly to personal matters, avoiding professional or project-related content entirely. A significant portion of users tend to passively consume content. This passive consumption can limit the meaningful interactions and collaborations you might be hoping to achieve for your project.
 
 
-## Use Analytics Tools 
+## Use Analytics and AI Tools
 
 Use Analytics Tools to figure out aspects such as:
 
@@ -169,9 +169,9 @@ Note: Use the table below to guide your thinking process as you design your acti
 | Functional Requirement | Solution |
 | -------- | ------- |
 | 1. Create diverse content about your project and encourage others to link to it and reuse your data.  | |
-| Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
-| The client-side technology should be open-source and avoid the use of front-end frameworks, which have a steep learning curve and can dissuade collaboration among those unfamiliar with a given framework.    | Vanilla JavaScript is the core programming language of the web and is open-source. It provides for collaboration and easy maintenance as it is framework independent.    |
-| The user interface should allow users to search through the data using keywords and present resources in an attractive, easy-to-read format that includes links to the original resources.    | JavaScript can make API calls, filter data, and display data on a webpage by injecting HTML into the site at run time.    |
-| The website must be translatable.    | JavaScript can create a translation table inside of an object to switch the site’s text content.    |
+| 2. Disseminate information about your project via Listservs of professional organizations |      |
+| 3. Build an effective social media strategy |    |
+| 4. Use analytics and AI tools |     |
+| 5.    |    |
 
 
