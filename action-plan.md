@@ -187,14 +187,13 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 9.  Explore potential collaborations to provide a national and international dimension for your project |     |
 | 10. Design experiential learning opportunities  |    |
  
-|               ACTION PLAN               |       |       |
-|:-------------------------------------------------|:------|:------|
-|               *Your project title*               |       |       |
-|                  Promoting your Project            |       |       |
-| 1. Create diverse content about your project and encourage others to link to it and reuse your data   | Some ideas (delete these as you go):
++-------------+------------------------------------+
+| Task        | Checklist                          |
++=============+====================================+
+| Write code  | - [ ] Set up project               |
+|             | - [ ] Write the core feature       |
++-------------+------------------------------------+
+| Review      | - [x] Proofread                    |
+|             | - [ ] Refactor code                |
++-------------+------------------------------------+
 
-
-| Left Col     | Right Column                                                   |
-|:----------------|:------------------------------------------------------------|
-| 1. Create diverse content about your project and encourage others to link to it and reuse your data  This is a long line of text meant to wrap inside the cell   |
-| Another Row     | Another very long description that may span multiple lines  |
