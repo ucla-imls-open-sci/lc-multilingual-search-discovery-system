@@ -184,7 +184,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 | Task | Checklist|
 |:------|:----------------------------------------------------------------------|
 | 6.  Organize an edit-a-thon  | [ ] Define its focus: topic, tasks, language, etc.<br> [ ] Type of event: online, in-person, hybrid? <br> [ ] How would you organize it so that it could contribute to community building and potential  future collaborations?|
-| 7.  Participate in conference presentations and create events such as webinars, lectures, etc. |
+| 7.  Participate in conference presentations and create events such as webinars, lectures, etc. |Conference presentations, roundtables, academic posters, etc.<br> [ ] Webinars, lectures, etc. <br> [ ] Events for highly targeted groups |
 | 8.  Choose and apply research methods to meet any specific goals you might have for your project|    |
 | 9.  Explore potential collaborations to provide a national and international dimension for your project |     |
 | 10. Design experiential learning opportunities  |    |
