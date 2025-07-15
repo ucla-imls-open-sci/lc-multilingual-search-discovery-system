@@ -165,11 +165,11 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 ::::::::::::::::::::::::::::::::::::::::::
 
-**ACTION PLAN**
+## ACTION PLAN
 
-**Your project title:** 
+## Your project title: 
 
-| **Promoting Your Project** | |
+## Promoting Your Project
 
 | Task | Checklist|
 |:-------|:---------------------------------------------------------------------|
@@ -179,7 +179,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 4.  Use analytics and AI tools |  [ ] Best day and time to post your content<br> [ ] Visitor metrics <br> [ ] Type of content with more views and reactions <br> [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects|
 | 5.  Apply for awards and grants   |  [ ] Find information about them in specialized databases <br> [ ] Think of organizations that might support projects like yours (national agencies, professional organizations, etc.)|
 
-| Encouraging Participation and Collaboration| |
+## Encouraging Participation and Collaboration 
 
 | Task | Checklist|
 |:-------|:---------------------------------------------------------------------|
@@ -188,7 +188,7 @@ Note: Use the table below to guide your thinking process as you design your acti
 | 8.  Choose and apply research methods to meet any specific goals you might have for your project| [ ] Focus groups<br> [ ] Surveys, questionnaires<br> [ ] Interviews  |
 | 9.  Explore potential collaborations to provide a national and international dimension for your project |  [ ]Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations <br> [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise <br> [ ] Actively look for chances to share metadata with related projects  |
 | 10. Design experiential learning opportunities  | [ ] Apply to grants to support these initiatives<br> [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
-   |
+   
 
 
 
