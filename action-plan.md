@@ -173,7 +173,6 @@ Note: Use the table below to guide your thinking process as you design your acti
 
 | Task | Checklist|
 |:----|:------------------------------------------------------------------------|
-| this should be a small, compact column | this should be a wide column|
 | 1.  Create diverse content about your project and encourage others to link to it and reuse your data | [ ] Write a Wikipedia entry<br> [ ] Select a creative commons license appropriate to your work <br> [ ] Encourage librarians to link to your project <br> [ ] Encourage other library projects or initiatives to include a metadata record for your project|
 | 2.  Disseminate information about your project via Listservs of professional organizations |  [ ] Think of both subject-related and library/archive related organizations|
 | 3.  Build an effective social media strategy |  [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience<br> [ ] Follow organizations and people related to the subject of your project <br> [ ] Be strategic about the context, nature of the content and when you post it<br> [ ] Promote your project by using hashtags <br> [ ] Be aware of the limitations of social media |
