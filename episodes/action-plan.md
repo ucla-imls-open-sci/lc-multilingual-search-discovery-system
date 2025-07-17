@@ -132,7 +132,7 @@ Community building is an important aspect of these events as they often serve as
 
 When presenting your work, tailor your approach to each venue's unique opportunities. At a conference presentation, your goal might be broad visibility for your project. In contrast, a roundtable could be ideal for in-depth discussions on specific initiatives or for sharing user experiences. By matching your expectations to the event type, you'll maximize the impact of your event and make the most of each opportunity to showcase your work. Events that target a highly specific community can also be very effective. For example, if you want to promote your content among scholars in Latin American film, a good place to start would be the [LASA's Film Studies section](https://sections.lasaweb.org/sections/film-studies). This event could also turn into a edit-a-thon in the future.
 
-## Apply Research Methods to Meet any Specific Goals
+## Apply Research Methods to Meet Your Specific Goals
 
  Focus groups is a pertinent qualitative research method that involves gathering a small group of carefully selected participants to engage in an open discussion about a specific topic, project, or idea. Another useful one could be surveys that would allow you to collect data, analyze, and interpret data. Think creatively about surveys. For example, you could design a survey that asks participants to identify which resources they consider most essential to your project. Sharing the survey results could promote your content and help potential users discover the gems included in your collection.
 
@@ -189,7 +189,34 @@ Note: Use the two checklists below to guide your thinking process as you design 
       
 ::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::: checklist
 
+### Encouraging Participation and Collaboration
+
+#### 6. Organize an edit-a-thon 
+- [ ] Define its focus: topic, tasks, language, etc.
+- [ ]  Type of event: online, in-person, hybrid? 
+- [ ] How would you organize it so that it could contribute to community building and future collaborations?
+
+#### 7. Participate in Academic/Professional Events
+- [ ] Conference presentations, roundtables, academic posters, webinars, lectures, etc.
+- [ ]  Events for highly targeted groups 
+
+#### 8. Apply Research Methods to Meet Your Specific Goals
+- [ ] Focus groups
+- [ ] Surveys or questionnaires
+- [ ] Interviews 
+
+#### 9. Explore Collaborations to Provide a Global Dimension to Your Project
+- [ ] Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations
+- [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise
+- [ ] Actively look for chances to share metadata with related projects 
+
+#### 10. Design Experiential Learning Opportunities
+- [ ] Apply to grants to support these initiatives
+- [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
+      
+::::::::::::::::::::::::::::::::::::::::::
 
 
 | Task | Checklist|
@@ -206,9 +233,9 @@ Note: Use the two checklists below to guide your thinking process as you design 
 | Task | Checklist|
 |:-------------------------------|:---------------------------------------------|
 | 6.  Organize an edit-a-thon  | [ ] Define its focus: topic, tasks, language, etc.<br> [ ] Type of event: online, in-person, hybrid? <br> [ ] How would you organize it so that it could contribute to community building and potential  future collaborations?|
-| 7.  Participate in conference presentations and create events such as webinars, lectures, etc. | [ ] Conference presentations, roundtables, academic posters, etc.<br> [ ] Webinars, lectures, etc. <br> [ ] Events for highly targeted groups |
-| 8.  Choose and apply research methods to meet any specific goals you might have for your project| [ ] Focus groups<br> [ ] Surveys, questionnaires<br> [ ] Interviews  |
-| 9.  Explore potential collaborations to provide a national and international dimension for your project |  [ ] Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations <br> [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise <br> [ ] Actively look for chances to share metadata with related projects  |
+| 7.  Participate in Academic/Professional Events| [ ] Conference presentations, roundtables, academic posters, webinars, lectures, etc. <br> [ ] Events for highly targeted groups |
+| 8.  Apply Research Methods to Meet Your Specific Goals| [ ] Focus groups<br> [ ] Surveys or questionnaires<br> [ ] Interviews  |
+| 9.  Explore Collaborations to Provide a Global Dimension to Your Project |  [ ] Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations <br> [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise <br> [ ] Actively look for chances to share metadata with related projects  |
 | 10. Design experiential learning opportunities  | [ ] Apply to grants to support these initiatives<br> [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
    
 
