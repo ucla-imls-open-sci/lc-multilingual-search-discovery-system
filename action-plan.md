@@ -20,12 +20,10 @@ exercises: 1
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 Congratulations on developing a search and discovery system for data stored in a Google Sheet! This is an impressive achievement. 
 
-In this episode, you will explore how to expand the impact of your project and encourage participation and collaboration. Let's begin by exploring various strategies to increase the visibility of your project. Think about how you bring people in! How can you effectively promote your website to reach potential users who might find it valuable? While not all of these possibilities may be directly applicable to your specific situation, it's valuable to consider a wide range of options. Use the following ideas to help you identify the most effective ways to promote your project.
+In this episode, you will explore how to develop and action plan to expand the impact of your project and encourage participation and collaboration. Let's begin by exploring various strategies to increase the visibility of your project. Think about how you bring people in! How can you effectively promote your website to reach potential users who might find it valuable? While not all of these possibilities may be directly applicable to your specific situation, it's valuable to consider a wide range of options. Use the following ideas to help you identify the most effective ways to promote your project.
 
 ## Encourage Others to Link to Your Project and Reuse Your Data
 
-* Write a wikipedia entry.
-  
 * Allow reuse of your data by selecting a [creative commons license appropriate to your work](https://chooser-beta.creativecommons.org/). Also, share your data with similar projects so that you can reuse their content and they can reuse yours.
   
 * Encourage librarians to link to your project in:
@@ -34,7 +32,7 @@ In this episode, you will explore how to expand the impact of your project and e
 
 * Suggest other library projects or initiatives to include a metadata record for your project. Example: project [LACLI](https://lacli.info/) in the [Handbook of Latin American Studies](https://hlasopac.loc.gov/vwebv/search?searchArg=lacli&searchCode=GKEY%5E*&searchType=0&recCount=25&sk=en_US) and [Resources for College Libraries](https://www.rclweb.net/) (this database requires a subscription). 
 
-## Disseminate Information about Your Project via Listservs of Professional Organizations 
+## Disseminate Information via Listservs of Professional Organizations 
 
 These listservs could be from both library and subject related organizations. In the case of the project [LACLI](https://lacli.info/) , we promote it in organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
 
