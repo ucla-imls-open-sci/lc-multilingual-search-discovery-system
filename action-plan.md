@@ -168,7 +168,7 @@ Note: Use the checklist below to guide your thinking process as you design your 
 - [ ] Encourage librarians to link to your project
 - [ ] Suggest other library projects or initiatives to include a metadata record for your project
 
-#### 2. Disseminate information about your project via Listservs of professional organizations
+#### 2. Disseminate Information via Organizations Listservs
 - [ ] Think of both subject-related and library/archive related organizations
       
 ::::::::::::::::::::::::::::::::::::::::::
@@ -178,8 +178,9 @@ Note: Use the checklist below to guide your thinking process as you design your 
 
 | Task | Checklist|
 |:-------------------------------|:---------------------------------------------|
-| 1.  Create diverse content about your project and encourage others to link to it and reuse your data |[ ] Write a Wikipedia entry<br> [ ] Select a creative commons license appropriate to your work <br> [ ] Encourage librarians to link to your project <br> [ ] Encourage other library projects or initiatives to include a metadata record for your project|
-| 2.  Disseminate information about your project via Listservs of professional organizations |  [ ] Think of both subject-related and library/archive related organizations|
+| 1.  Encourage Others to Link to Your Project and Reuse Your Data
+- [ ] Select a creative commons license appropriate to your work <br> - [ ] Encourage librarians to link to your project <br> - [ ] Suggest other library projects or initiatives to include a metadata record for your project|
+| 2.  Disseminate information about your project via Listservs of professional organizations |  - [ ] Think of both subject-related and library/archive related organizations|
 | 3.  Build an effective social media strategy |  [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience<br> [ ] Follow organizations and people related to the subject of your project <br> [ ] Be strategic about the context, nature of the content and when you post it<br> [ ] Promote your project by using hashtags <br> [ ] Be aware of the limitations of social media |
 | 4.  Use analytics and AI tools |  [ ] Best day and time to post your content<br> [ ] Visitor metrics <br> [ ] Type of content with more views and reactions <br> [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects|
 | 5.  Apply for awards and grants   |  [ ] Find information about them in specialized databases <br> [ ] Think of organizations that might support projects like yours (national agencies, professional organizations, etc.)|
