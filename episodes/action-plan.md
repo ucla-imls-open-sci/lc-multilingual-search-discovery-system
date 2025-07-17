@@ -156,7 +156,7 @@ Apply what you have learned so far in this episode! Now it is your turn to come 
 * Identifies and evaluates effective strategies to promote and increase visibility of your project among your diverse and global potential users.
 * Encourages participation in your project and nurture collaborations that enhance the multilingual functionality, cultural diversity, and global usefulness of your project. 
 
-Note: Use the checklist below to guide your thinking process as you design your action plan.
+Note: Use the two checklists below to guide your thinking process as you design your action plan.
 
 :::::::::::::::::::::::::::::::::::::::::: checklist
 
