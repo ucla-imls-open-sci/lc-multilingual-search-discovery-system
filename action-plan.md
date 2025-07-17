@@ -163,14 +163,17 @@ Note: Use the two checklists below to guide your thinking process as you design 
 ### Promoting Your Project
 
 #### 1. Encourage Others to Link to Your Project and Reuse Your Data
+
 - [ ] Select a creative commons license appropriate to your work
 - [ ] Encourage librarians to link to your project
 - [ ] Suggest other library projects or initiatives to include a metadata record for your project
 
 #### 2. Disseminate Information via Organizations Listservs
+
 - [ ] Think of both subject-related and library/archive related organizations
 
 #### 3. Build an effective social media strategy
+
 - [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience
 - [ ] Follow organizations and people related to the subject of your project
 - [ ] Be strategic about the context, nature of the content and when you post it
@@ -178,12 +181,14 @@ Note: Use the two checklists below to guide your thinking process as you design 
 - [ ] Be aware of the limitations of social media
 
 #### 4. Use Analytics and AI Tools
+
 - [ ] Type of content with more views and reactions
 - [ ] Visitor metrics
 - [ ] Best day and time to post your content
 - [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects
 
 #### 5. Apply for awards and grants
+
 - [ ] Find information about them in specialized databases
 - [ ] Think of organizations that might support projects like yours such as national agencies, professional organizations
       
@@ -194,50 +199,31 @@ Note: Use the two checklists below to guide your thinking process as you design 
 ### Encouraging Participation and Collaboration
 
 #### 6. Organize an edit-a-thon 
+
 - [ ] Define its focus: topic, tasks, language, etc.
 - [ ]  Type of event: online, in-person, hybrid? 
 - [ ] How would you organize it so that it could contribute to community building and future collaborations?
 
 #### 7. Participate in Academic/Professional Events
+
 - [ ] Conference presentations, roundtables, academic posters, webinars, lectures, etc.
 - [ ]  Events for highly targeted groups 
 
 #### 8. Apply Research Methods to Meet Your Specific Goals
+
 - [ ] Focus groups
 - [ ] Surveys or questionnaires
 - [ ] Interviews 
 
 #### 9. Explore Collaborations to Provide a Global Dimension to Your Project
+
 - [ ] Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations
 - [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise
 - [ ] Actively look for chances to share metadata with related projects 
 
 #### 10. Design Experiential Learning Opportunities
+
 - [ ] Apply to grants to support these initiatives
 - [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
       
 ::::::::::::::::::::::::::::::::::::::::::
-
-
-| Task | Checklist|
-|:-------------------------------|:---------------------------------------------|
-| 1.  Encourage Others to Link to Your Project and Reuse Your Data
-[ ] Select a creative commons license appropriate to your work <br> [ ] Encourage librarians to link to your project <br> [ ] Suggest other library projects or initiatives to include a metadata record for your project|
-| 2.  Disseminate information about your project via Organiations Listservs  |  - [ ] Think of both subject-related and library/archive related organizations|
-| 3.  Build an effective social media strategy |  [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience<br> [ ] Follow organizations and people related to the subject of your project <br> [ ] Be strategic about the context, nature of the content and when you post it<br> [ ] Promote your project by using hashtags <br> [ ] Be aware of the limitations of social media |
-| 4.  Use analytics and AI tools |  [ ] Best day and time to post your content<br> [ ] Visitor metrics <br> [ ] Type of content with more views and reactions <br> [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects|
-| 5.  Apply for awards and grants   |  [ ] Find information about them in specialized databases <br> [ ] Think of organizations that might support projects like yours (national agencies, professional organizations, etc.)|
-
-## <p align="center">Encouraging Participation and Collaboration </p>
-
-| Task | Checklist|
-|:-------------------------------|:---------------------------------------------|
-| 6.  Organize an edit-a-thon  | [ ] Define its focus: topic, tasks, language, etc.<br> [ ] Type of event: online, in-person, hybrid? <br> [ ] How would you organize it so that it could contribute to community building and potential  future collaborations?|
-| 7.  Participate in Academic/Professional Events| [ ] Conference presentations, roundtables, academic posters, webinars, lectures, etc. <br> [ ] Events for highly targeted groups |
-| 8.  Apply Research Methods to Meet Your Specific Goals| [ ] Focus groups<br> [ ] Surveys or questionnaires<br> [ ] Interviews  |
-| 9.  Explore Collaborations to Provide a Global Dimension to Your Project |  [ ] Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations <br> [ ] Don't limit yourself to long-term partnerships. Identify potential collaborators that could be helpful for specific challenges as they arise <br> [ ] Actively look for chances to share metadata with related projects  |
-| 10. Design experiential learning opportunities  | [ ] Apply to grants to support these initiatives<br> [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
-   
-
-
-
