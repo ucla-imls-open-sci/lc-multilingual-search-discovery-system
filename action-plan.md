@@ -174,6 +174,9 @@ Note: Use the table below to guide your thinking process as you design your acti
 - [ ] Encourage librarians to link to your project
 - [ ] Encourage other library projects or initiatives to include a metadata record for your project
 
+### 2. Disseminate information about your project via Listservs of professional organizations
+- [ ] Think of both subject-related and library/archive related organizations
+      
 ::::::::::::::::::::::::::::::::::::::::::
 
 **ACTION PLAN**
