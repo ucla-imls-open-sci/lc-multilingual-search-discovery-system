@@ -21,7 +21,7 @@ exercises: 3
 
 In this episode we will evaluate different methods to cleanup and enhance your data, all while keeping in mind an ethical obligation to provide inclusive access to information. We will then apply these techniques to our sample data set.
 
-Knowing your audience is the first step to ensure you have adequate data categories. In our spreadsheet we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of some of our target audiences. What access points would students, faculty, or other librarians want to search by? So we added more detailed subject analysis with columns such as Country Coverage and Time Period.
+Knowing your audience is the first step to ensure you have adequate data categories. In our spreadsheet we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of some of our target audiences. What access points would students, faculty, or other librarians want to search by? With that in mind, we added more detailed subject analysis with columns such as Country Coverage and Time Period.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Target Audience
