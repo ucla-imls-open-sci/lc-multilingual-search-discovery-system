@@ -1,5 +1,5 @@
 ---
-title: "Promote Your Project and Encourage Participation and Collaboration"
+title: "Promote Your Project and Prompt Participation and Collaboration"
 teaching: 45
 exercises: 1
 ---
@@ -32,9 +32,9 @@ In this episode, you will explore how to develop and action plan to expand the i
 
 * Suggest other library projects or initiatives to include a metadata record for your project. Example: project [LACLI](https://lacli.info/) in the [Handbook of Latin American Studies](https://hlasopac.loc.gov/vwebv/search?searchArg=lacli&searchCode=GKEY%5E*&searchType=0&recCount=25&sk=en_US) and [Resources for College Libraries](https://www.rclweb.net/) (this database requires a subscription). 
 
-## Disseminate Information via Listservs of Professional Organizations 
+## Disseminate Information via Organizations Listservs
 
-These listservs could be from both library and subject related organizations. In the case of the project [LACLI](https://lacli.info/) , we promote it in organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
+These listservs could be from both library and subject related organizations. In the case of the project [LACLI](https://lacli.info/) , we promote it in professional organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
 
 ## Build an Effective Social Media Strategy 
 
