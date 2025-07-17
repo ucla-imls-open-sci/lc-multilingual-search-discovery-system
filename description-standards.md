@@ -25,7 +25,7 @@ Knowing your audience is the first step to ensure you have adequate data categor
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Target Audience
-Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
+Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data, with emphasis on their particular needs? (Choose all that apply)
 
 A) Terms in Spanish & Portuguese  
 B) Country Coverage  
@@ -33,7 +33,7 @@ C) Resource type
 
 :::::::::::::::  solution
 
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in multiple languages. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities.
+**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities. Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -89,7 +89,7 @@ For more guidance, see:
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Matching Metadata Standards to a Target Audience
 
-Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
+Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data, with emphasis on their particular needs? (Choose all that apply)
 
 A) Terms in Spanish & Portuguese  
 B) Country Coverage  
@@ -97,7 +97,7 @@ C) Resource type
 
 :::::::::::::::  solution
 
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in multiple languages. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities.
+**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities. Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
