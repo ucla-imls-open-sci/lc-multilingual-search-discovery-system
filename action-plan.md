@@ -172,7 +172,7 @@ Note: Use the two checklists below to guide your thinking process as you design 
 
 - [ ] Think of both subject-related and library/archive related organizations
 
-#### 3. Build an effective social media strategy
+#### 3. Build an Effective Social Media Strategy
 
 - [ ] Create social media accounts/profiles in those social media services you consider more effective for your intended audience
 - [ ] Follow organizations and people related to the subject of your project
@@ -187,7 +187,7 @@ Note: Use the two checklists below to guide your thinking process as you design 
 - [ ] Best day and time to post your content
 - [ ] Use effective prompts for various types of analysis such as comparing your project with similar projects
 
-#### 5. Apply for awards and grants
+#### 5. Apply for Awards and Grants
 
 - [ ] Find information about them in specialized databases
 - [ ] Think of organizations that might support projects like yours such as national agencies, professional organizations
@@ -198,7 +198,7 @@ Note: Use the two checklists below to guide your thinking process as you design 
 
 ### Encouraging Participation and Collaboration
 
-#### 6. Organize an edit-a-thon 
+#### 6. Organize an Edit-a-thon 
 
 - [ ] Define its focus: topic, tasks, language, etc.
 - [ ]  Type of event: online, in-person, hybrid? 
