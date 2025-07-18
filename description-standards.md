@@ -43,7 +43,7 @@ C) Resource type
 
 Find a cheat sheet for cleaning up spreadsheets, such as:
 
-Marina Georgieva's *Data Remediation at Scale: How to Clean Up Your Metadata Quickly and Effectively Using Excel*
+Marina Georgieva's [*Data Remediation at Scale: How to Clean Up Your Metadata Quickly and Effectively Using Excel*](https://oasis.library.unlv.edu/libfacpresentation/191)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
