@@ -24,7 +24,7 @@ In this episode we will evaluate different methods to cleanup and enhance your d
 Knowing your audience is the first step to ensure you have adequate data categories. In our spreadsheet we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of some of our target audiences. What access points would students, faculty, or other librarians want to search by? With that in mind, we added more detailed subject analysis with columns such as Country Coverage and Time Period.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
-## Target Audience
+## Matching Metadata Standards to a Target Audience
 Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data, with emphasis on their particular needs? (Choose all that apply)
 
 A) Terms in Spanish & Portuguese  
@@ -86,18 +86,6 @@ For more guidance, see:
 + [*The Cataloging Code of Ethics*](http://hdl.handle.net/11213/16716)
 + [*Statement of Internaitonal Cataloging Principles*](https://repository.ifla.org/handle/20.500.14598/80)
 
-:::::::::::::::::::::::::::::::::::::::  challenge
-## Matching Metadata Standards to a Target Audience
-
-Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data, with emphasis on their particular needs? (Choose all that apply)
-
-A) Terms in Spanish & Portuguese  
-B) Country Coverage  
-C) Resource type  
-
-:::::::::::::::  solution
-
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities. Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
