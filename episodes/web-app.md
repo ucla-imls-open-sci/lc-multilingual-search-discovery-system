@@ -400,7 +400,7 @@ Filtering the data will occur after the browser has received data from the Googl
 
 It is very important to remember that after getData() is called, all of the data is loaded into the user’s browser. This means that once the page loads, and the getData() promise is resolved, our website will not request data again from our Google Sheet API. All our filtering will occur on the client-side, which is to say in the browser and not in our Google Sheet database. This organization helps us achieve the Functional Requirements we established in Episode 2.1 and has a few benefits:
 
-- After `getData()` loads the data, filtering data is almost instantaneous, because we do not need to keep request new data from the Google Sheets API.
+- After `getData()` loads the data, filtering data is almost instantaneous, because we do not need to keep requesting new data from the Google Sheets API.
 - As laid out in the Functional Requirements at the start of this episode, we want free database and web hosting solutions. Limiting our API requests ensures that we can continue with Google Sheets as our simple database.
 - Security: We want a simple web solution, and a single get request from the API excludes any two way communication with our server, such as Post requests or the ability of users to inject malicious code back into our database. Our system is very simple, and this simplicity is its strength.
 
@@ -495,9 +495,9 @@ function filterData(query) {
 };
 ```
 
-We created a new variable called `searchTerms`. Inside this variable, we will first apply the `.toLowerCase()` method which makes the user’s input keywords in lowercase and should eliminate any problems around mismatched capitalization. Then we use the `.split()` method to split up the user’s input on each space (/\s+/) which is a regular expression that identifies spaces and creates a new search term on the space. In the end, searchTerms will be an array of search terms that we will use to filter our data.
+We created a new variable called `searchTerms`. Inside this variable, we first apply the `.toLowerCase()` method which makes the user’s input keywords in lowercase and should eliminate any problems around mismatched capitalization. Then we use the `.split()` method to split up the user’s input on each space (/\s+/) which is a regular expression that identifies spaces and creates a new search term on the space. In the end, searchTerms will be an array of search terms that we will use to filter our data.
 
-Diacritics are require an additional step, we must create our own function that will strip the diacritics from the user’s keywords:
+Diacritics require an additional step: we must create our own function that will strip the diacritics from the user’s keywords:
 
 ```app.js
 function removeDiacritics(str) {
@@ -505,7 +505,7 @@ function removeDiacritics(str) {
 };
 ```
 
-This function takes a string, the user’s input, and applies `.normalize("NFD")`. This command normalizes the input string using the "Normalization Form D" (NFD) algorithm, which separates base characters and diacritic markings. For example, "é" becomes "e" and ‘. Then the `.replace()` method replaces all diacritic marks with an empty string. The g flag ensures that all markings within the string are replaced. 
+This function takes a string (the user’s input) and applies `.normalize("NFD")`. This command normalizes the input string using the "Normalization Form D" (NFD) algorithm, which separates base characters and diacritic markings. For example, "é" becomes "e" and ‘. Then the `.replace()` method replaces all diacritic marks with an empty string. The g flag ensures that all markings within the string are replaced. 
 
 Now let’s add this `removeDiacritics` function and finish normalizing the user’s input:
 
@@ -523,7 +523,7 @@ function filterData(query) {
 
 ### Apply .map()
 
-The `.map()` function is very useful in JavaScript. This function in JavaScript creates a new array by applying a provided function to each element of the original array. That's important because remember that searchTerms is actually an array of every term, separated by spaces, from the user’s input. We then use the arrow function, which takes each term in the array and applies the `removeDiacritics` function on that argument.
+The `.map()` function is very useful in JavaScript: it creates a new array by applying a function to each element of the original array. That's important because remember that searchTerms is actually an array of every term, separated by spaces, from the user’s input. We use the arrow function, which takes each term in the array and applies the `removeDiacritics` function on that argument.
 
 Now that we’ve normalized the user’s search terms, we can use it to filter the data. We will use the JavaScript `filter()` function to return only those results in our data that match the user’s search keywords:
 
@@ -574,7 +574,7 @@ We use three important methods to conduct the search: filter(), every(), and som
 
 ### Displaying Filtered Data
 
-In the end, we will pass our `filteredData` array to our `displayData()` function to display the search results to our user.
+In the end, we pass our `filteredData` array to our `displayData()` function to display the search results to our user.
 
 Now we are ready to test it. We need to make a small change to our runSearch() function, which at this time is logging our searchTerms to the console. We want to now pass the user’s supplied keywords to our new filterData() function like this:
 
@@ -588,7 +588,7 @@ function runSearch() {
 
 ## Refresh Button
 
-The last feature we need to add is a refresh button. This button will take users back to the full API dataset without forcing them to refresh the page. 
+The last feature we need to add is a refresh button. This button will show all our resources without forcing the user to refresh the page. 
 
 Let’s identify the refresh button in `app.js`:
 
