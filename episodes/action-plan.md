@@ -20,9 +20,15 @@ exercises: 1
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 Congratulations on developing a search and discovery system for data stored in a Google Sheet! This is an impressive achievement. 
 
-In this episode, you will explore how to develop and action plan to expand the impact of your project and encourage participation and collaboration. Let's begin by exploring various strategies to increase the visibility of your project. Think about how you bring people in! How can you effectively promote your website to reach potential users who might find it valuable? While not all of these possibilities may be directly applicable to your specific situation, it's valuable to consider a wide range of options. Use the following ideas to help you identify the most effective ways to promote your project.
+In this episode, we'll explore how to develop an action plan. This plan will guide us in expanding our project's reach and encouraging participation and collaboration. Let's begin by exploring various strategies to increase the visibility of our project. 
 
-## Encourage Others to Link to Your Project and Reuse Your Data
+Think about how you can bring people in! How can you effectively promote your website to reach potential users who might find it valuable? 
+
+While not all of these possibilities may be directly applicable to your specific situation, it's valuable to consider a wide range of options. The following ideas will help you identify the most effective ways to promote your project.
+
+## Expanding Your Project's Reach
+
+### Encourage Others to Link to Your Project and Reuse Your Data
 
 * Allow reuse of your data by selecting a [creative commons license appropriate to your work](https://chooser-beta.creativecommons.org/). Also, share your data with similar projects so that you can reuse their content and they can reuse yours.
   
@@ -32,23 +38,23 @@ In this episode, you will explore how to develop and action plan to expand the i
 
 * Suggest other library projects or initiatives to include a metadata record for your project. Example: project [LACLI](https://lacli.info/) in the [Handbook of Latin American Studies](https://hlasopac.loc.gov/vwebv/search?searchArg=lacli&searchCode=GKEY%5E*&searchType=0&recCount=25&sk=en_US) and [Resources for College Libraries](https://www.rclweb.net/) (this database requires a subscription). 
 
-## Disseminate Information via Organizations Listservs
+### Disseminate Information via Organizations Listservs
 
-These listservs could be from both library and subject related organizations. In the case of the project [LACLI](https://lacli.info/) , we promote it in professional organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
+Listservs could be from both library and subject related organizations. In the case of the project [LACLI](https://lacli.info/) , we promote it in professional organizations such as the [Seminar on the Acquisition of Latin American Library Materials (SALALM)](https://salalm.org), sections of the [Latin American Studies Association (LASA)](https://lasaweb.org/en/),the [ACRL’s European Studies Section (ESS)](https://acrl.ala.org/ess/), and [the National Association to Promote Library and Information Services to Latinos and the Spanish-Speaking (REFORMA)](https://www.reforma.org/). In addition to national and international organizations, consider promoting it in regional and local organizations as well. 
 
-## Build an Effective Social Media Strategy 
+### Build an Effective Social Media Strategy 
 
-* Create social media accounts/profiles in those social media services you consider more effective for your intended audience.  At the beginning of your social media strategy, you might need to explore a wider net of social media platforms and narrow them down based on their analytics.
+* Create social media profiles in those social media services you consider more effective for your intended audience.  At the beginning of your social media strategy, you might need to explore a wider net of social media platforms and narrow them down based on their analytics.
   
 ::::::::::::::::::::::::::::::::::::::: callout
 
-For example, **Linkedin** might be a good option to target professionals across various industries and career stages interested in networking. **X (formerly known as Twitter)** can be proven effective targeting media professionals and political discourse. Also consider age groups. **TikTok** is heavily used by younger users than **Instagram**. Consider the potential of others such as **Reddit** that is known for its diverse communities and discussions.
+For example, **Linkedin** might be a good option to target professionals across various industries and career stages interested in networking. **X** has been proven effective in targeting media professionals and political discourse. Also consider age groups. **TikTok** and **Instagram** are used more heavily by younger users over **Facebook**. Consider the potential of others such as **Reddit**, which is known for its diverse communities and discussions.
 
 ::::::::::::::::::::::::::::::::::::::: 
 
 * Follow organizations and people related to the subject of your project. Make sure you tag them when you create content related to something of their interest or that has been created by them. This is a low-maintenance way to start building connections with them by helping promote their own content or share with them related content connected to their interests. For example, in [LACLI](https://lacli.info/) we create weekly posts featuring sources from our database. If we promote a source created by an organization, we tag it along with tags to potential individual users interested in it. This also expands the visibility of your posts to anyone that follows the account you are tagging.
   
-* Be strategic about the context, nature of the content and when you post it. For example, in [LACLI](https://lacli.info/)  we have featured content related to historical commemorations or celebrations. During the “back to school” period, we have promoted free OER resources. Make sure you use hashtags to increase the visibility of your posts. Also, use at least one hashtag that can bring all the posts related to a specific theme or focus together. For example, for [LACLI](https://lacli.info/)  we use the hashtag #LACLIresources to bring all the resources that we feature together. In terms of content, explore various tones depending on your audience but keep them short and to the point. In the case of [LACLI](https://lacli.info/), we focus on the value and uniqueness of each featured resource.
+* Be strategic about the context, the nature of the content, and when you post it. For example, in [LACLI](https://lacli.info/)  we have featured content related to historical commemorations or celebrations. During the “back to school” period, we promote free curricular materials. Make sure you use hashtags to increase the visibility of your posts. Also, use at least one hashtag that can bring all the posts related to a specific theme or focus together. For example, for [LACLI](https://lacli.info/)  we use the hashtag #LACLIresources to bring all the resources that we feature together. In terms of content, explore various tones depending on your audience, but keep them short and to the point.
 
 ::::::::::::::::::::::::::::::::::::::: checklist
 
@@ -64,7 +70,7 @@ When crafting your posts, carefully consider two key language aspects:
 * Be aware of the limitations of social media. When you rely solely on social media platforms, you're not necessarily casting the widest possible net for your audience. While some individuals engage deeply with content and actively participate in discussions, many others interact differently. Furthermore, numerous individuals confine their social media use strictly to personal matters, avoiding professional or project-related content entirely. A significant portion of users tend to passively consume content. This passive consumption can limit the meaningful interactions and collaborations you might be hoping to achieve for your project.
 
 
-## Use Analytics and AI Tools
+### Use Analytics and AI Tools
 
 Use Analytics Tools to figure out aspects such as:
 
@@ -76,11 +82,11 @@ Use Analytics Tools to figure out aspects such as:
 
 Google Analytics is the tool we use to monitor how people interact with the [LACLI](https://lacli.info/) website. This tool provides various metrics, but we find the information about users' geographical locations especially valuable. This data helps us tailor our outreach strategies more effectively. Also take advantage of the built-in analytics tools offered by various social media platforms.
 
-You can also use AI tools to undertake additional types of analysis. For example, if you want to compare your project with similar projects, you could use this prompt: Compare [name of your project] to other similar online repositories specialized in  [specify your subject(s)] Always ask follow-up questions when using AI tools. This helps you get more accurate and relevant answers.
+You can also use AI tools to undertake additional types of analysis. For example, if you want to compare your project to similar projects, you could use this prompt: Compare [name of your project] to other similar online repositories specialized in  [specify your subject(s)] Always ask follow-up questions when using AI tools. This helps you get more accurate and relevant answers.
 
-## Apply for Awards and Grants
+### Apply for Awards and Grants
 
-Apply for Awards and Grants that could bring both recognition and financial support. 
+Apply for awards and grants that could bring both recognition and financial support. 
 
 For this type of content, you'll find several specialized databases that can be particularly helpful: 
 
@@ -109,15 +115,15 @@ Consider applying to awards and grants by organizations that support digital pro
   
   * [Council on Library and Information Resources (CLIR)](https://www.clir.org/)
     
-* **Professional organizations** For example, in the case of [LACLI](https://lacli.info), it was awarded the award for best public project by [LASA’s Archives, Libraries, and Digital Scholarship section](https://sections.lasaweb.org/sections/scholarly-research-resources/?pg=6) and the [SALALM Award for Institutional Collaborative Initiatives](https://salalm.org/content.asp?contentid=263). Beyond prestige, these awards bring visibility to your project in specific communities interested in your content. It can also encourage others to explore collaborations. In the case of the SALALM, this award recognizes international collaborations. In addition to professional organizations at the national level, please also consider those at the international level (e.g. the [Alliance of Digital Humanities Organizations (ADHO)](https://adho.org/)), regional and local level. 
+* **Professional organizations** In the case of [LACLI](https://lacli.info), it received awards for best public project by [LASA’s Archives, Libraries, and Digital Scholarship section](https://sections.lasaweb.org/sections/scholarly-research-resources/?pg=6) and the [SALALM Award for Institutional Collaborative Initiatives](https://salalm.org/content.asp?contentid=263). Beyond prestige, these awards bring visibility to your project in specific communities interested in your content. It can also encourage others to explore collaborations. In the case of the SALALM, this award recognizes international collaborations. In addition to professional organizations at the national level, please also consider those at the international level (e.g. the [Alliance of Digital Humanities Organizations (ADHO)](https://adho.org/)), regional and local level. 
 
 Beyond organization-specific awards, there are independent recognition programs for digital humanities and scholarship projects, such as the [Digital Humanities Awards](http://dhawards.org/). While these may not offer financial support, they can significantly boost your project's visibility and recognition in the field.
 
-----
+## Encourage Participation & Collaboration
 
 Now, let's proceed to our second objective: we will explore strategies to increase user engagement in your project and foster partnerships that improve your web-based tool's ability to support multiple languages and its overall global usefulness.
 
-## Organize an Edit-a-thon
+### Organize an Edit-a-thon
 
 :::::::::::::::::::::::::::::::::::::::::: callout
 
@@ -128,15 +134,15 @@ It is a collaborative event where people come together to create, update or impr
 
 Community building is an important aspect of these events as they often serve as networking venues for people with similar interests and help build a sense of community among participants. This can translate into future collaborative partnerships.  Edit-a-thons have become popular tools for institutions, organizations, and communities to engage people in content creation and improvement while promoting digital literacy and collaborative knowledge sharing. Ultimately, edit-a-thons can be a perfect venue to  increase multilingual content and global reach by organizing edit-a-thons that can focus on a specific language, country etc. The underlying concept is that your project's quality and effectiveness will significantly improve through diverse contributions from individuals representing various cultural backgrounds, linguistic groups, and nationalities. This approach will ensure that the content included in your project is respectful of different values and perspectives. We learn together, we contribute together. Nobody holds the whole knowledge on one topic.  This diversity of perspectives and experiences enhances the project's overall scope, relevance, and applicability across different contexts. Global collaboration enables projects to become more comprehensive, inclusive, and diverse by incorporating knowledge and perspectives from people worldwide.
 
-## Participate in Academic/Professional Events
+### Participate in Academic/Professional Events
 
 When presenting your work, tailor your approach to each venue's unique opportunities. At a conference presentation, your goal might be broad visibility for your project. In contrast, a roundtable could be ideal for in-depth discussions on specific initiatives or for sharing user experiences. By matching your expectations to the event type, you'll maximize the impact of your event and make the most of each opportunity to showcase your work. Events that target a highly specific community can also be very effective. For example, if you want to promote your content among scholars in Latin American film, a good place to start would be the [LASA's Film Studies section](https://sections.lasaweb.org/sections/film-studies). This event could also turn into a edit-a-thon in the future.
 
-## Apply Research Methods to Meet Your Specific Goals
+### Apply Research Methods to Meet Your Specific Goals
 
  Focus groups is a pertinent qualitative research method that involves gathering a small group of carefully selected participants to engage in an open discussion about a specific topic, project, or idea. Another useful one could be surveys that would allow you to collect data, analyze, and interpret data. Think creatively about surveys. For example, you could design a survey that asks participants to identify which resources they consider most essential to your project. Sharing the survey results could promote your content and help potential users discover the gems included in your collection.
 
-## Explore Collaborations to Provide a Global Dimension to Your Project
+### Explore Collaborations to Provide a Global Dimension to Your Project
 
 Beyond the usual networking opportunities (conferences, online platforms, etc.), look for relevant international research grants that require cross-country collaborations. This type of initiative offers an exceptional opportunity to build meaningful connections. Our experience with the [LACLI project](https://lacli.info/) serves as an example of this strategy's success. We took the initiative to reach out to two prestigious institutions: [Colegio de México](https://www.colmex.mx/) and [Fundação Getulio Vargas](https://cpdoc.fgv.br/). Our efforts paid off when we were awarded a grant aimed at enhancing the multilingual content of our project. The grant, initially seen as a means to an end, transformed into a long-term collaboration. It provided us with a structured environment, understanding each other's working styles, learning the intricacies of effective international cooperation, and identifying areas where our combined expertise (language, cultural knowledge etc.) could bring solutions to any initiative related to our project. This experience laid a solid foundation for our partnership and opened doors to possibilities for future joint ventures.
 
@@ -144,12 +150,12 @@ Don't limit yourself to long-term partnerships. Be open to seeking help for spec
 
 In the spirit of avoiding redundant work, seek out opportunities to collaborate with similar projects to share metadata. Additionally, think about using a [Creative Commons license for your project](https://chooser-beta.creativecommons.org/). Such a license can make it easier and more straightforward for others to use and build upon your work, fostering a culture of open collaboration and shared resources.
 
-## Design Experiential Learning Opportunities 
+### Design Experiential Learning Opportunities 
 
 Experiential learning offers numerous advantages for students and creators of projects. This hands-on approach to education provides an engaging learning environment that goes beyond traditional classroom instruction. Students develop a wide range of skills that are valuable in both academic and professional settings. By engaging in real-world challenges, students learn to approach problems creatively and think outside the box. If you develop one of these opportunities, make sure you clearly articulate the following in your position announcement: your learning objectives, skills required, benefits, outcomes, and mentorship provided. 
 
 
-## Activity - Authentic Assessment 
+### Activity - Authentic Assessment 
 
 Apply what you have learned so far in this episode! Now it is your turn to come up with your own plan. Develop an action plan that:
 
