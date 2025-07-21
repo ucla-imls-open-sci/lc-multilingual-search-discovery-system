@@ -22,28 +22,34 @@ exercises: 1
 
 ## Background
 
-In this episode we will create a single page website that displays a search and discovery system for data on a Google Sheet using JavaScript.  You'll begin by establishing functional requirements for your project, setting clear goals and selecting free, open-source solutions. Next, you'll transform a Google Sheet into a database by converting it into a dynamic JSON-based API endpoint using Google App Script, allowing your website to retrieve data. You'll then connect your website and database via the `getData()` function to fetch data and the `displayData()` function to display the data to the user. Finally, you'll build the logic behind the search interface (`filterData()`), which will include *data normalization*, an important consideration to ensure search results match different user provided keywords (e.g., handling variations in capitalization, accents, or special characters).
+In this episode, we will create a single page website that displays data from a Google Sheet and lets users search through this data, all using JavaScript.  We'll begin by establishing functional requirements for your project. Functional requirements specify what the system should do, and from there you can select what technology will best help you meet those requirements. 
+
+Next, we'll transform our Google Sheet into a database, converting it to an API endpoint. You'll learn about APIs and how they transfer data from your spreadsheet to your website.
+
+We'll then connect our website and database. We'll write some JavaScript to fetch data from the spreadsheet and then display that data to the user. 
+
+Finally, we'll build the the search interface. This will include *data normalization*, which ensures that small variations in users' searches do not result in wildly different results (e.g., variations in capitalization, accents, and special characters).
 
 :::::::::::::::::::::::::::::::::::::::::: prereq
 - Copy our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet to a new folder in your Google Drive. You can name this folder whatever you like.
-- Download our starting code files: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip)
+- Download these starting code files: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip)
   
 ::::::::::::::::::::::::::::::::::::::::::
 
 ## Functional Requirements
-In any technical project, it's essential to establish clear functional requirements before diving into the technical details. This ensures that the team stays focused on the core objectives of the project, rather than getting sidetracked by fancy features or bells and whistles.
+In any technical project, it's essential to establish clear functional requirements before diving into the technical details. Establishing these requirements from the start ensures that the team stays focused on the project's goals, rather than getting sidetracked by fancy features or bells and whistles.
 
 During the development of the LACLI project, we arrived at a series of functional requirements. Many of which are shared by digital projects in the humanities and social sciences:
 
 | Functional Requirement | Solution |
 | -------- | ------- |
 | A free, intuitive, and collaborative database solution that can be easily edited by multiple volunteers without prior database knowledge.  | Google Sheets is a free, cloud-based spreadsheet solution that is intuitive to use, supports real-time collaboration by multiple users, and does not require extensive database knowledge.    |
-| Free web hosting services to store and access website files. | GitHub Pages allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
-| The client-side technology should be open-source and avoid the use of front-end frameworks, which have a steep learning curve and can dissuade collaboration among those unfamiliar with a given framework.    | Vanilla JavaScript is the core programming language of the web and is open-source. It provides for collaboration and easy maintenance as it is framework independent.    |
+| Free web hosting services to store and access website files. | [GitHub Pages](https://pages.github.com/) allows you to easily publish static websites directly from your GitHub repositories and use custom URL.     |
+| The client-side technology should be open-source and avoid the use of front-end frameworks, which have a steep learning curve and can dissuade collaboration among those unfamiliar with a given framework.    | JavaScript is the core programming language of the web and is open-source. It provides for collaboration and easy maintenance as it is framework independent.    |
 | The user interface should allow users to search through the data using keywords and present resources in an attractive, easy-to-read format that includes links to the original resources.    | JavaScript can make API calls, filter data, and display data on a webpage by injecting HTML into the site at run time.    |
 | The website must be translatable.    | JavaScript can create a translation table inside of an object to switch the site’s text content.    |
 
-With this solution, the website data is edited and stored using Google Sheets. The added benefit is that Google already has an entire security infrastructure: you can set permission of who can view, comment, or edit files in Google Drive. Then we use JavaScript to get the data from the spreadsheet and display it on our website. The JavaScript file that does that data manipulation, as well as the HTML and CSS files that give structure and style to our site, all live in a GitHub repository and are served to the public via their GitHub Pages service.
+With this solution, the LACLI team can intutively edit data using Google Sheets. The added benefit is that Google already has an entire security infrastructure: you can set permissions of who can view, comment, or edit files in Google Drive. We use JavaScript to get the data from the spreadsheet to our website. The JavaScript file that does that data manipulation, as well as the HTML and CSS files that give structure and style to our site, all live in a GitHub repository and are served to the public via their GitHub Pages service.
 
 :::::::::::::::::::::::::::::::::::::::: challenge
 ### Write Your Own
@@ -55,14 +61,16 @@ Based on the functional requirement assessment above, create your own two column
 
 The first technological hurtle is the fact that a Google Sheet is not automatically set up like a database. We will do this in three steps:
 1. Create a Google App Script file that uses the Google Sheets API.
-2. Write a script in the file that wraps all data up in a JSON.
+2. Write a script in that file that wraps up all the data in our spreadsheet in JSON.
 3. Launch our script as a web app, which creates a unique API endpoint for our data and will permit our website to get that data and bring it to the user’s browser.
 
-An API is a set of protocols that delivers data to a website. We want our site to receive the data in our spreadsheet as JSON (JavaScript Object Notation), which is a text-based data format to transmit data objects between a web server and a client-side application. When we talk about server-side, we are talking about operations that happen in the database on the servers. When we talk about client-side, we are talking about operations that occur in the user’s browser.
+An API is a set of protocols that delivers data to a website. We want our site to receive the data in our spreadsheet as JSON (JavaScript Object Notation), which is a text-based data format to transmit data objects between a web server and a client-side application. 
 
-To activate the Google Sheet API and transform our Spreadsheet into JSON data requires creating a Google App Script file. 
+When we talk about **server-side**, we are talking about operations that happen in the database on the servers. When we talk about **client-side**, we are talking about operations that occur in the user’s browser.
 
-In a Google Drive folder, make a copy of our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet. In this folder you'll also create a Google App Script File and name it Convert Sheet to JSON. This video will show you how to create the file and add the Google Sheets API under Services:
+Activating the Google Sheet API and transforming our Spreadsheet into JSON data requires that we create a Google App Script file. 
+
+In a Google Drive folder, make a copy of our [LACLI Sample Data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) spreadsheet. In this same folder, we'll create a Google App Script file and name it `Convert Sheet to JSON`. This video will show you how to create the file and add the Google Sheets API under Services:
 
 <iframe src="https://drive.google.com/file/d/1WScfIWv2PFTf4IoY_Z01r3qIUa194Muk/preview" width="640" height="480" allow="autoplay"></iframe>
 
@@ -101,10 +109,10 @@ function doGet(request) {
 
 ### Let's take this code step by step:
 
-1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL.<br><br>
+1. `function doGet(request)` is a stock function in Google App Script that handles a GET request made to your script's web app URL. A GET request simply gets data from a specific location.<br><br>
 2. Your spreadsheetid is available in the URL for the spreadsheet. Copy the string of alphanumeric characters in the URL of your spreadsheet:<br><br>
 ![Screenshot of the spreadsheet's URL.](fig/spreadsheet-url.png)<br><br>
-3. `var headers = dataValues[2]`, set the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information, we want the JSON to start on row 3 to find column headers.<br><br>
+3. `var headers = dataValues[2]`, sets the index of where the JSON should read header names. Because in our spreadsheet we have 2 rows of contextual information at the top of the spreadheet, we want the JSON to start on row 3 to find column header names.<br><br>
 4. `var rows = [],` the script will loop over all rows to add them to the JSON.<br><br>
 
 The last step is launching the Apps Script web app:
@@ -120,7 +128,7 @@ At the end of the video, you see that a red box appears around the Apps Script w
 ## Get your Data: getData()
 In this section we will take the API endpoint, which we created with Apps Script, and connect it to our website. We’ll then display that data on our website.
 
-To begin, download the webapp code as a zip file: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip), which contains the starting files for our website. Your file structure will look like this:
+To begin, download the webapp startup code as a zip file: [webapp.zip](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/raw/refs/heads/main/episodes/webapp/webapp.zip). This zip file contains the starting files for our website. The file structure will look like this:
 
 ```
 –webapp
@@ -129,7 +137,7 @@ To begin, download the webapp code as a zip file: [webapp.zip](https://github.co
 	–style.css
 ```
 
-Open index.html in the browser and you will see a basic structure for our discovery system. I’ve already given you some basic styling. We won’t be looking at style.css during this lesson, but feel free to modify it after. 
+Open index.html in the browser and you will see a basic structure for our discovery system. I’ve already given you some basic styling. We won’t be looking at style.css during this lesson, but feel free to modify it later. 
 
 From top to bottom: we have our language selection buttons, which we will use in a later episode to translate our page. Then we have our search bar, search button, and refresh button. We will use these in the next episode to enable users to search through the research data by with keywords. Last, in the blank white space is where we will populate our website with our research data.
 
@@ -158,7 +166,7 @@ In `app.js`, we have a variable `googleSheet`. Let’s set this to the URL of th
 const googleSheet = 'https://script.google.com/macros/s/....';
 ```
 
-Now we need to have `app.js` request that our webapp send our site the JSON data. We will do this by creating our first function, `getData()`.
+Now we need to have `app.js` request that our Apps Script web app send our site the JSON data. We will do this by creating our first function, `getData()`.
 1. Create an object called apiData where we will store the incoming data.
 
 ```app.js
@@ -183,7 +191,7 @@ The `getData` function will use an API endpoint (the URL of our Apps Script web 
 
 A unique attribute of JavaScript are promises. Promises are objects that represents the eventual completion (or failure) of an asynchronous operation. Promises typically do not happen as soon as a page loads, but take some time. In our case, we assign the async keyword before declaring the getData function because we know that the request for the Google Sheet data will take some time to reach our webpage. Similarly, the await keyword is used when we make the fetch request and format our fetch response in JSON because we are anticipating that the data will not arrive when the page loads.
 
-3. As a result of using promises, it is best practice too use the try/catch error handling block in our function in case there is some error retrieving the data. Our final getData() function should look like this:
+3. As a result of using promises, it is best practice to use the try/catch error handling block in our function in case there is some error retrieving the data. Our final getData() function should look like this:
 
 ```app.js
 // Get data
@@ -257,7 +265,7 @@ Success! Lets look at this data to get a sense of what is going on. Let’s expa
 	URL: "https://acervo.socioambiental.org/"
 ```
 
-JSON works in key-value format. This format will be the same for every entry in our data. All the keys are exactly the column headings in our Google Sheet. This is very useful because we can call specific pieces of data about a resource in our data table by using the column headings. The values, presented within quotes, is the data per row of our data. So here we are look at all the data, for the first row in our table. So, for example, if we want to display the title of a resource in our data table, we can ask JavaScript to show us the Resource_Title for a specific row.
+JSON works in key-value format. This format will be the same for every entry in our data. All the keys are exactly the column headings in our Google Sheet. This is very useful because we can call specific pieces of metadata about a resource by using the column headings. The values, presented within quotes, are the data per row of our data. So, for example, if we want to display the title of a resource in our data table, we can ask JavaScript to show us the Resource_Title for a specific row.
 :::
 
 ## Display your Data: displayData()
@@ -292,9 +300,11 @@ function displayData(data) {
 };
 ```
 
-This function takes our data as input. It then creates an object called `dataDisplay` where we will store our formatted data for display to the user. The key part of `displayData()` is the use of the `.map()` method. In Javascript, `.map()` creates a new array from an existing array by applying a provided function to each element in the existing array. In our project, `.map` will take our data array, a create a new array, `dataDisplay`, that will take each object and format it in html, ready to be injected into `index.html`, which occurs in the last line of the code above, `display.innerHTML = dataDisplay;`
+This function takes our data as input. It then creates an object called `dataDisplay` where we will store our formatted data for display to the user. 
 
-You can see what we are iterating over all the data and placing each object’s "Resource_Title" within `<h2>` tags. The map function makes it easy to specify where you’d like what piece of data within the html by calling: `object.<insert column name from spreadsheet>`. Here we are using `object.Resource_Title`.
+The key part of `displayData()` is the use of the `.map()` method. In Javascript, `.map()` creates a new array from an existing array by applying a provided function to each element in the existing array. In our project, `.map` will take our data array, a create a new array, `dataDisplay`, that will take each object and format it in html, ready to be injected into `index.html`, which occurs in the last line of the code above, `display.innerHTML = dataDisplay;`
+
+`displayData()` iterates over all of our data and places each object’s "Resource_Title" within `<h2>` tags. The map function makes it easy to specify where you’d like what piece of data within the html by calling: `object.<insert column name from spreadsheet>`. In the case of the title of each resource, we are using `object.Resource_Title`.
 
 Open `index.html` in the browser and you will see the "Resource_Title" of each object in our data array now populating the formerly blank white space below the search bar.
 
@@ -312,7 +322,7 @@ In our [lacli-sample-data](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0
 - Institutional_Hosts
 - Summary
 
-Thus, the hierarchy we apply to this data when we populate it on our website should reflect some kind of logic. For example, the "Resource_Title" should serve as a "URL" link to the resource. Below the title, we should have the "Institutional_Hosts." The rest of the data is there to describe the resource so that a user can quickly evaluate whether they are interested in a given resource. Here is one possible arrangement of this data in html:
+We will have to make some decisions about the hierarchy in which we display each resource's data. And these decisions should make sense to the user when they are reading through our site. For example, the "Resource_Title" should serve as a "URL" link to the resource. Below the title, we should have the "Institutional_Hosts." The rest of the data is there to describe the resource so that a user can quickly evaluate whether they are interested in a given resource. Here is one possible arrangement of this data in html:
 
 ```html
 <article class="item">
@@ -333,7 +343,9 @@ Thus, the hierarchy we apply to this data when we populate it on our website sho
 </article>
 ```
 
-As we discussed above when we were just applying `object.Resource_Title`, here you can see that we can call all the different data elements per resource with this same notation. Want to call the language of the resource? `object.Languages`. Materias en Español? `object.Materias_en_Espanol`. Again, all borrowing the column headings from our Google Sheet. We wrap each resource in an article tag as it defines independent content and thus improves accessibility by providing clear structure for assistive technologies.
+Here you can see that we can call each different data element per resource with the same notation we used when applying Resource_title: `object.Resource_Title`
+
+Want to call the language of the resource? `object.Languages`. Materias en Español? `object.Materias_en_Espanol`. Again, all borrowing from the column headings on our Google Sheet. We wrap each resource in an `<article>` tag as it defines independent content and thus improves accessibility by providing clear structure for assistive technologies.
 
 We can copy this html into our displayData() function like this:
 
@@ -380,7 +392,9 @@ This flowchart recaps the key functions we've written that move the data from ou
 
 ## Filter your Data: filterData()
 
-Up to this point, we’ve focused on connecting our site to our Google Sheet API and displaying that data in the browser. We haven’t touched the search functionality. To call this functionality searching very much anthropomorphizes the code. Humans search using a variety of emotion, reason, and what we might call algorithms to sift through information to determine what is most relevant at a given time. What our will do is much simpler and a better way to describe it is filtering the data. We will filter the data according to whether the data we have describing a resource matches or does not match the user’s keywords. For example, if a user enters the keyword “periodicals,” we want to return all resources whose "Resource_Types" include “periodicals.” 
+Up to this point, we’ve focused on connecting our site to our Google Sheet API and displaying that data in the browser. We haven’t touched the search functionality. 
+
+To call this functionality "searching" very much anthropomorphizes the code. Humans search using a variety of emotion, reason, and what we might call algorithms to sift through information to determine what is most relevant at a given time. What our will do is much simpler and a better way to describe it is filtering the data. We will filter the data according to whether the data we have describing a resource matches or does not match the user’s keywords. For example, if a user enters the keyword “periodicals,” we want to return all resources whose "Resource_Types" include “periodicals.” 
 
 Filtering the data will occur after the browser has received data from the Google Sheet API, the `getData()` function, and before that data is displayed on the website to the user, the `displayData()` function.
 
