@@ -23,7 +23,9 @@ In this episode, we will evaluate different methods to cleanup and enhance your 
 
 [Sample Data Set Spreadsheet](https://docs.google.com/spreadsheets/d/1v6xA8q23YJjS8koBD8Bq-233uaDfIyETA4RXHReUZkk/edit?usp=sharing)
 
-Knowing your audience is the first step to ensure that you have adequate data categories. In our spreadsheet, we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of some of our target audiences. What access points would students, faculty, or other librarians want to search by? With that in mind, we added more detailed subject analysis with columns such as Country Coverage and Time Period.
+Knowing your audience is the first step to ensure that you have adequate data categories. In our spreadsheet, we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of our target audience: What access points would students, faculty, or other librarians want to search by? 
+
+With this question in mind, we added metadata on Country Coverage and Time Period.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 ## Matching Metadata Standards to a Target Audience
@@ -35,7 +37,9 @@ C) Resource type
 
 :::::::::::::::  solution
 
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities. Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
+**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. The ability to narrow by specific countries, rather than a broader Latin America or by continent, gives users more precise searching capabilities. 
+
+Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -94,20 +98,11 @@ For more guidance, see:
 ## Evaluate Sample Dataset
 At this point, go ahead and copy the [lacli-sample-data spreadsheet](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) to your Google Drive. We'll explore the data through the following two questions.
 
-
-:::::::::::::::::::::::::::::::::::::::::: spoiler
-
 ### There are typos that may result in inaccurate search results. How might you edit this?
 
 Use tutorials and other existing Google Sheet shortcuts. Filtering within a column, for example, is a fast way to pull out terms only used once, some of which may in fact be typos.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-:::::::::::::::::::::::::::::::::::::::::: spoiler
 
 ### There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column?
 
 Use Find & Replace
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
