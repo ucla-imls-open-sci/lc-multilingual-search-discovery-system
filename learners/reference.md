@@ -11,7 +11,7 @@ When building a web app, an API acts as a messenger that allows your app to comm
 standardizes information, like converting all text to lowercase and removing diacritics (accent marks). This allows a search interface to treat "Résumé" and "resume" as identical, ensuring more accurate and comprehensive results.
 
 ### Event Listener 
-in JavaScript is a function that is triggered when a user interacts with an HTML element. In our case, we want to trigger runSearch() when the user hits the return key or clicks the search button.
+In JavaScript, event listeners are functions that wait for a specific interaction or "event" to occur on an HTML element, like a user clicking a button or pressing a specific key on their keyboard.
 
 ### Functional Requirements
 Define what a system should do, specifying its behaviors, features, and functions to meet user needs. They describe how the software will react to inputs and how it should behave in specific situations.
