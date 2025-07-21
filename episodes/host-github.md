@@ -1,7 +1,7 @@
 ---
 title: "Host your Site on GitHub"
 teaching: 20
-exercises: 0
+exercises: 2
 ---
 ::::::::::::::::::::::::::::::::::::::: objectives
 
@@ -18,11 +18,11 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Background
-We've invested a lot of time and effort to building our web app, and now its time to deploy it to the internet. In this episode, we will use GitHub pages to freely host our web app files online and GitHub Pages to serve our site to the public at large.
+We've invested a lot of time and effort to building our web app. Now its time to deploy it to the internet! In this episode, we will use GitHub pages to freely host our web app files online and GitHub Pages to serve our site to the public at large.
 
 :::::::::::::::::::::::::::::::::::::::::: callout
 ### What is GitHub?
-GitHub is a platform where developers create, store, manage, and share their code. Its power lies in that it tracks every change you make to your code, essentially letting you "time travel" back to any previous version of your project. We call this "version control," and it is made possible by Git, the underlying system that records every change you make to your files. Over time, GitHub has expanded its services and now offers one called GitHub Pages, which allows you to host websites directly from your GitHub account for free.
+GitHub is a platform where developers create, store, manage, and share their code. Its power lies in that it tracks every change you make to your code, essentially letting you "time travel" back to any previous version of your project. We call this time traveling "version control," and it is made possible by Git, the underlying system that records every change you make to your files. Over time, GitHub has expanded its services and now offers one called GitHub Pages, which allows you to host websites directly from your GitHub account for free.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Create a GitHub Account
@@ -33,7 +33,8 @@ To begin, you'll need to create a free GitHub account.
 2. Next, enter your email then create a password and username. This username is very important as it is your unique identifier for your profile and projects, and a key for hosting your site through GitHub Pages.
 
 ## Upload your Files to a Repository
-Web projects tend to be composed of several files including HTML and JavaScript documents as well as image, video, and text files. GitHub stores all project files in a container called a repository. We call respositories repo for short.
+Web projects tend to be composed of several files including HTML and JavaScript documents as well as image, video, and text files. GitHub stores all project files in a container called a repository. We call respositories `repo` for short.
+
 Before we can launch our site, we need to create a repo in which we will store all of our project files.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
@@ -68,7 +69,7 @@ These steps above have guided you on how to create an empty repo. Now we will up
 
 2. Now drag and drop the HTML, CSS, and JavaScript files we've worked on in the previous episodes.
 
-3. When we add files to make changes to files, Git (which manages GitHub's version control system) calls this confirmation step a "commit." In other words, we are committing to making these changes to the repo. It is customary to briefly summarize your changes when you commit them to the repo. You'll do this in the first text field as seen in the screen shot below. Another custom is to write "First Commit" when you commit documents to a repo for the first time. These commit comments let you search back through time for previous versions of your code. However, this capability is beyond the scope of this episode. Go ahead and write "First Commit" in the top text field and click the green "Commit changes" button.
+3. When we add files or make changes to files, Git (which manages GitHub's version control system) calls this confirmation step a "commit." In other words, we are committing to making these changes to the repo. It is customary to briefly summarize your changes when you commit them to the repo. You'll do this in the first text field as seen in the screen shot below. Another custom is to write "First Commit" when you commit documents to a repo for the first time. These commit comments essentially label each change you make to your code. Go ahead and write "First Commit" in the top text field and click the green "Commit changes" button.
 
 ![Commit dialog box.](fig/commit-screen.png)
 
