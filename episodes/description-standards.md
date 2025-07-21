@@ -92,8 +92,6 @@ For more guidance, see:
 + [*The Cataloging Code of Ethics*](http://hdl.handle.net/11213/16716)
 + [*Statement of Internaitonal Cataloging Principles*](https://repository.ifla.org/handle/20.500.14598/80)
 
-:::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Evaluate Sample Dataset
 At this point, go ahead and copy the [lacli-sample-data spreadsheet](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) to your Google Drive. We'll explore the data through the following two questions.
