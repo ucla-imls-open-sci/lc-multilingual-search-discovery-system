@@ -104,3 +104,7 @@ Use tutorials and other existing Google Sheet shortcuts. Filtering within a colu
 ### There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column?
 
 Use Find & Replace
+
+:::::: keypoints
+Focusing on the needs of your intended audience will guide you to choose the best standards and focus areas to clean up your metadata. This ultimately leads to a more user-friendly and ethical system.
+::::::
