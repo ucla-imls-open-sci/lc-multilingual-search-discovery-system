@@ -237,11 +237,10 @@ Note: Use the two checklists below to guide your thinking process as you design 
 ## Episode Summary
 
 :::keypoints
-**Establishing Functional Requirements:** We learned how to define clear goals for a technical project, identifying optimal, free, and open-source solutions like Google Sheets, GitHub Pages, and Vanilla JavaScript for building a robust search and discovery system.
+**Promoting Your Project:** We explored effective strategies to promote and increase visibility of your project among your diverse and global potential users.
 
-**Transforming Google Sheets into a Database:** We successfully converted a Google Sheet into a dynamic JSON-based API endpoint using Google App Script, enabling our website to retrieve and utilize the data.
+**Encouraging Participation and Collaboration:** We Learned  how to encourage participation in your project and nurture collaborations that enhance its multilingual functionality, cultural diversity, and global usefulness.
 
-**Connecting Website and Database:** We developed the JavaScript `getData()` function to fetch JSON data from our Google Sheet API and the `displayData()` function to present this information effectively on the webpage.
+**Designing an Action Plan:** We developed an action plan to promote your project and encourage participation and collaboration.
 
-**Implementing Data Filtering and Search:** We built robust client-side filtering capabilities, including normalization for capitalization and diacritics, allowing users to search the displayed data efficiently.
 :::
