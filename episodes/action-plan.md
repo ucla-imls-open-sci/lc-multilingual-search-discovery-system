@@ -238,7 +238,7 @@ Note: Use the two checklists below to guide your thinking process as you design 
 :::keypoints
 **Promoting Your Project:** We explored effective strategies to promote and increase visibility of your project among your diverse and global potential users.
 
-**Encouraging Participation and Collaboration:** We Learned  how to encourage participation in your project and nurture collaborations that enhance its multilingual functionality, cultural diversity, and global usefulness.
+**Encouraging Participation and Collaboration:** We learned  how to encourage participation in your project and nurture collaborations that enhance its multilingual functionality, cultural diversity, and global usefulness.
 
 **Designing an Action Plan:** We developed an action plan to promote your project and encourage participation and collaboration.
 :::
