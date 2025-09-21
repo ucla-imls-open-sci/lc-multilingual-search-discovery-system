@@ -233,3 +233,15 @@ Note: Use the two checklists below to guide your thinking process as you design 
 - [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
       
 ::::::::::::::::::::::::::::::::::::::::::
+
+## Episode Summary
+
+:::keypoints
+**Establishing Functional Requirements:** We learned how to define clear goals for a technical project, identifying optimal, free, and open-source solutions like Google Sheets, GitHub Pages, and Vanilla JavaScript for building a robust search and discovery system.
+
+**Transforming Google Sheets into a Database:** We successfully converted a Google Sheet into a dynamic JSON-based API endpoint using Google App Script, enabling our website to retrieve and utilize the data.
+
+**Connecting Website and Database:** We developed the JavaScript `getData()` function to fetch JSON data from our Google Sheet API and the `displayData()` function to present this information effectively on the webpage.
+
+**Implementing Data Filtering and Search:** We built robust client-side filtering capabilities, including normalization for capitalization and diacritics, allowing users to search the displayed data efficiently.
+:::
