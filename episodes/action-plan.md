@@ -233,7 +233,6 @@ Note: Use the two checklists below to guide your thinking process as you design 
 - [ ] Articulate the learning objectives, skills required, value, outcomes, and mentorship provided for these opportunities. Ensure mutual benefit for students and your project
       
 ::::::::::::::::::::::::::::::::::::::::::
-
 ## Episode Summary
 
 :::keypoints
@@ -242,5 +241,4 @@ Note: Use the two checklists below to guide your thinking process as you design 
 **Encouraging Participation and Collaboration:** We Learned  how to encourage participation in your project and nurture collaborations that enhance its multilingual functionality, cultural diversity, and global usefulness.
 
 **Designing an Action Plan:** We developed an action plan to promote your project and encourage participation and collaboration.
-
 :::
