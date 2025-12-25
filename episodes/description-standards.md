@@ -19,13 +19,17 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this episode we will evaluate different methods to cleanup and enhance your data, all while keeping in mind an ethical obligation to provide inclusive access to information. We will then apply these techniques to our sample data set.
+In this episode, we will evaluate different methods to cleanup and enhance your data, all the while keeping in mind an ethical obligation to provide inclusive access to information. We'll then apply these techniques to our sample data set.
 
-Knowing your audience is the first step to ensure you have adequate data categories. In our spreadsheet we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of some of our target audiences. What access points would students, faculty, or other librarians want to search by? So we added more detailed subject analysis with columns such as Country Coverage and Time Period.
+[Sample Data Set Spreadsheet](https://docs.google.com/spreadsheets/d/1v6xA8q23YJjS8koBD8Bq-233uaDfIyETA4RXHReUZkk/edit?usp=sharing)
+
+Knowing your audience is the first step to ensure that you have adequate data categories. In our spreadsheet, we started with typical access points such as title, creator (institutional host), resource type, subject, language, and URL. Then we thought of our target audience: What access points would students, faculty, or other librarians want to search by? 
+
+With this question in mind, we added metadata on Country Coverage and Time Period.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
-## Target Audience
-Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
+## Matching Metadata Standards to a Target Audience
+Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data, with emphasis on their particular needs? (Choose all that apply)
 
 A) Terms in Spanish & Portuguese  
 B) Country Coverage  
@@ -33,7 +37,9 @@ C) Resource type
 
 :::::::::::::::  solution
 
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in multiple languages. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities.
+**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in the two most widely used languages in Latin America. The ability to narrow by specific countries, rather than a broader Latin America or by continent, gives users more precise searching capabilities. 
+
+Resource type is essential metadata for any research project, but does not relate to resources about Latin America.
 :::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -43,7 +49,7 @@ C) Resource type
 
 Find a cheat sheet for cleaning up spreadsheets, such as:
 
-Marina Georgieva's *Data Remediation at Scale: How to Clean Up Your Metadata Quickly and Effectively Using Excel*
+Marina Georgieva's [*Data Remediation at Scale: How to Clean Up Your Metadata Quickly and Effectively Using Excel*](https://oasis.library.unlv.edu/libfacpresentation/191)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -86,38 +92,19 @@ For more guidance, see:
 + [*The Cataloging Code of Ethics*](http://hdl.handle.net/11213/16716)
 + [*Statement of Internaitonal Cataloging Principles*](https://repository.ifla.org/handle/20.500.14598/80)
 
-:::::::::::::::::::::::::::::::::::::::  challenge
-## Matching Metadata Standards to a Target Audience
-
-Imagine one target audience includes students, teachers, and librarians in Latin America. What kind of metadata might enhance access to your data? (Choose all that apply)
-
-A) Terms in Spanish & Portuguese  
-B) Country Coverage  
-C) Resource type  
-
-:::::::::::::::  solution
-
-**Answer: A & B.** While A, B, and C are all useful metadata, adding additional columns for subject access in Spanish and Portuguese provides a broader audience the ability to keyword search in multiple languages. And adding the ability to narrow by specific countries, rather than a broader Latin America or by continent, gives the user more precise searching capabilities.
-:::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Evaluate Sample Dataset
 At this point, go ahead and copy the [lacli-sample-data spreadsheet](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing) to your Google Drive. We'll explore the data through the following two questions.
-
-
-:::::::::::::::::::::::::::::::::::::::::: spoiler
 
 ### There are typos that may result in inaccurate search results. How might you edit this?
 
 Use tutorials and other existing Google Sheet shortcuts. Filtering within a column, for example, is a fast way to pull out terms only used once, some of which may in fact be typos.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-:::::::::::::::::::::::::::::::::::::::::: spoiler
 
 ### There is a problematic or outdated term for a group of people in your subject columns. How might you quickly fix a term quickly for the whole column?
 
 Use Find & Replace
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::: keypoints
+Focusing on the needs of your intended audience will guide you to choose the best standards and focus areas to clean up your metadata. This ultimately leads to a more user-friendly and ethical system.
+::::::

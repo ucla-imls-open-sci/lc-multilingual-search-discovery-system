@@ -18,7 +18,7 @@ carpentry: 'incubator'
 carpentry_description: 'A low-code search and discovery web app with Google Sheets & JavaScript for collaborative, multilingual projects'
 
 # Overall title for pages.
-title: 'Search and Discovery Web App for Collaborative, Multilingual Projects' # FIXME
+title: 'Building a Search and Discovery Web App for Collaborative Multilingual Projects'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2024-09-01 # FIXME
@@ -70,6 +70,7 @@ episodes:
 - description-standards.md
 - web-app.md
 - translation.md
+- host-github.md
 - action-plan.md
 
 # Information for Learners

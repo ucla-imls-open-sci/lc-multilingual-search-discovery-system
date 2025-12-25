@@ -16,15 +16,15 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Background
-Translation remains an elusive problem on the web. Browsers permit the use of 3rd party tools like Google Translate to translate a web page on the fly. There are also subscription AI tools like Transifex. Translation has come a long way and it is now very good and enable users to access content from a variety of languages. But language is complicated by regionalisms, varieties, and problems between literal and figurative speech. At times, AI translation services miss these subtleties. JavaScript enables us a straightforward way to customize our translation for users and be sure that we have full control of the content user’s see.
+Translation remains an elusive problem on the web. Browsers permit the use of 3rd party tools like Google Translate to translate a web page on the fly. There are also subscription AI tools like Transifex. Translation has come a long way and it now enables users to access content from a variety of languages. But language is complicated by regionalisms, varieties, and problems between literal and figurative speech. At times, translation services miss these subtleties. JavaScript enables us a straightforward way to customize our translation for users and be sure that we have full control over the content that a user sees.
 
-In this episode we will focus on setting up our language selection buttons in the top right corner of our page:
+In this episode we will focus on setting up our language translation buttons in the top right corner of our page:
 
-![Translation buttons at the top of our webpage.](https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system/blob/main/episodes/media/translation-buttons.png)
+![Translation buttons at the top of our webpage.](fig/translation-buttons.png)
 
 ## User Interface
 
-We will first create a new file called `translation.js` where we will create our language selection app. Your file structure should look like this:
+First, we'll create a new file called `translation.js` in which we'll create our translation app. Your file structure should look like this:
 
 ```
 –webapp
@@ -34,7 +34,7 @@ We will first create a new file called `translation.js` where we will create our
 	–translation.js
 ```
 
-Next we will need to link this new JavaScript file with our webpage. Open up `index.html` and add a link using a `<script>` tag at the bottom of the file:
+Next, we need to link this new JavaScript file with our webpage. Open up `index.html` and add a link using a `<script>` tag at the bottom of the file:
 
 ```index.html
 [...]
@@ -57,7 +57,7 @@ Within our `index.html` file, we should also examine the structure of the langua
 </div>
 ```
 
-We see that these are actually anchor elements `<a>`. We have left the href empty because these links will not direct users to a new page, but instead will trigger our `translation.js` script. Also, we have this custom element data-lang, which we will use to cue our `translation.js` script, through the two-character language codes *en* and *es*, as to what language the user prefers to read in.
+We see that these are actually anchor elements `<a>`. We have left the href empty because these links will not direct users to a new page. Instead, these links will trigger our `translation.js` script. Also, we custom `data-lang` elements. Notice that each link has a two-character language code: *en* for English and *es* for Spanish. We'll use these to cue our `translation.js` script to translate the page to the user's language preference.
 
 Next, lets take a look at the HTML elements we want to translate:
 
@@ -83,7 +83,7 @@ const searchButton = document.getElementById('search-btn');
 const refreshButton = document.getElementById('refresh-btn');
 ```
 
-Translation using JavaScript works by creating a 1:1 translation table. When our script receives the language code, *en* or *es*, it will then look what text to display for the elements we just targeted above. We will create an object called translations that has a set of content for English (en) and Spanish (es).
+Translation using JavaScript works by creating a 1:1 translation table. When our script receives the language code, *en* or *es*, it then looks up what text to display for the welcome message, search button, and refresh button elements we just targeted above. We'll create an object called `translations` that includes a set of content for English (en) and Spanish (es).
 
 ```translation.js
 const translations = {
@@ -104,7 +104,7 @@ As you can see, we reference the element we want to target, for example `welcome
 
 ## translatePage() Function
 
-Now we will create a function that will execute our translation:
+Now we can create a function to execute our translation:
 
 ```translation.js
 let currentLanguage = 'en'; // Default language
@@ -122,7 +122,7 @@ function translatePage(language) {
 translatePage(currentLanguage);
 ```
 
-We start by setting our default language to English (en). Then we create the function `translatePage()`, which takes as an argument the two-character language code. Then for each element on our page we want to translate, JavaScript first manipulates the textContent in the HTML by looking up in the translations object which nest table of translations to use. It then within that nest table for either en or es, finds the prescribed content to push to our HTML.
+We start by setting our default language to English (en). Then we create the function `translatePage()`, which takes as an argument the two-character language code. For each element on our page, JavaScript manipulates the textContent in the HTML by looking up our specified translations. The script then injects the translated content into our HTML.
 
 Finally, we need to create an event listener that will pass the two-character language code to our `translatePage()` function when a user clicks on their preferred language:
 
@@ -137,7 +137,7 @@ document.querySelector('.translation').addEventListener('click', function (event
 });
 ```
 
-When a user clicks on a language link, the script will retrieve the two-character code listed by the `data-lang` custom element. `event.preventDefault()` will prevent the `<a>` tag from carrying out its normal link action and refreshing the page. If it refreshes the page, it will cause us to have to reload the API data, which will make our site a much slower experience for users. Finally, we pass the two-character language code to `translatePage()` function.
+When a user clicks on a language link, the script retrieves the two-character code listed by the `data-lang` custom element. `event.preventDefault()` will prevent the `<a>` tag from carrying out its normal link action and refreshing the page. If it refreshes the page, it will cause us to have to reload the API data, which will make our site a much slower experience for users. Finally, we pass the two-character language code to `translatePage()` function.
 
 :::keypoints
 ### Episode Summary
