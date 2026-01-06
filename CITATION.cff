@@ -1,24 +1,23 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: 'Search and Discovery Web App for Collaborative, Multilingual Projects'
-message: >-
-  Please cite this lesson using the information in this file
-  when you refer to it in publications, and/or if you
-  re-use, adapt, or expand on the content in your own
-  training material.
+message: "If you use this lesson, please cite it as below."
 type: dataset
+title: "Collaborative Multilingual Search and Discovery Systems"
 authors:
-  - given-names: Eric
-    family-names: Silberberg
-  - given-names: Cate
-    family-names: Kellet
-  - given-names: Jesús
-    family-names: Alonso-Regalado
-abstract: >-
-  A low-code search and discovery web app with Google Sheets & JavaScript for collaborative, multilingual projects.
+  - family-names: Silberberg
+    given-names: Eric
+  - family-names: Alonso-Regalado
+    given-names: Jesus
+  - family-names: Kellett
+    given-names: Cate
+abstract: "Guides users through creating a lightweight, open-source search and discovery system for multilingual research materials using the Google Sheets API and JavaScript. Addresses challenges in making research collections publicly available and ethically represented."
+keywords:
+  - search
+  - multilingual
+  - discovery
+  - google sheets api
+  - javascript
 license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-01-06
+repository-code: "https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system"
+url: "http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/"
