@@ -4,7 +4,7 @@ title: Setup
 
 ## Dataset
 
-Access the LACLI [sample data]([https://example.com/FIXME](https://docs.google.com/spreadsheets/d/19pTiNUP_PqqX0FlzMeEd5aZRWUj6lt9VU4SCwEm1f5I/edit?usp=sharing)) that we will use throughout the lesson.
+Access the LACLI [sample data](https://docs.google.com/spreadsheets/d/1v6xA8q23YJjS8koBD8Bq-233uaDfIyETA4RXHReUZkk/edit?usp=sharing) that we will use throughout the lesson.
 
 ## Web App Starting Files
 
