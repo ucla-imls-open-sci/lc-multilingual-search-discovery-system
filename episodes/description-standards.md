@@ -19,7 +19,7 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this episode, we will evaluate different methods to cleanup and enhance your data, all the while keeping in mind an ethical obligation to provide inclusive access to information. We'll then apply these techniques to our sample data set.
+In this episode, we will evaluate different methods to clean up and enhance your data, all the while keeping in mind an ethical obligation to provide inclusive access to information. We'll then apply these techniques to our sample data set.
 
 [Sample Data Set Spreadsheet](https://docs.google.com/spreadsheets/d/1v6xA8q23YJjS8koBD8Bq-233uaDfIyETA4RXHReUZkk/edit?usp=sharing)
 
