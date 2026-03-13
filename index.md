@@ -29,7 +29,7 @@ Understand how a description standard ensures ethical representation of data and
 Create a JavaScript-based website search system that allows users to effectively search and retrieve information from a Google Sheets database.
 
 **Part 3: Action Plan for Promotion and Collaboration**<br>
-Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration in sharing research findings.
+Consider linguistic and cultural diversity in the design and implementation of the dissemination plan that works toward reciprocity and collaboration.
 
 ## Who is this lesson for?
 Subject liaison, digital scholarship, or data services librarians working with researchers in the social sciences and humanities. While these librarians possess domain expertise, they seek theoretical and technical guidance in creating a collaborative, multilingual search and discovery system for their research community.
